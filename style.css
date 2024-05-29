@@ -32,25 +32,44 @@ html, body{
 }
 #page1{
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     background-color: var(--black);
     padding: 1.5vw 5vw;
     position: relative;
     overflow: hidden;
 }
+#homeimg{
+    position: absolute;
+    z-index: 6;
+    bottom: 0%;
+    right: 28%;
+}
+#homeimg img{
+    height:38vw;
+    width: 30vw;
+    object-position: 0 -2%;
+    object-fit: cover;
+    opacity: 0;
+}
 #panther{
+    transition: all 0.4s ease-in-out;
     position: absolute;
     z-index: 0;
-    top: 0.2%;
+    bottom: -0.2;
     right: calc(5vw);
+    opacity: 0;
 }
-
+.pantherimg{
+    width: 65vw;
+    height: 55vw;
+}
 nav{
     height: 4.5vw;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between ;
+    overflow: hidden;
 }
 #navpart1{
     height: 100%;
@@ -81,7 +100,10 @@ nav{
     margin-bottom: -2vw;
     
 }
-#navpart2 h3:hover{
+#navpart2 h3:hover {
+    color: var(--green);
+}
+#navpart2 h3:hover i{
     color: var(--green);
 }
 #navpart3{
@@ -101,8 +123,79 @@ nav{
     cursor: pointer;
     color: var(--green);
 }
-
-#page2{
-    height: 100vh;
+#homepage{
     width: 100vw;
+    height: 42vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3.5vw;
+}
+#home1{
+    line-height: 0.6;
+}
+#h3{
+    height: 5.8vw;
+    overflow: hidden;
+}
+#home1 h3{
+    font-size: 7vw;
+    font-family: var(--headingfont);
+    color: var(--green);
+    background-blend-mode: mixed;
+    filter: drop-shadow(0 0 20px rgba(181, 238, 12, 0.4));
+}
+#h1{
+    overflow: hidden;
+    height: 13vw;
+}
+#home1 h1{
+    margin-left: -1.1vw;
+    font-size: 18vw;
+    letter-spacing: -0.7vw;
+    font-family: var(--headingfont);
+    color: var(--green);
+    filter: drop-shadow(0 0 20px rgba(181, 238, 12, 0.4));
+}
+
+#home2 {
+    display: flex;
+    align-items: center;
+}
+#home2 button{
+    padding: 0.6vw 3vw;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: var(--green);
+   /* font-family: var(--headingfont); */
+   font-size: 1.5vw;
+   background-color: transparent;
+   border: 2px solid var(--green);
+   position: relative;
+   border-radius: 4px;
+   opacity: 0;
+   overflow: hidden;
+}
+#home2 button:after{
+    content: '';
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.4s ease-out;
+    z-index: -1;
+}
+#home2 button:hover{
+    color: var(--black);
+    border-color: var(--black);
+}
+#home2 button:hover:after{
+    background-color: var(--green);
+    width: 100%;
+}
+#page2{
+    width: 100vw;
+    height: 100vh;
 }
