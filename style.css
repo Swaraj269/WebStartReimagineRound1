@@ -4,6 +4,7 @@
     --white : #FFFFFF;
     --headingfont : 'futura-bold';
     --parafont : 'futura-medium';
+    --textfont: 'futura-light';
 }
 @font-face {
     font-family: 'futura-bold';
@@ -13,12 +14,15 @@
     font-family: 'futura-medium';
     src: url('/FUTURA65MEDIUM.woff2');
 }
+@font-face {
+    font-family: 'futura-light';
+    src: url('/FUTURA65LIGHT.woff2');
+}
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: var(--parafont);
-    color: var(--white);
+    font-family: var(--headingfont);
     z-index: 1;
 }
 *::selection{
@@ -28,9 +32,59 @@
 html, body{
     height: 100%;
     width: 100%;
+}
+body{
     overflow-x: hidden;
+    background-color: var(--black);
+}
+main{
+    background-color: var(--black);
+}
+#loader{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--black);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index:999;
+}
+#loadingtext{
+    width: fit-content;
+    position: relative;
+    top:50%;
+    left: 50%;
+    overflow: hidden;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4vw;
+}
+#loadingtext h1{
+    color: #B7EE0C;
+    font-family: var(--headingfont);
+    filter: drop-shadow(0 0 20px rgba(181, 238, 12, 0.258));
+    font-size: 5vw;
+}
+#loadingtext h2{
+    color: #B7EE0C;
+    filter: drop-shadow(0 0 20px rgba(181, 238, 12, 0.258));
+    font-family: var(--headingfont);
+    font-size: 5vw;
+}
+#logo{
+    width: 12%;
+    height: 12%;
+    overflow: hidden;
+}
+#logo img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 #page1{
+    opacity: 0;
     width: 100vw;
     height: 100%;
     background-color: var(--black);
@@ -41,7 +95,7 @@ html, body{
 #homeimg{
     position: absolute;
     z-index: 6;
-    bottom: 0%;
+    bottom: -2%;
     right: 28%;
 }
 #homeimg img{
@@ -82,21 +136,22 @@ nav{
 }
 #navpart2{
     height: 100%;
-    width: 40%;
+    width: fit-content;
     display: flex;
     letter-spacing: 1px;
     align-items: center;
-    justify-content: space-around;
-    margin-right: 30vw;
+    gap: 1.3vw;
+    margin-right: 25vw;
 }
 #navpart2 h3{
-    font-size: 1.4vw;
+    color:var(--white);
+    font-size: 1.28vw;
     transition: all 0.2s ease-out;
     cursor: pointer;
 }
 #navpart2 h3 i{
-    font-size: 1.1vw;
-    /* background-color: red; */
+    color:var(--white);
+    font-size: 1vw;
     margin-bottom: -2vw;
     
 }
@@ -116,6 +171,7 @@ nav{
 }
 
 #navpart3 i{
+    color:var(--white);
     font-size: 1.8vw;
     transition: all 0.2s ease-out;
 }
@@ -132,14 +188,14 @@ nav{
     gap: 3.5vw;
 }
 #home1{
-    line-height: 0.6;
+    line-height: 0.64;
 }
 #h3{
     height: 5.8vw;
     overflow: hidden;
 }
 #home1 h3{
-    font-size: 7vw;
+    font-size: 7.7vw;
     font-family: var(--headingfont);
     color: var(--green);
     background-blend-mode: mixed;
@@ -147,7 +203,8 @@ nav{
 }
 #h1{
     overflow: hidden;
-    height: 13vw;
+    height: 13.4vw;
+    word-spacing: 11vw;
 }
 #home1 h1{
     margin-left: -1.1vw;
@@ -163,7 +220,7 @@ nav{
     align-items: center;
 }
 #home2 button{
-    padding: 0.6vw 3vw;
+    padding: 0.73vw 4.1vw;
    display: flex;
    align-items: center;
    justify-content: center;
@@ -188,6 +245,7 @@ nav{
     z-index: -1;
 }
 #home2 button:hover{
+    cursor: pointer;
     color: var(--black);
     border-color: var(--black);
 }
@@ -198,4 +256,5 @@ nav{
 #page2{
     width: 100vw;
     height: 100vh;
+    background-color: var(--black);
 }
