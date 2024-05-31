@@ -11,21 +11,22 @@
 />
     <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
     <title>Beast Life</title>
 </head>
 <body>
     <div id="loader">
         <div id="loadingtext">
             <h2><span id="loadercounter">0</span>%</h2>
-            <h1>Get Ready to Roar</h1>
+            <h1>Get Ready to Enter Beast Life</h1>
             
         </div>
-        <!-- <div id="logo">
-            <img src="/beastlife-whitelogo.svg" alt="">
-        </div> -->
     </div>
     <main>
-        <div id="page1">
+        <div id="page1" data-scroll>
             <div id="panther">
                 <img src="/panther.svg" class="pantherimg" alt="" srcset="">
             </div>
@@ -36,8 +37,21 @@
                 <div id="navpart1">
                     <img src="/beastlife-whitelogo.svg"  alt="">
                 </div>
+                <div id="products">
+                    <div id="productsname">
+                        <h3 id="shop"><span class="shop" id="shopall">shop</span>All</h3>
+                        <h3 id="protein"><span class="shop" id="shopprotein">shop</span>Protein</h3>
+                        <h3 id="creatine"><span class="shop" id="shopcreatine">shop</span>Creatine</h3>
+                        <h3 id="BCCA"><span class="shop" id="shopBCCA">shop</span>BCCA</h3>
+                        <h3 id="clothing"><span class="shop" id="shopclothing">shop</span>CLOTHING</h3>
+                        <h3 id="accessories"><span class="shop" id="shopaccessories">shop</span>ACCESSORIES</h3>
+                    </div>
+                    <div id="productphoto">
+                        <img src="https://cdn.shopify.com/s/files/1/0690/7723/7977/t/4/assets/d543ec9c521c--shopall-219a3f.jpg?v=1715186587" alt="">
+                    </div>
+                </div>
                 <div id="navpart2">
-                    <h3>Product<span><i class="ri-arrow-down-s-fill"></i></span> </h3>
+                    <h3 id="producttag">Product<span><i class="ri-arrow-down-s-fill"></i></span> </h3>
                     <h3>Our Story</h3>
                     <h3>Authenticity Guaranteed</h3>
                     <h3>Blogs</h3>
@@ -56,7 +70,46 @@
                 <div id="home2"><button>Check It Out</button></div>
             </div>
         </div>
-        <div id="page2"></div>
+        <div id="page2" data-scroll>
+            <div id="seccursor">
+                <i class="ri-arrow-left-s-line"></i>
+                <i class="ri-mouse-line"></i>
+                <i class="ri-arrow-right-s-line"></i>
+            </div>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="circle show1"></div>
+                    <div class="photo show2"><img src="/page2suppliment.png" alt=""></div>
+                    <div class="text"><h1>SUPPLIMENT</h1></div>
+                    <div class="info">
+                        <div class="infotext">suppliment</div>
+                        <button>Shop Now</button>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="circle show1"></div>
+                    <div class="photo show2"><img src="/page2clothing.png" alt=""></div>
+                    <div class="text"><h1>CLOTHING</h1></div>
+                    <div class="info">
+                        <div class="infotext">clothing</div>
+                        <button>Shop Now</button>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="circle show1"></div>
+                    <div class="photo show2"><img src="/page2accessories.png" alt=""></div>
+                    <div class="text t2"><h1>ACCESSORIES</h1></div>
+                    <div class="info">
+                        <div class="infotext">Accessories</div>
+                        <button>Shop Now</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-button-next" style="color:#B7EE0C; padding-right:5vw;"></div>
+                <div class="swiper-button-prev" style="color:#B7EE0C; padding-left:5vw;"></div>
+            </div>
+        </div>
         <div id="page3"></div>
         <div id="page4"></div>
         <div id="page5"></div>
@@ -66,6 +119,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script  type="text/javascript"  src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script> 
 </body>
 </html>
