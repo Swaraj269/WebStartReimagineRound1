@@ -46,8 +46,9 @@ var BCCA = document.querySelector('#BCCA');
 var clothing = document.querySelector('#clothing');
 var accessories = document.querySelector('#accessories');
 var productphoto = document.querySelector('#productphoto img');
-
-
+var swiperSlider = document.querySelector('#swiper-slide');
+var leftsidebutton = document.querySelector('#leftsidebutton');
+var rightsidebutton = document.querySelector('#rightsidebutton');
 
 
 function loadingAndHomeAnimation(){
@@ -359,15 +360,38 @@ function secondpageanimation(){
         observer.observe(slide);
     });
 var page2 = document.querySelector('#page2');
-    page2.addEventListener('mousemove',function(e){
+let mouseMoveTimeout;
+
+
+function onMouseStop() {
+  gsap.to('#seccursor', {
+    opacity: 0, 
+    duration: 0.2,
+  });
+}
+
+
+function onMouseMove(e) {
+  clearTimeout(mouseMoveTimeout);
+
+  mouseMoveTimeout = setTimeout(onMouseStop, 500);
+
+  gsap.to('#seccursor', {
+    opacity: 1,
+    x: e.x,
+    y: e.y,
+    duration: 0.2,
+  });
+}
+
+page2.addEventListener('mousemove', onMouseMove);
+
+    page2.addEventListener('wheel',function(){
         gsap.to('#seccursor',{
-            opacity: 1,
-            x: e.x,
-            y: e.y,
-            duration: 0.15,
+            opacity: 0,
         })
     })
-    page2.addEventListener('onwheel',function(){
+    window.addEventListener('drag',function(){
         gsap.to('#seccursor',{
             opacity: 0,
         })
@@ -380,3 +404,64 @@ var page2 = document.querySelector('#page2');
 }
 
 secondpageanimation();
+
+function thirdpagesliding(){
+    const track = document.querySelector('#productslist');
+
+    let isDragging = false;
+    let startX = 0;
+    let prevPercentage = 0;
+    const minPercentage = -95;
+    const maxPercentage = 0;
+
+
+    window.addEventListener('mousedown', function(e) {
+        isDragging = true;
+        startX = e.clientX;
+        track.dataset.mouseDownAt = startX;
+    });
+
+    window.addEventListener('mousemove', function(e) {
+        if (!isDragging) return;
+
+        const mouseDelta = e.clientX - startX;
+        const maxDelta = window.innerWidth;
+
+        const percentage = (mouseDelta / maxDelta) * 100;
+        let nextPercentage = prevPercentage + percentage;
+
+        if (nextPercentage < minPercentage) {
+            nextPercentage = minPercentage;
+        } else if (nextPercentage > maxPercentage) {
+            nextPercentage = maxPercentage;
+        }
+
+        track.dataset.percentage = nextPercentage;
+
+        track.style.transform = `translateX(${nextPercentage}%)`;
+    });
+
+    window.addEventListener('mouseup', function(e) {
+        if (!isDragging) return;
+        
+        isDragging = false;
+        prevPercentage = parseFloat(track.dataset.percentage);
+    });
+
+
+    window.addEventListener('dragstart', function(e) {
+        e.preventDefault();
+    });
+
+    var trackpercentage = 0;
+    leftsidebutton.addEventListener('click', function(e) {
+        if(trackpercentage >= -95) trackpercentage -= 20;
+        track.style.transform = `translateX(${trackpercentage}%)`;
+    })
+    rightsidebutton.addEventListener('click', function(e) {
+        if(trackpercentage <= -5) trackpercentage += 20;
+        track.style.transform = `translateX(${trackpercentage}%)`;
+    })
+}
+
+thirdpagesliding();
