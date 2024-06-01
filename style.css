@@ -8,15 +8,15 @@
 }
 @font-face {
     font-family: 'futura-bold';
-    src: url('/FUTURA75BOLD.woff2');
+    src: url('./FUTURA75BOLD.woff2');
 }
 @font-face {
     font-family: 'futura-medium';
-    src: url('/FUTURA65MEDIUM.woff2');
+    src: url('./FUTURA65MEDIUM.woff2');
 }
 @font-face {
     font-family: 'futura-light';
-    src: url('/FUTURA65LIGHT.woff2');
+    src: url('./FUTURA65LIGHT.woff2');
 }
 *{
     padding: 0;
@@ -411,20 +411,14 @@ nav{
 }
 
 #seccursor{
-    width:100px;
-    height: 100px;
     border-radius: 50%;
-    border: 2px solid whitesmoke;
     position: absolute;
     z-index: 999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     opacity: 0;
 }
-#seccursor i {
+#seccursor h5 {
     color: whitesmoke;
-    font-size: 1.6vw;
+    font-size: 1.2vw;
     mix-blend-mode: mixed;
 }
 #page3{

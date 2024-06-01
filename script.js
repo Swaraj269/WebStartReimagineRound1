@@ -367,7 +367,7 @@ var page2 = document.querySelector('#page2');
             duration: 0.15,
         })
     })
-    page2.addEventListener('wheel',function(){
+    page2.addEventListener('onwheel',function(){
         gsap.to('#seccursor',{
             opacity: 0,
         })
