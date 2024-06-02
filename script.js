@@ -49,6 +49,10 @@ var productphoto = document.querySelector('#productphoto img');
 var swiperSlider = document.querySelector('#swiper-slide');
 var leftsidebutton = document.querySelector('#leftsidebutton');
 var rightsidebutton = document.querySelector('#rightsidebutton');
+var leftparth1 = document.querySelector('#leftpart h1');
+var video = document.querySelector('#mainVideo');
+var liftpart = document.querySelector('#liftpart');
+var videocursor = document.querySelector('#videocursor');
 
 
 function loadingAndHomeAnimation(){
@@ -465,3 +469,60 @@ function thirdpagesliding(){
 }
 
 thirdpagesliding();
+
+
+gsap.from("#leftpart h1", {
+    opacity: 0,
+    y:200,
+    duration: 1.3,
+    scrollTrigger:{
+        trigger: "#leftpart",
+        scroller: "main",
+        start: "top 60%",
+        end: "top 15%",
+        scrub: true,
+    }
+})
+gsap.from(".line img", {
+    opacity: 0,
+    width: "0",
+    duration: 1.3,
+    scrollTrigger:{
+        trigger: "#leftpart",
+        scroller: "main",
+        start: "top 60%",
+        end: "top 15%",
+        scrub: true,
+    }
+})
+gsap.from("#leftpart4 button", {
+    opacity: 0,
+    duration: 1.3,
+    scrollTrigger:{
+        trigger: "#leftpart",
+        scroller: "main",
+        start: "top 60%",
+        end: "top 15%",
+        scrub: true,
+    }
+})
+
+video.addEventListener('click', function() {
+    if (this.muted) {
+        this.muted = false;
+    } else {
+        this.muted = true;
+    }
+    
+});
+liftpart.addEventListener('click', function() {
+    video.muted = !video.muted;
+});
+
+// videocursor.addEventListener('mousemove', function(e){
+//     gsap.to('#videocursor',{
+//         x: e.x,
+//         y: e.y,
+//         duration: 0.2,
+//     })
+// })
