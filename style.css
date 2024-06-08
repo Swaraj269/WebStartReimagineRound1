@@ -133,7 +133,7 @@ nav{
 }
 #navpart1{
     height: 100%;
-    width: 10%;
+    width: 12.5%;
 }
 #navpart1 img{
     height: 100%;
@@ -187,22 +187,20 @@ nav{
     height: 100%;
     width: fit-content;
     display: flex;
-    letter-spacing: 1px;
+    letter-spacing: 1.2px;
     align-items: center;
     gap: 1.3vw;
     margin-right: 25vw;
 }
 #navpart2 h3{
     color:var(--white);
-    font-size: 1.28vw;
+    font-size: 1.3vw;
     transition: all 0.2s ease-out;
     cursor: pointer;
 }
 #navpart2 h3 i{
     color:var(--white);
-    font-size: 1vw;
-    margin-bottom: -2vw;
-    
+    font-size: 1vw; 
 }
 #navpart2 h3:hover {
     color: rgb(171, 169, 169);
@@ -215,13 +213,13 @@ nav{
     width: 10%;
     display: flex;
     justify-content: end;
-    gap: 0.8vw;
+    gap: 1vw;
     align-items: center;
 }
 
 #navpart3 i{
     color:var(--white);
-    font-size: 1.8vw;
+    font-size: 2vw;
     transition: all 0.2s ease-out;
 }
 #navpart3 i:hover{
@@ -240,11 +238,11 @@ nav{
     line-height: 0.64;
 }
 #h3{
-    height: 5.8vw;
+    height: 4.5vw;
     overflow: hidden;
 }
 #home1 h3{
-    font-size: 7.7vw;
+    font-size: 5.9vw;
     font-family: var(--headingfont);
     color: var(--green);
     background-blend-mode: mixed;
@@ -652,8 +650,9 @@ s{
     position: relative;
     text-decoration: underline;
     text-decoration-thickness: 12px;
-    text-decoration-color: var(--green);
+    text-decoration-color: #b5ee0cd7;
     text-decoration-style:double;
+    
 }
 
 #leftpart4{
@@ -1146,19 +1145,19 @@ s{
     justify-content: center;
 }
 #lefttext6 h1{
-    font-size: 3.5vw;
+    font-size: 4vw;
     line-height: 1;
     color: var(--white);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 #lefttext6 h1 span{
-    font-size: 4vw;
+    font-size: 4.4vw;
     color: var(--green);
     filter: drop-shadow(0 0 20px rgba(181, 238, 12, 0.4));
 }
 #lefttext6 button{
-    padding: 0.8vw 3.2vw;
-    font-size: 1.5vw;
+    padding: 0.7vw 3vw;
+    font-size: 1.4vw;
     background-color: var(--green);
     color: var(--black);
     border-radius: 5px;
@@ -1192,16 +1191,16 @@ s{
     opacity: 0;
     will-change: height;
     position: relative;
-    transform: translateY(100%);
+    transform: translateY(140%);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
 }
 #rightpart1{
-    width: 70%;
+    width: 85%;
     height: 30%;
-    border-radius: 20px;
+    border-radius: 4px;
     overflow: hidden;
 }
 #rightpart1:hover .uppart img{
@@ -1226,13 +1225,13 @@ s{
     align-items: center;
     justify-content: space-between;
     padding: 0 1vw;
-    background-color: #191616;
+    background-color: whitesmoke;
 }
 .downpart h3{
     width: 80%;
-    font-size: 1.2vw;
+    font-size: 1.4vw;
     line-height: 1.25;
-    color: var(--white);
+    color: black;
 }
 
 .downpart .circle3{
@@ -1257,9 +1256,9 @@ s{
     color: var(--green);   
 }
 #rightpart2{
-    width: 70%;
+    width: 85%;
     height: 30%;
-    border-radius: 20px;
+    border-radius: 4px;
     overflow: hidden;
 }
 #rightpart2:hover .uppart img{
@@ -1269,9 +1268,9 @@ s{
      scale: 1.02; 
   }
 #rightpart3{
-    width: 70%;
+    width: 85%;
     height: 30%;
-    border-radius: 20px;
+    border-radius: 4px;
     overflow: hidden;
 }
 #rightpart3:hover .uppart img{
@@ -1284,5 +1283,52 @@ s{
     width: 100vw;
     height: 100vh;
     background-color:var(--black);
-    padding: 1.5vw 5vw;
+    padding: 2vw 5vw;
+    display: flex;
+}
+#partleft7{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#partleft7 h1{
+    color: var(--white);
+    font-size: 3vw;
+    line-height: 1;
+}
+#partleft7 h3{
+    color: var(--white);
+    font-size: 2vw;
+    line-height: 1.2;
+    margin-top: 2vw;
+}
+#partleft7 span{
+    color: var(--green);
+    font-size: 3vw;
+    line-height: 1;
+}
+#partleft7 a{
+    text-decoration: none;
+    color: var(--green);
+    font-size: 3vw;
+    line-height: 1;
+}
+#partleft7 h4{
+    color: var(--white);
+    font-size: 1.6vw;
+    line-height: 1.2;
+    margin-top: 2vw;
+}
+#partright7 {
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+
+#partright7 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }

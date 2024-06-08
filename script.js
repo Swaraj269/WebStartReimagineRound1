@@ -587,18 +587,18 @@ liftpart.addEventListener('click', function() {
 });
 });
 
-window.addEventListener('mousemove', function(e){
-    const windowWidth = window.innerWidth;
-    const halfWidth = windowWidth / 2;
+// window.addEventListener('mousemove', function(e){
+//     const windowWidth = window.innerWidth;
+//     const halfWidth = windowWidth / 2;
 
-    if (e.x > halfWidth) {
-        gsap.to('#videocursor',{
-            x: e.x,
-            y: e.y,
-            duration: 0.2,
-        });
-    }
-});
+//     if (e.x > halfWidth) {
+//         gsap.to('#videocursor',{
+//             x: e.x,
+//             y: e.y,
+//             duration: 0.2,
+//         });
+//     }
+// });
 
 
 document.addEventListener("DOMContentLoaded", function() {
