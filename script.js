@@ -1,29 +1,51 @@
+gsap.registerPlugin(ScrollTrigger);
+
 const locoScroll = new LocomotiveScroll({
-    el: document.querySelector("main"),
-    smooth: true,
-  });
-  
-  gsap.registerPlugin(ScrollTrigger);
-  
-  ScrollTrigger.scrollerProxy("main", {
-    scrollTop(value) {
-      return arguments.length
-        ? locoScroll.scrollTo(value, 0, 0)
-        : locoScroll.scroll.instance.scroll.y;
-    },
-    getBoundingClientRect() {
-      return {
-        top: 0,
-        left: 0,
-        width: window.innerWidth,
-        height: window.innerHeight,
-      };
-    },
-    pinType: document.querySelector("main").style.transform ? "transform" : "fixed",
-  });
-  
-  ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
-  ScrollTrigger.refresh();
+  el: document.querySelector("main"),
+  smooth: true,
+  smartphone: true,
+  multiplier: 1.3,
+  firefoxMultiplier: 200,
+  tablet: {
+    smooth: true
+  },
+  smartphone: {
+    smooth: true
+  }
+});
+
+gsap.to("body", {
+  autoAlpha: 1
+});
+
+locoScroll.on("scroll", ScrollTrigger.update);
+
+ScrollTrigger.scrollerProxy("main", {
+  scrollTop(value) {
+    return arguments.length
+      ? locoScroll.scrollTo(value, 0, 0)
+      : locoScroll.scroll.instance.scroll.y;
+  },
+  getBoundingClientRect() {
+    return {
+      top: 0,
+      left: 0,
+      width: window.innerWidth,
+      height: window.innerHeight
+    };
+  },
+  pinType: document.querySelector("main").style.transform
+    ? "transform"
+    : "fixed"
+});
+
+// each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll. 
+ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+
+// after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
+ScrollTrigger.refresh();
+
+
 
 var phanter = document.querySelector('#panther');
 var homeh3 = document.querySelector('#home1 h3');
@@ -79,10 +101,6 @@ var soundbox5 = document.querySelector('.slide5 .soundbox');
 var soundon5 = document.querySelector(".slide5 .soundon i");
 var soundoff5 = document.querySelector(".slide5 .soundoff i");
 var images5 = document.querySelectorAll('.image5 img');
-var soundbox6 = document.querySelector('.slide6 .soundbox');
-var soundon6 = document.querySelector(".slide6 .soundon i");
-var soundoff6 = document.querySelector(".slide6 .soundoff i");
-var images6 = document.querySelectorAll('.image6 img');
 
 function loadingAndHomeAnimation(){
     var tl2 = gsap.timeline();
@@ -500,41 +518,35 @@ function thirdpagesliding(){
 thirdpagesliding();
 
 
-gsap.from("#leftpart h1", {
-    opacity: 0,
-    y:200,
-    scrollTrigger:{
-        trigger: "#leftpart h1",
-        scroller: "main",
-        markers: true,
-        start: "top 120%",
-        end: "top 90%",
-        scrub: true,
-    }
-})
-gsap.from(".line img", {
-    opacity: 0,
-    width: "0",
-    duration: 1.3,
-    scrollTrigger:{
-        trigger: "#leftpart",
-        scroller: "main",
-        start: "top 60%",
-        end: "top 15%",
-        scrub: true,
-    }
-})
-gsap.from("#leftpart4 button", {
-    opacity: 0,
-    duration: 1.3,
-    scrollTrigger:{
-        trigger: "#leftpart",
-        scroller: "main",
-        start: "top 60%",
-        end: "top 15%",
-        scrub: true,
-    }
-})
+
+document.addEventListener("DOMContentLoaded", function() {
+    gsap.from("#leftpart h1", {
+        opacity: 0,
+        y:20,
+        scrollTrigger:{
+            trigger: "#leftpart h1",
+            scroller: "main",
+            start: "top 70%",
+            end: "top 40%",
+            scrub:2,
+        }
+    })
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    gsap.from("#leftpart4 button", {
+        opacity: 0,
+        scrollTrigger:{
+            trigger: "#leftpart",
+            scroller: "main",
+            start: "top 40%",
+            end: "top 20%",
+            scrub:2,
+        }
+    })
+});
+document.addEventListener("DOMContentLoaded", function() {
+    
 video.addEventListener('click',function(){
     if(video.muted){
         gsap.to(liftpart, {
@@ -573,6 +585,7 @@ video.addEventListener('click', function() {
 liftpart.addEventListener('click', function() {
     video.muted = !video.muted;
 });
+});
 
 // window.addEventListener('mousemove', function(e){
 //     const windowWidth = window.innerWidth;
@@ -587,24 +600,27 @@ liftpart.addEventListener('click', function() {
 //     }
 // });
 
-var swiper = new Swiper(".p5swiper", {
-    loop: true,
-    spaceBetween: 10,
-    slidesPerView: 4,
-    freeMode: true,
-    watchSlidesProgress: true,
-  });
-  var swiper2 = new Swiper(".p5mySwiper2", {
-    loop: true,
-    spaceBetween: 10,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    thumbs: {
-      swiper: swiper,
-    },
-  });
+
+document.addEventListener("DOMContentLoaded", function() {
+    var swiper = new Swiper(".p5swiper", {
+        loop: true,
+        spaceBetween: 10,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesProgress: true,
+      });
+      var swiper2 = new Swiper(".p5mySwiper2", {
+        loop: true,
+        spaceBetween: 10,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        thumbs: {
+          swiper: swiper,
+        },
+      });
+});
 
   var slideIdx = 0;
   var intervalId = null;
@@ -808,44 +824,44 @@ function nextSlide4(){
 };
 document.addEventListener("DOMContentLoaded", insitializeSlide4);
 
-leftpartvideo4.addEventListener('click', function(){
+// Continue the function declaration for leftpartvideo4
+leftpartvideo4.addEventListener('click', function() {
     if (leftpartvideo4.muted) {
         leftpartvideo4.muted = false;
         soundoff4.style.display = 'none';
         soundon4.style.display = 'block';
-
-    } else {
-        leftpartvideo4.muted = true;
-        soundon4.style.display = 'none';
-        soundoff4.style.display = 'block';
-    }
-})
-soundbox4.addEventListener('click', function(){
-    if (leftpartvideo4.muted) {
-        leftpartvideo4.muted = false;
-        soundoff4.style.display = 'none';
-        soundon4.style.display = 'block';
-
     } else {
         leftpartvideo4.muted = true;
         soundon4.style.display = 'none';
         soundoff4.style.display = 'block';
     }
 });
+soundbox4.addEventListener('click', function() {
+    if (leftpartvideo4.muted) {
+        leftpartvideo4.muted = false;
+        soundoff4.style.display = 'none';
+        soundon4.style.display = 'block';
+    } 
+    else {
+        leftpartvideo4.muted = true;
+        soundon4.style.display = 'none';
+        soundoff4.style.display = 'block';
+    }
+});
 
+// Add the missing functions for slide 5
 var slideIdx5 = 0;
 var intervalId5 = null;
 
-
-function insitializeSlide5(){
+function insitializeSlide5() {
     images5[slideIdx5].classList.add("displaySlide");
-    intervalId5 = setInterval(nextSlide5, 5000);
+    intervalId5 = setInterval(nextSlide5, 4000);
 };
-function showSlide5(idx){
-    if(idx >= images5.length){
+
+function showSlide5(idx) {
+    if (idx >= images5.length) {
         slideIdx5 = 0;
-    }
-    else if(idx < 0){
+    } else if (idx < 0) {
         slideIdx5 = images5.length - 1;
     }
     images5.forEach(e => {
@@ -853,107 +869,59 @@ function showSlide5(idx){
     });
     images5[slideIdx5].classList.add("displaySlide");
 };
-function prevSlide5(){
+
+function prevSlide5() {
     clearInterval(intervalId5);
     slideIdx5--;
     showSlide5(slideIdx5);
 };
-function nextSlide5(){
+
+function nextSlide5() {
     slideIdx5++;
     showSlide5(slideIdx5);
 };
+
 document.addEventListener("DOMContentLoaded", insitializeSlide5);
 
-leftpartvideo5.addEventListener('click', function(){
+leftpartvideo5.addEventListener('click', function() {
     if (leftpartvideo5.muted) {
         leftpartvideo5.muted = false;
         soundoff5.style.display = 'none';
         soundon5.style.display = 'block';
-
-    } else {
+    } 
+    else {
         leftpartvideo5.muted = true;
         soundon5.style.display = 'none';
         soundoff5.style.display = 'block';
     }
-})
-soundbox5.addEventListener('click', function(){
+});
+soundbox5.addEventListener('click', function() {
     if (leftpartvideo5.muted) {
         leftpartvideo5.muted = false;
         soundoff5.style.display = 'none';
         soundon5.style.display = 'block';
-
-    } else {
+    } 
+    else {
         leftpartvideo5.muted = true;
         soundon5.style.display = 'none';
         soundoff5.style.display = 'block';
     }
 });
 
-var slideIdx6 = 0;
-var intervalId6 = null;
 
-
-function insitializeSlide6(){
-    images6[slideIdx6].classList.add("displaySlide");
-    intervalId6 = setInterval(nextSlide6, 6000);
-};
-function showSlide6(idx){
-    if(idx >= images6.length){
-        slideIdx6 = 0;
-    }
-    else if(idx < 0){
-        slideIdx6 = images6.length - 1;
-    }
-    images6.forEach(e => {
-        e.classList.remove("displaySlide");
+document.addEventListener("DOMContentLoaded", function() {
+    
+    gsap.to("#rightplace2", {
+        transform: "translateY(0%)",
+        opacity: 1,
+        scrollTrigger: {
+            trigger: "#page6",
+            scroller: "main",
+            start: "top 0%",
+            end: "top -100%",
+            scrub: 1,
+            pin: true,
+        }
     });
-    images6[slideIdx6].classList.add("displaySlide");
-};
-function prevSlide6(){
-    clearInterval(intervalId6);
-    slideIdx6--;
-    showSlide6(slideIdx6);
-};
-function nextSlide6(){
-    slideIdx6++;
-    showSlide6(slideIdx6);
-};
-document.addEventListener("DOMContentLoaded", insitializeSlide6);
 
-leftpartvideo6.addEventListener('click', function(){
-    if (leftpartvideo6.muted) {
-        leftpartvideo6.muted = false;
-        soundoff6.style.display = 'none';
-        soundon6.style.display = 'block';
-
-    } else {
-        leftpartvideo6.muted = true;
-        soundon6.style.display = 'none';
-        soundoff6.style.display = 'block';
-    }
-})
-soundbox6.addEventListener('click', function(){
-    if (leftpartvideo6.muted) {
-        leftpartvideo6.muted = false;
-        soundoff6.style.display = 'none';
-        soundon6.style.display = 'block';
-
-    } else {
-        leftpartvideo6.muted = true;
-        soundon6.style.display = 'none';
-        soundoff6.style.display = 'block';
-    }
 });
-
-gsap.to("#page6 #rightplace2", {
-    height : "100%",
-    scrollTrigger:{
-        trigger: "#page6",
-        scroller: "main",
-        start: "top 0",
-        end: "top -100%",
-        scrub: 2,
-        pin: true,
-    }
-})
-
