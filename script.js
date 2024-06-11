@@ -101,6 +101,8 @@ var soundbox5 = document.querySelector('.slide5 .soundbox');
 var soundon5 = document.querySelector(".slide5 .soundon i");
 var soundoff5 = document.querySelector(".slide5 .soundoff i");
 var images5 = document.querySelectorAll('.image5 img');
+var menu = document.querySelector("#menu");
+var cross = document.querySelector("#phonecross");
 
 function loadingAndHomeAnimation(){
     var tl2 = gsap.timeline();
@@ -216,6 +218,24 @@ window.addEventListener('mousemove',function(){
     }, 400);
 })
 
+menu.addEventListener('click', function(){
+    gsap.to("#phonemenu",{
+        duration: 0.4,
+        transform: "translateX(0%)",
+    })
+    gsap.from("#phonemenu h3",{
+        x: 100,
+        delay: 0.25,
+        duration: 0.3,
+        stagger: 0.05,
+    })
+})
+cross.addEventListener('click', function(){
+    gsap.to("#phonemenu",{
+        duration: 0.6,
+        transform: "translateX(calc(100vh - 5vw))",
+    })
+})
 function productmenudownanimation(){
     producttag.addEventListener('mouseover',function(){
         gsap.to("#products",{
@@ -506,11 +526,11 @@ function thirdpagesliding(){
 
     var trackpercentage = 0;
     leftsidebutton.addEventListener('click', function(e) {
-        if(trackpercentage >= -95) trackpercentage -= 20;
+        if(trackpercentage <= -5) trackpercentage += 20;
         track.style.transform = `translateX(${trackpercentage}%)`;
     })
     rightsidebutton.addEventListener('click', function(e) {
-        if(trackpercentage <= -5) trackpercentage += 20;
+        if(trackpercentage >= -95) trackpercentage -= 20;
         track.style.transform = `translateX(${trackpercentage}%)`;
     })
 }
