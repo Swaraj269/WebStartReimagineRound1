@@ -1157,7 +1157,6 @@ s{
     font-size: 4vw;
     line-height: 1;
     color: var(--white);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 #lefttext6 h1 span{
     font-size: 4.4vw;
@@ -1383,7 +1382,7 @@ footer{
 }
 #block2 h3{
     letter-spacing: 1px;
-    font-family: 'futura-light';
+    font-family: 'futura-medium';
 }
 #block3{
     height:58%;
@@ -1396,6 +1395,7 @@ footer{
     font-family: 'futura-light';
 }
 #block3 h1{
+    font-family: var(--parafont);
     color: var(--green);
 }
 #block4 h3{
@@ -1887,6 +1887,7 @@ footer{
         overflow: hidden;
     }
     #leftpart h1{
+        color: var(--black);
         font-size: 15vw;
     }
     #leftpart3 {
@@ -2385,7 +2386,7 @@ footer{
         font-size: 9vw;
         line-height: 1;
         color: var(--white);
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-family: var(--headingfont);
     }
     #lefttext62 h1 span{
         font-size: 10vw;
@@ -2523,8 +2524,9 @@ footer{
         width: 100vw;
         height: 50vh;
         background-color:var(--black);
-        padding: 2vw 5vw;
+        padding: 1vw 5vw;
         display: flex;
+        padding-top: 3vw;
     }
     #partleft7{
         width: 100%;
@@ -2535,12 +2537,12 @@ footer{
     }
     #partleft7 h1{
         color: var(--white);
-        font-size: 6vw;
+        font-size: 8vw;
         line-height: 1;
     }
     #partleft7 h3{
         color: var(--white);
-        font-size: 4.5vw;
+        font-size: 6vw;
         line-height: 1.2;
         margin-top: 6vw;
     }
@@ -2557,14 +2559,82 @@ footer{
     }
     #partleft7 h4{
         color: var(--white);
-        font-size: 3.6vw;
+        font-size: 5vw;
         line-height: 1.2;
         margin-top: 5vw;
     }
     #partright7 {
         display: none;
     }
+    footer {
+        height: 112vh;
+        width: 100vw;
+        position: relative;
+        overflow-y: visible;
+    }
+    #onea {
+        width: 43vw;
+    }
+    #block1 {
+        height: 13%;
+    }
+    #block2 {
+        height: 25%;
+        line-height: 1.4;
+    }
+    #block h1 {
+        color: var(--green);
+        font-family: var(--parafont);
+        font-size: 7vw;
+    }
+    #block2 h3 {
+        font-size: 4.6vw;
+    }
+    #block3 h1{
+        font-family: var(--parafont);
+    }
+    #block3 {
+        height: 100%;
+        flex-direction: column;
+    }
+    #a1 {
+        height: 50%;
+        line-height: 4vh;
+        width: 100%;
+    }
+    #a2 {
+        width: 100%;
+        height: 50%;
+        flex-direction: column;
+    }
+    #a21 {
+        height: 100%;
+        width: 50%;
+        padding-top: 4vh;
+        line-height: 4vh;
+    }
+    #a22{
+        height: 100%;
+        width: 50%;
+        padding-top: 4vh;
+        line-height: 4.5vh;
+    }
+    #a3 {
+        width: 100%;
+        height: 60%;
+        margin-top: 22vw;
+    }
+    #panther-img {
+        position: absolute;
+        top: 69%;
+        left: 29%;
+        scale: 1;
+    }
     
+    #block4 {
+        margin-top: 6vh;
+        justify-content: start;
+    }
     
 }
 

@@ -949,13 +949,13 @@ document.addEventListener("DOMContentLoaded", function() {
 document.addEventListener("DOMContentLoaded", function() {
     
     gsap.to("#rightplace62", {
-        transform: "translateX(-52%)",
+        transform: "translateX(-50%)",
         opacity: 1,
         scrollTrigger: {
             trigger: "#phonepage6",
             scroller: "main",
-            start: "top 0%",
-            end: "top 50%",
+            start: "top 50%",
+            end: "top -50%",
             scrub: 1,
         }
     });
