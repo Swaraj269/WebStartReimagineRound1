@@ -547,7 +547,7 @@ document.addEventListener("DOMContentLoaded", function() {
             trigger: "#leftpart h1",
             scroller: "main",
             start: "top 70%",
-            end: "top 40%",
+            end: "top 50%",
             scrub:2,
         }
     })
@@ -559,8 +559,8 @@ document.addEventListener("DOMContentLoaded", function() {
         scrollTrigger:{
             trigger: "#leftpart",
             scroller: "main",
-            start: "top 40%",
-            end: "top 20%",
+            start: "top 70%",
+            end: "top 40%",
             scrub:2,
         }
     })
@@ -945,3 +945,20 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    
+    gsap.to("#rightplace62", {
+        transform: "translateX(-52%)",
+        opacity: 1,
+        scrollTrigger: {
+            trigger: "#phonepage6",
+            scroller: "main",
+            start: "top 0%",
+            end: "top 50%",
+            scrub: 1,
+        }
+    });
+
+});
+

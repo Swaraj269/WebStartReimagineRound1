@@ -1288,6 +1288,10 @@ s{
  #rightpart3:hover .downpart:hover h3{
      scale: 1.02; 
   }
+
+#phonepage6{
+    display: none;
+}
 #page7{
     width: 100vw;
     height: 100vh;
@@ -1577,7 +1581,7 @@ s{
     }
 
     #page3{
-        height: 60vh;
+        height: 66vh;
     }
     #blackscreen{
         position: absolute;
@@ -1628,7 +1632,7 @@ s{
     .productcard{
         flex-shrink: 0;
         height: 100%;
-        width: 50%;
+        width: 70%;
         /* background-color: rgb(193, 175, 212); */
         border: 4px solid var(--black);
         position: relative;
@@ -1653,9 +1657,9 @@ s{
         z-index: -1;
     }
     .uppercard img{
-        width: 70%;
-        height: 70%;
-        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
         transition: all 0.2s linear ;
     }
     .productcard:hover .productimage{
@@ -1678,11 +1682,11 @@ s{
         gap: 1vw;
     }
     .lower1 h1{
-        font-size: 2.9vw;
+        font-size: 3.9vw;
     }
     .lower1 h2{
         text-align: center;
-        font-size: 2.7vw;
+        font-size: 3.7vw;
     }
     .lower2{
         width: 100%;
@@ -1692,7 +1696,7 @@ s{
         justify-content: center;
     }
     s{
-        font-size: 3vw;
+        font-size: 3.2vw;
         margin-right: 0.4vw;
     }
     .lower3{
@@ -1705,7 +1709,7 @@ s{
     }
     .lower3 button{
         padding: 1.3vw 5.5vw;
-        font-size: 2.6vw;
+        font-size: 3.6vw;
         background-color: black;
         border: 2px solid #fefefe;
         font-weight: bold;
@@ -2266,35 +2270,39 @@ s{
         border: 2px solid var(--black);
     }
     #page6{
+        display: none;
+    }
+    #phonepage6{
+        display: initial;
         width: 100vw;
-        height: 100vh;
+        height:40vh;
         background-color:black;
-        padding: 1.5vw 5vw;
+        padding: 2vw 5vw;
         display: flex;
         flex-direction: column;
         position: relative;
     }
-    #page6 #lefttext6{
+    #lefttext62{
         width: 100%;
-        height: 20%;
+        height: 50%;
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
         justify-content: center;
+        align-items: flex-start;
     }
-    #lefttext6 h1{
+    #lefttext62 h1{
         font-size: 9vw;
         line-height: 1;
         color: var(--white);
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
-    #lefttext6 h1 span{
-        font-size: 10.4vw;
+    #lefttext62 h1 span{
+        font-size: 10vw;
         color: var(--green);
         filter: drop-shadow(0 0 20px rgba(181, 238, 12, 0.4));
     }
-    #lefttext6 button{
-        padding: 1.7vw 6vw;
+    #lefttext62 button{
+        padding: 1.2vw 6vw;
         font-size: 4vw;
         background-color: var(--green);
         color: var(--black);
@@ -2303,7 +2311,7 @@ s{
         position: relative;
         border: 2px solid var(--green);
     }
-    #lefttext6 button::after{
+    #lefttext62 button::after{
         content : "";
         height: 100%;
         position: absolute;
@@ -2315,47 +2323,49 @@ s{
         width: 0;
         transition: all 0.4s ease-out;
     }
-    #lefttext6 button:hover{
+    #lefttext62 button:hover{
         cursor: pointer;
         color: var(--white);
         border-color: var(--black);
     }
-    #lefttext6 button:hover::after{
+    #lefttext62 button:hover::after{
         width: 100%;
     }
-    #rightplace2{
+    #rightplace62{
         width: 100%;
-        height: 80%;
-        opacity: 0;
-        will-change: height;
+        height: 50%;
+        opacity: 1;
         position: relative;
-        transform: translateY(240%);
+        transform: translateX(0%);
         display: flex;
         align-items: center;
         justify-content: space-evenly;
+        margin-top: 2vw;
+        gap: 2vw;
     }
-    #rightpart1{
+    #rightpart61{
         width: 100%;
-        height: 25%;
+        height: 100%;
         border-radius: 4px;
         overflow: hidden;
+        flex-shrink: 0;
     }
-    #rightpart1:hover .uppart img{
+    #rightpart61:hover .uppart img{
        scale: 1.02; 
     }
-    #rightpart1:hover .downpart:hover h3{
+    #rightpart61:hover .downpart:hover h3{
         scale: 1.02; 
      }
-    .uppart{
+    .uppart2{
         width: 100%;
         height: 60%;
     }
-    .uppart img{
+    .uppart2 img{
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
-    .downpart{
+    .downpart2{
         width: 100%;
         height: 40%;
         display: flex;
@@ -2364,16 +2374,16 @@ s{
         padding: 0 1vw;
         background-color: whitesmoke;
     }
-    .downpart h3{
+    .downpart2 h3{
         width: 80%;
-        font-size: 3.6vw;
+        font-size: 4.4vw;
         line-height: 1.25;
         color: black;
     }
     
-    .downpart .circle3{
-        width: 34px;
-        height: 34px;
+    .downpart2 .circle32{
+        width: 42px;
+        height: 42px;
         border-radius: 50%;
         background-color: var(--green);
         display: flex;
@@ -2381,40 +2391,42 @@ s{
         justify-content: center;
         transition: all 0.3s linear;
     }
-    .circle3:hover{
+    .circle32:hover{
         background-color: #010101;
     }
-    .downpart .circle3 i{
-        font-size: 4.3vw;
+    .downpart2 .circle32 i{
+        font-size: 5vw;
         color: var(--black);
     }
-    .circle3:hover i{
-        font-size: 1.3vw;
+    .circle32:hover i{
+        font-size: 5vw;
         color: var(--green);   
     }
-    #rightpart2{
+    #rightpart62{
         width: 100%;
-        height: 25%;
+        height: 100%;
         border-radius: 4px;
         overflow: hidden;
+        flex-shrink: 0;
     }
-    #rightpart2:hover .uppart img{
+    #rightpart62:hover .uppart img{
+       scale: 1.02; 
+    }
+    #rightpart62:hover .downpart:hover h3{
         scale: 1.02; 
      }
-     #rightpart2:hover .downpart:hover h3{
-         scale: 1.02; 
-      }
-    #rightpart3{
+     #rightpart63{
         width: 100%;
-        height: 25%;
+        height: 100%;
         border-radius: 4px;
         overflow: hidden;
+        flex-shrink: 0;
     }
-    #rightpart3:hover .uppart img{
+    #rightpart63:hover .uppart img{
+       scale: 1.02; 
+    }
+    #rightpart63:hover .downpart:hover h3{
         scale: 1.02; 
-     }
-    #rightpart3:hover .downpart:hover h3{
-         scale: 1.02; 
     }
     #page7{
         width: 100vw;
