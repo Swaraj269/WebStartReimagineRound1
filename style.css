@@ -63,6 +63,8 @@ footer{
 }
 #block2 h3{
     font-family: var(--parafont);
+    margin: 0;
+    padding: 0;
 }
 #block3{
     height:58%;
@@ -116,17 +118,19 @@ h3 {
 
 @media(max-width:600px){
     footer {
-        height: 100%;
+        height: 130%;
         width: 100vw;
         position: relative;
-    }
-    #block1 {
-        width: 100%;
+        overflow-y: visible;
     }
     #onea {
-        width: 18vw;
+        width: 23vw;
+    }
+    #block1 {
+        height: 15%;
     }
     #block2 {
+        height: 25%;
         padding-bottom: 4vw;
     }
     h1 {
@@ -138,39 +142,43 @@ h3 {
         font-size: 2.2vw;
     }
     #block3 {
+        height: 100%;
         padding-top: 4vw;
         flex-direction: column;
     }
     #a1 {
-        height: 33%;
+        height: 50%;
         width: 100%;
+        margin-top: -10vh;
     }
     #a2 {
         width: 100%;
-        height: 33%;
+        height: 50%;
         flex-direction: column;
     }
     #a21 {
+        height: 100%;
         width: 50%;
         padding-top: 4vh;
         line-height: 4.5vh;
     }
     #a22{
+        height: 100%;
         width: 50%;
         padding-top: 4vh;
         line-height: 4.5vh;
     }
     #a3 {
         width: 100%;
-        height: 33%;
-        padding-top: 4vh;
+        height: 60%;
+        padding-top: 8vh;
     }
     #a3 h1 {
         color: var(--white);
     }
     #panther-img {
         position: absolute;
-        top: 49%;
+        top: 69%;
         left: 29%;
         scale: 1;
     }
@@ -197,6 +205,11 @@ h3 {
         position: absolute;
         top: 54%;
         left: 65%;
+    }
+    #block4 {
+        margin-top: 4vh;
+        justify-content: start;
+        line-height: 4.5vh;
     }
 }
 @media(min-width:901px) and (max-width:1200px) {
