@@ -1610,7 +1610,7 @@ footer{
         height: 50vw;
         background-color: var(--green);
         position: absolute;
-        top: 45%;
+        top: 40%;
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: -1;
@@ -1621,7 +1621,7 @@ footer{
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -60%);
         padding: 1vw;
         z-index: 6;
     }
@@ -2142,7 +2142,8 @@ footer{
         gap: 2vw;
     }
     .buttons button{
-        font-size: 2.2vw;
+        display: none;
+        font-size: 2.8vw;
         padding: 0.8vw 2vw;
         border: 3px solid rgb(99, 96, 96);
         background-color: var(--white);
@@ -2178,10 +2179,11 @@ footer{
         transition: all 0.4s ease-out;
     }
     .green button{
+        display: initial;
         background-color: var(--black);
         color: var(--white);
         border: 2px solid var(--black);
-        padding: 0.7vw 2.4vw;
+        padding: 1.2vw 4vw;
         margin-bottom: 3px;
     }
     .green button:hover{

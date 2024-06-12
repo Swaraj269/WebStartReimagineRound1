@@ -546,7 +546,7 @@ document.addEventListener("DOMContentLoaded", function() {
         scrollTrigger:{
             trigger: "#leftpart h1",
             scroller: "main",
-            start: "top 60%",
+            start: "top 80%",
             end: "top 50%",
             scrub:2,
         }
