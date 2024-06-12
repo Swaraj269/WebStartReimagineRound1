@@ -546,7 +546,7 @@ document.addEventListener("DOMContentLoaded", function() {
         scrollTrigger:{
             trigger: "#leftpart h1",
             scroller: "main",
-            start: "top 70%",
+            start: "top 60%",
             end: "top 50%",
             scrub:2,
         }
@@ -949,13 +949,13 @@ document.addEventListener("DOMContentLoaded", function() {
 document.addEventListener("DOMContentLoaded", function() {
     
     gsap.to("#rightplace62", {
-        transform: "translateX(-50%)",
+        transform: "translateX(-200%)",
         opacity: 1,
         scrollTrigger: {
             trigger: "#phonepage6",
             scroller: "main",
             start: "top 50%",
-            end: "top -50%",
+            end: "top 20%",
             scrub: 1,
         }
     });
