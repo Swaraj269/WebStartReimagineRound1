@@ -1441,7 +1441,9 @@ footer{
 }
 
 @media(max-width:600px){
-    
+    main{
+        background-color: #010101;
+    }
     #loadingtext{
         align-items: center;
     }
@@ -1593,7 +1595,7 @@ footer{
     #page2{
         width: 100vw;
         height: 70vh;
-        background-color: var(--black);
+        background-color: #ffffff;
         position: relative;
     }
     .swiper-slide {
@@ -1610,18 +1612,18 @@ footer{
         height: 50vw;
         background-color: var(--green);
         position: absolute;
-        top: 40%;
+        top: 20vw;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, 0vw);
         z-index: -1;
     }
     .swiper-slide .photo{
         width: 55vw;
         height: 55vw;
         position: absolute;
-        top: 50%;
+        top: 25%;
         left: 50%;
-        transform: translate(-50%, -60%);
+        transform: translate(-50%, 0);
         padding: 1vw;
         z-index: 6;
     }
@@ -1634,9 +1636,9 @@ footer{
         padding: 0 5vw;
         width: 100%;
         position: absolute;
-        top: 35%;
+        top: 35vw;
         left: 50%;
-        transform: translate(-50%, -35%);
+        transform: translate(-50%, -0vw);
     }
     .text h1{
         font-family: var(--headingfont);
@@ -1650,9 +1652,9 @@ footer{
     }
     .info{
         position: absolute;
-        top: 80%;
+        top: 100vw;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -0vw);
     }
     .infotext{
         font-family: var(--headingfont);
@@ -1672,7 +1674,7 @@ footer{
     }
 
     #page3{
-        height: 66vh;
+        height: 80vh;
     }
     #blackscreen{
         position: absolute;
@@ -1699,7 +1701,7 @@ footer{
     }
     .productcards{
         width: 100%;
-        height: 60%;
+        height: 70%;
         position: relative;
         background-color: var(--white);
     }
@@ -1730,7 +1732,7 @@ footer{
     }
     .uppercard{
         width: 100%;
-        height: 50%;
+        height: 60%;
         background-color: #FFFFFF;
         position: relative;
         display: flex;
@@ -1761,7 +1763,7 @@ footer{
     }
     .lowercard{
         width: 100%;
-        height: 50%;
+        height: 40%;
     }
     .lower1{
         width: 100%;
