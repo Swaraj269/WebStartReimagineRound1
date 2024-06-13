@@ -478,24 +478,27 @@ secondpageanimation();
 
 function thirdpagesliding(){
     const track = document.querySelector('#productslist');
+    const leftsidebutton = document.querySelector('#leftsidebutton');
+    const rightsidebutton = document.querySelector('#rightsidebutton');
 
     let isDragging = false;
     let startX = 0;
     let prevPercentage = 0;
     const minPercentage = -95;
     const maxPercentage = 0;
+    let trackPercentage = 0;
 
-
-    window.addEventListener('mousedown', function(e) {
+    function handleDragStart(e) {
         isDragging = true;
-        startX = e.clientX;
+        startX = e.clientX || e.touches[0].clientX;
         track.dataset.mouseDownAt = startX;
-    });
+    }
 
-    window.addEventListener('mousemove', function(e) {
+    function handleDragMove(e) {
         if (!isDragging) return;
 
-        const mouseDelta = e.clientX - startX;
+        const currentX = e.clientX || e.touches[0].clientX;
+        const mouseDelta = currentX - startX;
         const maxDelta = window.innerWidth;
 
         const percentage = (mouseDelta / maxDelta) * 100;
@@ -508,31 +511,37 @@ function thirdpagesliding(){
         }
 
         track.dataset.percentage = nextPercentage;
-
         track.style.transform = `translateX(${nextPercentage}%)`;
-    });
+    }
 
-    window.addEventListener('mouseup', function(e) {
+    function handleDragEnd(e) {
         if (!isDragging) return;
-        
         isDragging = false;
         prevPercentage = parseFloat(track.dataset.percentage);
-    });
+    }
 
-
-    window.addEventListener('dragstart', function(e) {
+    function preventDefault(e) {
         e.preventDefault();
-    });
+    }
+    window.addEventListener('mousedown', handleDragStart);
+    window.addEventListener('mousemove', handleDragMove);
+    window.addEventListener('mouseup', handleDragEnd);
+    window.addEventListener('touchstart', handleDragStart);
+    window.addEventListener('touchmove', handleDragMove);
+    window.addEventListener('touchend', handleDragEnd);
 
-    var trackpercentage = 0;
-    leftsidebutton.addEventListener('click', function(e) {
-        if(trackpercentage <= -5) trackpercentage += 20;
-        track.style.transform = `translateX(${trackpercentage}%)`;
-    })
-    rightsidebutton.addEventListener('click', function(e) {
-        if(trackpercentage >= -95) trackpercentage -= 20;
-        track.style.transform = `translateX(${trackpercentage}%)`;
-    })
+    window.addEventListener('dragstart', preventDefault);
+
+    leftsidebutton.addEventListener('click', function() {
+        if (trackPercentage <= -5) trackPercentage += 20;
+        if (trackPercentage > maxPercentage) trackPercentage = maxPercentage;
+        track.style.transform = `translateX(${trackPercentage}%)`;
+    });
+    rightsidebutton.addEventListener('click', function() {
+        if (trackPercentage >= -95) trackPercentage -= 20;
+        if (trackPercentage < minPercentage) trackPercentage = minPercentage;
+        track.style.transform = `translateX(${trackPercentage}%)`;
+    });
 }
 
 thirdpagesliding();
@@ -546,8 +555,8 @@ document.addEventListener("DOMContentLoaded", function() {
         scrollTrigger:{
             trigger: "#leftpart h1",
             scroller: "main",
-            start: "top 65%",
-            end: "top 50%",
+            start: "top 80%",
+            end: "top 70%",
             scrub:2,
         }
     })
@@ -560,7 +569,7 @@ document.addEventListener("DOMContentLoaded", function() {
             trigger: "#leftpart",
             scroller: "main",
             start: "top 70%",
-            end: "top 40%",
+            end: "top 60%",
             scrub:2,
         }
     })

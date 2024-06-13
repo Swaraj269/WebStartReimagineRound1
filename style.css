@@ -482,6 +482,7 @@ nav{
 #productslist{
    height: 100%;
    width: 100%;
+   transition: transform 0.2s linear;
    display: flex;
    position: absolute;
    gap: 0.7vw;
@@ -1392,7 +1393,7 @@ footer{
 }
 #block3 h3{
     letter-spacing: 1px;
-    font-family: 'futura-light';
+    font-family: 'futura-medium';
 }
 #block3 h1{
     font-family: var(--parafont);
@@ -1406,7 +1407,7 @@ footer{
     height:100%;
     width:24% ;
     font-size:2.1vh;
-    line-height:4.3vh;
+    line-height:5vh;
 }
 #a2{
     height: 100%;
@@ -1414,7 +1415,7 @@ footer{
     display: flex;
     align-items: start;
     font-size:2.1vh;
-    line-height:4.3vh;
+    line-height:5vh;
 }
 #a21{
     width: 55%;
@@ -1715,13 +1716,13 @@ footer{
         background-color: var(--black);
     }
     #productslist{
-       height: 100%;
-       width: 100%;
-       display: flex;
-       position: absolute;
-       gap: 1.3vw;
-       transform: translate(0%, 0%);
-    }
+        height: 100%;
+        width: 100%;
+        transition: transform 0.1s linear;
+        display: flex;
+        position: absolute;
+        gap: 0.7vw;
+     }
     .productcard{
         flex-shrink: 0;
         height: 100%;
@@ -2090,6 +2091,12 @@ footer{
     }
     .next{
         right: 5%;
+    }
+    .productcards{
+        width: 100%;
+        height: 70%;
+        position: relative;
+        background-color: var(--white);
     }
     .namepricing{
         width: 100%;
