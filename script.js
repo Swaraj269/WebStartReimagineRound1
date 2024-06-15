@@ -523,12 +523,12 @@ function thirdpagesliding(){
     function preventDefault(e) {
         e.preventDefault();
     }
-    window.addEventListener('mousedown', handleDragStart);
-    window.addEventListener('mousemove', handleDragMove);
-    window.addEventListener('mouseup', handleDragEnd);
-    window.addEventListener('touchstart', handleDragStart);
-    window.addEventListener('touchmove', handleDragMove);
-    window.addEventListener('touchend', handleDragEnd);
+    track.addEventListener('mousedown', handleDragStart);
+    track.addEventListener('mousemove', handleDragMove);
+    track.addEventListener('mouseup', handleDragEnd);
+    track.addEventListener('touchstart', handleDragStart);
+    track.addEventListener('touchmove', handleDragMove);
+    track.addEventListener('touchend', handleDragEnd);
 
     window.addEventListener('dragstart', preventDefault);
 
@@ -963,8 +963,8 @@ document.addEventListener("DOMContentLoaded", function() {
         scrollTrigger: {
             trigger: "#phonepage6",
             scroller: "main",
-            start: "top 50%",
-            end: "top 20%",
+            start: "top 30%",
+            end: "top -10%",
             scrub: 1,
         }
     });

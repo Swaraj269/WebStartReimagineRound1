@@ -112,6 +112,7 @@ main{
     object-position: 0 -2%;
     object-fit: cover;
     opacity: 0;
+    
 }
 #panther{
     transition: all 0.4s ease-in-out;
@@ -2648,3 +2649,6 @@ footer{
     }
     
 }
+
+
+    
