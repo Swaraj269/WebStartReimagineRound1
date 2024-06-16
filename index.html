@@ -2,645 +2,75 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
     rel="stylesheet"
 />
-    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
-    <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-/>
-    <title>Beast Life</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
 </head>
 <body>
-    <div id="loader">
-        <div id="loadingtext">
-            <h2><span id="loadercounter">0</span>%</h2>
-            <h1>Get Ready to Enter Beast Life</h1>
-            
+    <div id="loader" class="bg-[#010101] w-screen h-screen z-[99] fixed flex justify-center items-center">
+        <div id="loadertext" class="text-[#fff] flex flex-col  justify-center items-center overflow-hidden ">
+            <h1 class="text-3xl">BEAST LIFE</h1>
+            <h1 id="counter" class="text-center text-[#B4EF02]">100%</h1>
         </div>
-    </div>
-    <main>
-        <div data-scroll data-scroll-speed="-2" id="page1">
-            <div id="panther">
-                <img src="./panther.svg" class="pantherimg" alt="" srcset="">
-            </div>
-            <div id="homeimg">
-                <img src="./homepageimg.png" alt="">
-            </div>
-            <nav>
-                <div id="navpart1">
-                    <img src="./beastlife-whitelogo.svg"  alt="">
+        <div id="photos" class="h-screen w-screen hidden ">
+            <div id="images" class="h-full w-full relative">
+                <div class="absolute top-2/4 left-2/4 translate-y-[-50%] translate-x-[-50%]  opacity-0  h-[20vw] w-[16vw] bg-[#010101] " id="image1">
+                    <img class="h-full w-full object-cover" src="https://cdn.shopify.com/s/files/1/0690/7723/7977/files/Image05_36f1d9a3-a3f1-400f-931f-dda79fe9b3c3_720x720.jpg?v=1715278358" alt="">
                 </div>
-                <div id="products">
-                    <div id="productsname">
-                        <h3 id="shop"><span class="shop" id="shopall">shop</span>All</h3>
-                        <h3 id="protein"><span class="shop" id="shopprotein">shop</span>Protein</h3>
-                        <h3 id="creatine"><span class="shop" id="shopcreatine">shop</span>Creatine</h3>
-                        <h3 id="BCCA"><span class="shop" id="shopBCCA">shop</span>BCCA</h3>
-                        <h3 id="clothing"><span class="shop" id="shopclothing">shop</span>CLOTHING</h3>
-                        <h3 id="accessories"><span class="shop" id="shopaccessories">shop</span>ACCESSORIES</h3>
-                    </div>
-                    <div id="productphoto">
-                        <img src="https://cdn.shopify.com/s/files/1/0690/7723/7977/t/4/assets/d543ec9c521c--shopall-219a3f.jpg?v=1715186587" alt="">
-                    </div>
+                <div class="absolute top-[45%] left-[35%] translate-y-[-50%] translate-x-[-50%] opacity-0  h-[20vw] w-[24vw] bg-[#010101] " id="image2">
+                    <img class="h-full w-full object-cover " src="https://cdn.shopify.com/s/files/1/0690/7723/7977/files/Image06_e7679616-b66f-4b6f-b1c5-53adbbf8de62_720x720.jpg?v=1715278358" alt="">
                 </div>
-                <div id="navpart2">
-                    <h3 id="producttag">Product<span><i class="ri-arrow-down-s-fill"></i></span> </h3>
-                    <h3>Our Story</h3>
-                    <h3>Authenticity Guaranteed</h3>
-                    <h3>Blogs</h3>
+                <div class="absolute top-[35%] left-[65%] translate-y-[-50%] translate-x-[-50%] opacity-0 z-10 h-[25vw] w-[18vw] bg-[#010101] " id="image4">
+                    <img class="h-full w-full object-cover " src="https://cdn.shopify.com/s/files/1/0690/7723/7977/files/Image07_51f2d9f3-83af-4192-a58c-bb92525d8efb_720x720.jpg?v=1715278358" alt="">
                 </div>
-                <div id="navpart3">
-                    <i class="ri-search-line"></i>
-                    <i id="profile" class="ri-user-3-fill"></i>
-                    <i class="ri-shopping-cart-2-fill"></i>
-                    <i id="menu" class="ri-menu-line"></i>
+                <div class="absolute top-[75%] left-[34%] translate-y-[-50%] translate-x-[-50%] opacity-0  h-[15vw] w-[25vw] bg-[#010101] " id="image5">
+                    <img class="h-full w-full object-cover " src="https://cdn.shopify.com/s/files/1/0690/7723/7977/files/Image-02_720x720.jpg?v=1715100774" alt="">
                 </div>
-                <div id="phonemenu">
-                    <div id="phonecross">
-                        <i class="ri-close-line"></i>
-                    </div>
-                    <h3>Product</h3>
-                    <h3>Authenticity Guaranteed</h3>
-                    <h3>Our Story</h3>
-                    <h3>Blogs</h3>
-                    <h3>Profile</h3>
+                <div class="absolute top-[75%] left-[65%] translate-y-[-50%] translate-x-[-50%] opacity-0  h-[15vw] w-[24vw] bg-[#010101] " id="image3">
+                    <img class="h-full w-full object-cover " src="https://cdn.shopify.com/s/files/1/0690/7723/7977/files/Image-04_42d43c89-5531-429d-b0c8-8f574c5d01b6_720x720.jpg?v=1715100776" alt="">
                 </div>
-            </nav>
-            <div id="homepage">
-                <div id="home1">
-                    <div id="h3"><h3>Activate the</h3></div>
-                    <div id="h1"><h1>BEAST LIFE</h1></div>
+                <div class="absolute top-[40%] left-[20%] translate-y-[-50%] translate-x-[-50%] opacity-0  h-[22vw] w-[18vw] bg-[#010101] " id="image6">
+                    <img class="h-full w-full object-cover " src="https://cdn.shopify.com/s/files/1/0690/7723/7977/files/Image-05_891cb73c-1bde-4a9a-b800-f0c46e484e6a_720x720.jpg?v=1715100187" alt="">
                 </div>
-                <div id="home2"><button>Check It Out</button></div>
-            </div>
-        </div>
-        <div id="page2">
-            <div id="seccursor">
-                <h5>Drag!</h5>
-            </div>
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <div class="circle show1"></div>
-                    <div class="photo show2"><img src="./page2suppliment.png" alt=""></div>
-                    <div class="text"><h1>SUPPLIMENT</h1></div>
-                    <div class="info">
-                        <div class="infotext">suppliment</div>
-                        <button>Shop Now</button>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="circle show1"></div>
-                    <div class="photo show2"><img src="./page2clothing.png" alt=""></div>
-                    <div class="text"><h1>CLOTHING</h1></div>
-                    <div class="info">
-                        <div class="infotext">clothing</div>
-                        <button>Shop Now</button>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="circle show1"></div>
-                    <div class="photo show2"><img src="./page2accessories.png" alt=""></div>
-                    <div class="text t2"><h1>ACCESSORIES</h1></div>
-                    <div class="info">
-                        <div class="infotext">Accessories</div>
-                        <button>Shop Now</button>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-button-next" style="color:#B7EE0C; padding-right:5vw;"></div>
-                <div class="swiper-button-prev" style="color:#B7EE0C; padding-left:5vw;"></div>
-            </div>
-        </div>
-        <div id="page3">
-            <div id="blackscreen"></div>
-            <div id="headingthirdpage">
-                <h1>Town Talk Products</h1>
-            </div>
-            <div class="productcards">
-                <div id="blackscreen2"></div>
-                <div id="productslist" data-mouse-down-at="0" data-prev-percentage = "0">
-                    <div class="productcard" draggable="false">
-                        <div class="uppercard">
-                            <img class="productpanther" src="./panther.svg" alt="">
-                            <img class="productimage" src="./smallproteinpack.png" alt="">
-                        </div>
-                        <div class="lowercard">
-                            <div class="lower1">
-                                <h1>SUPPLIMENT</h1>
-                                <h2>Isorich Blend Whey Protein with Ultrasorb Tech | 924G</h2>
-                            </div>
-                            <div class="lower2">
-                                <h3><s>&#8377 3,999</s><span>₹3,190</span></h3>
-                            </div>
-                            <div class="lower3">
-                                <button>Get It Now</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="productcard" draggable="false">
-                        <div class="uppercard">
-                            <img class="productpanther" src="./panther.svg" alt="">
-                            <img class="productimage" src="./creatinesmallpack.png" alt="">
-                        </div>
-                        <div class="lowercard">
-                            <div class="lower1">
-                                <h1>SUPPLIMENT</h1>
-                                <h2 id="creatinetext">Super Micronized Creatine Monohydrate | 100G</h2>
-                            </div>
-                            <div class="lower2">
-                                <h3><s>&#8377 749</s><span>₹549</span></h3>
-                            </div>
-                            <div class="lower3">
-                                <button>Get It Now</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="productcard" draggable="false">
-                        <div class="uppercard">
-                            <img class="productpanther" src="./panther.svg" alt="">
-                            <img class="productimage" src="./bigproteinpack.png" alt="">
-                        </div>
-                        <div class="lowercard">
-                            <div class="lower1">
-                                <h1>SUPPLIMENT</h1>
-                                <h2>Isorich Blend Whey Protein with Ultrasorb Tech | 1848G</h2>
-                            </div>
-                            <div class="lower2">
-                                <h3><s>&#8377 7,699</s><span>₹6,159</span></h3>
-                            </div>
-                            <div class="lower3">
-                                <button>Get It Now</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="productcard" draggable="false">
-                        <div class="uppercard">
-                            <img class="productpanther" src="/panther.svg" alt="">
-                            <img class="productimage" src="./bccapowder.png" alt="">
-                        </div>
-                        <div class="lowercard">
-                            <div class="lower1">
-                                <h1>SUPPLIMENT</h1>
-                                <h2 id="creatinetext">Beast Recovery BCAA | Mango | 240G</h2>
-                            </div>
-                            <div class="lower2">
-                                <h3><s>&#8377 1,399</s><span>₹1,119</span></h3>
-                            </div>
-                            <div class="lower3">
-                                <button>Get It Now</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="productcard" draggable="false">
-                        <div class="uppercard">
-                            <img class="productpanther" src="/panther.svg" alt="">
-                            <img class="productimage" src="./creatinephoto.png" alt="">
-                        </div>
-                        <div class="lowercard">
-                            <div class="lower1">
-                                <h1>SUPPLIMENT</h1>
-                                <h2 id="creatinetext">Super Micronized Creatine Monohydrate | 249G</h2>
-                            </div>
-                            <div class="lower2">
-                                <h3><s>&#8377 1,499</s><span>₹999</span></h3>
-                            </div>
-                            <div class="lower3">
-                                <button>Get It Now</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="productcard" draggable="false">
-                        <div class="uppercard">
-                            <img class="productpanther" src="/panther.svg" alt="">
-                            <img class="productimage" src="./sipperimage.png" alt="">
-                        </div>
-                        <div class="lowercard">
-                            <div class="lower1">
-                                <h1>ACCESSORIES</h1>
-                                <h2 id="creatinetext">BeastLife Premium Metal Gym Shaker | 1000ML</h2>
-                            </div>
-                            <div class="lower2">
-                                <h3><s>&#8377 1,499</s><span>₹999</span></h3>
-                            </div>
-                            <div class="lower3">
-                                <button>Get It Now</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="productcard" draggable="false">
-                        <div class="uppercard">
-                            <img class="productpanther" src="/panther.svg" alt="">
-                            <img class="productimage" src="./Plasticsipper1.png" alt="">
-                        </div>
-                        <div class="lowercard">
-                            <div class="lower1">
-                                <h1>ACCESSORIES</h1>
-                                <h2 id="creatinetext">BeastLife Blend Pro Sipper with Straw | 1000ML</h2>
-                            </div>
-                            <div class="lower2">
-                                <h3><s>&#8377 1,299</s><span>₹899</span></h3>
-                            </div>
-                            <div class="lower3">
-                                <button>Get It Now</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="productcard" draggable="false">
-                        <div class="uppercard">
-                            <img class="productpanther" src="/panther.svg" alt="">
-                            <img class="productimage" src="./page2clothing.png ">
-                        </div>
-                        <div class="lowercard">
-                            <div class="lower1">
-                                <h1>CLOTHING</h1>
-                                <h2 id="creatinetext">BeastLife Dryfit Flexifit Tee: Sweat Less, Hustle More.</h2>
-                            </div>
-                            <div class="lower2">
-                                <h3><s>&#8377 1,499</s><span>₹999</span></h3>
-                            </div>
-                            <div class="lower3">
-                                <button>Get It Now</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="lrbutton">
-                <div id="leftsidebutton">
-                    <i class="ri-arrow-left-s-line"></i>
-                </div>
-                <div id="rightsidebutton">
-                    <i class="ri-arrow-right-s-line"></i>
+                <div class="absolute top-[40%] left-[80%] translate-y-[-50%] translate-x-[-50%] opacity-0 z-[11] h-[25vw] w-[20vw] bg-[#010101] " id="image7">
+                    <img class="h-full w-full object-cover " src="https://cdn.shopify.com/s/files/1/0690/7723/7977/files/Image-06_720x720.jpg?v=1715100190" alt="">
                 </div>
             </div>
         </div>
-        <div id="page4">
-            <div id="leftpart">
-                <div id="leftpart1"><h1>Unleash the</h1></div>
-                <div id="leftpart2"><h1>Beast with</h1></div>
-                <div id="leftpart3">
-                    <h1>Ultrasorb Tech</h1>
-                </div>
-                <div id="leftpart4">
-                    <button>Know More</button>
+    </div>
+    <main class="bg-[#010101]">
+        <nav class=" z-[5] fixed top-[0%] left-[0%] w-screen h-[12vh]  px-[5vw] flex justify-between items-center ">
+            <div id="navpart1" class="flex items-center gap-[1.2vw]">
+                <div id="part11"><i class="ri-menu-line text-[1.5vw] text-[#fff] cursor-pointer"></i></div>
+                <div id="part12"><h1 class="text-[1.4vw] text-[#fff] cursor-pointer">Product</h1></div>
+            </div>
+            <div id="navpart2" class=" w-[10%] mr-[3.2vw] h-full  flex justify-center items-center  ">
+                <img class="w-full h-[70%]  object-cover" src="https://beastlife.in/cdn/shop/files/beastlife-whitelogo.svg?v=1714820170&width=260" alt="">
+            </div>
+            <div id="navpart3" class="flex items-center gap-[1.2vw]">
+                <div id="part31"><i class="ri-search-line text-[1.5vw] text-[#fff] cursor-pointer"></i></div>
+                <div id="part32"><i class="ri-shopping-cart-2-fill text-[1.5vw] text-[#fff] cursor-pointer"></i></div>
+            </div>
+        </nav>
+        <div id="page1" class="w-screen h-screen flex justify-center items-end bg-[#010101] relative   ">
+            <div id="hometext" class="absolute top-[50%] left-[50%] translate-y-[-50%] flex flex-col justify-center items-center translate-x-[-50%] h-[30%] w-[70%] gap-[0.4] overflow-hidden z-[2]">
+                <h1 class="uppercase leading-[0.4] text-[3vw] text-[#fff]">Supplements that will make</h1>
+                <h1 class="uppercase text-[3vw] text-[#fff]">the beast in you <span class="text-[3.2vw] text-[#B4EF02]">roar!</span></h1>
+                <div id="cta" class="mt-[1.2vw]">
+                    <button class=" px-[2vw] py-[0.5vw]  text-[1.2vw] text-[#010101] bg-[#fff] overflow-hidden rounded-md flex flex-col ">get it now</button>
                 </div>
             </div>
-            <div id="rightpart">
-                <div id="liftpart">
-                    <img src="./ultrasorbtech.png" alt="">
-                </div>
-                <video id="mainVideo" autoplay muted loop src="./16;9 vid1 (1).mp4"></video>
-            </div>
-        </div>
-        <div id="page45"><h1>Learning!</h1></div>
-        <div id="page5">
-            <div id="p5part3">
-                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="p5mySwiper2 p5swiper-wrapper2">
-                    <div class="swiper-wrapper">
-                      <div class="swiper-slide p5slide" style="display: flex;">
-                        <div class="slideleftpart">
-                            <div class="soundbox">
-                                <div class="soundoff"><i class="ri-volume-mute-fill"></i></div>
-                                <div class="soundon"><i class="ri-volume-down-fill"></i></div>
-                            </div>
-                            <video muted loop autoplay src="https://beastlife.in/cdn/shop/files/quinn_pnzr8lq4yu5etx9dfd19mysm.mp4"></video>
-                        </div>
-                        <div class="sliderightpart">
-                            <div class="imgcontainer">
-                                <div class="image">
-                                    <img src="https://cdn.shopify.com/s/files/1/0690/7723/7977/files/Image-02_720x720.jpg?v=1715100774" alt="">
-                                    <img src="https://cdn.shopify.com/s/files/1/0690/7723/7977/files/Image-03_031e7e83-38c7-4d2e-9bdc-8d94f3416c10_720x720.jpg?v=1715100773" alt="">
-                                    <img src="https://cdn.shopify.com/s/files/1/0690/7723/7977/files/Image-04_42d43c89-5531-429d-b0c8-8f574c5d01b6_720x720.jpg?v=1715100776" alt="">
-                                    <img src="https://cdn.shopify.com/s/files/1/0690/7723/7977/files/Image-05_1c26bfd2-ede4-49f1-88c5-32f178b1cc43_720x720.jpg?v=1715100775" alt="">
-                                    <button class="prev" onclick="prevSlide()">&#10094</button>
-                                    <button class="next" onclick="nextSlide()">&#10095</button>
-                                </div>
-                            </div>
-                            <div class="namepricing">
-                                <h2>Super Micronized Creatine Monohydrate | 249G</h2>
-                                <h4><s>₹1,499</s>₹1,199</h4>
-                            </div>
-                            <div class="description">
-                                <h2>Description:</h2>
-                                <p>
-                                    The Beast Formula's super micronized blend ensures quick absorption, rapidly boosting strength and performance. It provides steady energy for extra reps, heavier lifts, and high endurance.</p>
-                            </div>
-                            <div class="buttons">
-                                <button>Know More</button>
-                                <div class="green"><button>Get It Now</button></div>
-                            </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide p5slide" style="display: flex;">
-                        <div class="slideleftpart slide2">
-                            <div class="soundbox">
-                                <div class="soundoff"><i class="ri-volume-mute-fill"></i></div>
-                                <div class="soundon"><i class="ri-volume-down-fill"></i></div>
-                            </div>
-                            <video muted loop autoplay src="https://beastlife.in/cdn/shop/files/quinn_pmqiyxfybqc28zryuobdrdn4.mp4"></video>
-                        </div>
-                        <div class="sliderightpart">
-                            <div class="imgcontainer">
-                                <div class="image2">
-                                    <img src="https://cdn.shopify.com/s/files/1/0690/7723/7977/files/Image04_b4953310-f76a-4370-9092-c88937c18b4a_720x720.jpg?v=1715278358" alt="">
-                                    <img src="https://cdn.shopify.com/s/files/1/0690/7723/7977/files/Image05_36f1d9a3-a3f1-400f-931f-dda79fe9b3c3_720x720.jpg?v=1715278358" alt="">
-                                    <img src="https://cdn.shopify.com/s/files/1/0690/7723/7977/files/Image06_e7679616-b66f-4b6f-b1c5-53adbbf8de62_720x720.jpg?v=1715278358" alt="">
-                                    <img src="https://cdn.shopify.com/s/files/1/0690/7723/7977/files/Image-08_720x720.jpg?v=1715278358" alt="">
-                                    <button class="prev" onclick="prevSlide2()">&#10094</button>
-                                    <button class="next" onclick="nextSlide2()">&#10095</button>
-                                </div>
-                            </div>
-                            <div class="namepricing smallpara">
-                                <h2>Isorich Blend Whey Protein with Ultrasorb Tech | 924G</h2>
-                                <h4><s>₹3,999</s>₹3,199</h4>
-                            </div>
-                            <div class="description">
-                                <h2>Description:</h2>
-                                <p>
-                                    Protein that wont kill your appetite, and wont make you feel bloated.24g Protein & 5.5g BCAA per scoop, 28 Servings!
-                                </p>
-                            </div>
-                            <div class="buttons">
-                                <button>Know More</button>
-                                <div class="green"><button>Get It Now</button></div>
-                            </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide p5slide" style="display: flex;">
-                        <div class="slideleftpart slide3">
-                            <div class="soundbox">
-                                <div class="soundoff"><i class="ri-volume-mute-fill"></i></div>
-                                <div class="soundon"><i class="ri-volume-down-fill"></i></div>
-                            </div>
-                            <video muted loop autoplay src="https://beastlife.in/cdn/shop/files/quinn_hfqvbzg1wfwjwov9xb4zpcc9.mp4"></video>
-                        </div>
-                        <div class="sliderightpart">
-                            <div class="imgcontainer">
-                                <div class="image3">
-                                    <img src="https://cdn.shopify.com/s/files/1/0690/7723/7977/files/Image-03_720x720.jpg?v=1715100187" alt="">
-                                    <img src="https://cdn.shopify.com/s/files/1/0690/7723/7977/files/Image-04_720x720.jpg?v=1715100190" alt="">
-                                    <img src="https://cdn.shopify.com/s/files/1/0690/7723/7977/files/Image-06_720x720.jpg?v=1715100190" alt="">
-                                    <img src="https://cdn.shopify.com/s/files/1/0690/7723/7977/files/Image-07_720x720.jpg?v=1715100189" alt="">
-                                    <button class="prev" onclick="prevSlide3()">&#10094</button>
-                                    <button class="next" onclick="nextSlide3()">&#10095</button>
-                                </div>
-                            </div>
-                            <div class="namepricing">
-                                <h2>Beast Recovery BCAA | Mango | 120G</h2>
-                                <h4><s>₹849</s>₹764</h4>
-                            </div>
-                            <div class="description">
-                                <h2>Description:</h2>
-                                <p>
-                                    Unleash your energy, and make that extra rep that will make you flex your muscles. 120g/ 15 Servings!
-                                </p>
-                            </div>
-                            <div class="buttons">
-                                <button>Know More</button>
-                                <div class="green"><button>Get It Now</button></div>
-                            </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide p5slide" style="display: flex;">
-                        <div class="slideleftpart slide4">
-                            <div class="soundbox">
-                                <div class="soundoff"><i class="ri-volume-mute-fill"></i></div>
-                                <div class="soundon"><i class="ri-volume-down-fill"></i></div>
-                            </div>
-                            <video muted loop autoplay src="https://beastlife.in/cdn/shop/files/quinn_g0n0qnhnealyy7w65s6rq7er.mp4"></video>
-                        </div>
-                        <div class="sliderightpart">
-                            <div class="imgcontainer">
-                                <div class="image4">
-                                    <img src="https://cdn.shopify.com/s/files/1/0690/7723/7977/files/Image-05_d4a542d4-7762-4823-b562-8278f326e6e2_720x720.jpg?v=1715100789" alt="">
-                                    <img src="https://cdn.shopify.com/s/files/1/0690/7723/7977/files/Image-02_f72169fb-4f00-4b50-a882-892ec2cd7612_720x720.jpg?v=1715100792" alt="">
-                                    <img src="https://cdn.shopify.com/s/files/1/0690/7723/7977/files/Image-03_db0025d4-2897-4e58-96e0-a9da87dbe3c3_720x720.jpg?v=1715100790" alt="">
-                                    <img src="https://cdn.shopify.com/s/files/1/0690/7723/7977/files/Image-04_43d20192-408b-4b5b-bb51-cac2d108353f_720x720.jpg?v=1715100789" alt="">
-                                    <button class="prev" onclick="prevSlide4()">&#10094</button>
-                                    <button class="next" onclick="nextSlide4()">&#10095</button>
-                                </div>
-                            </div>
-                            <div class="namepricing">
-                                <h2>Super Micronized Creatine Monohydrate | 249G</h2>
-                                <h4><s>₹1,499</s>₹1,199</h4>
-                            </div>
-                            <div class="description">
-                                <h2>Description:</h2>
-                                <p>
-                                    A Clean Fuel for Max Hustle. 249g / 83 Servings!
-                                </p>
-                            </div>
-                            <div class="buttons">
-                                <button>Know More</button>
-                                <div class="green"><button>Get It Now</button></div>
-                            </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide p5slide" style="display: flex;">
-                        <div class="slideleftpart slide5">
-                            <div class="soundbox">
-                                <div class="soundoff"><i class="ri-volume-mute-fill"></i></div>
-                                <div class="soundon"><i class="ri-volume-down-fill"></i></div>
-                            </div>
-                            <video muted loop autoplay src="https://beastlife.in/cdn/shop/files/quinn_kdsvm1yv0gbuhtwoy79mne91.mp4"></video>
-                        </div>
-                        <div class="sliderightpart">
-                            <div class="imgcontainer">
-                                <div class="image5">
-                                    <img src="https://cdn.shopify.com/s/files/1/0690/7723/7977/files/Image09_c0978604-5400-4f39-a71c-3a701af7a71b_720x720.jpg?v=1715278422" alt="">
-                                    <img src="https://cdn.shopify.com/s/files/1/0690/7723/7977/files/Image07_73fd0844-29e3-4060-89ea-e459192ccc64_720x720.jpg?v=1715278422" alt="">
-                                    <img src="https://cdn.shopify.com/s/files/1/0690/7723/7977/files/Image05_d2bb2d25-3987-448d-b1fd-a754947cf85c_720x720.jpg?v=1715278422" alt="">
-                                    <img src="https://cdn.shopify.com/s/files/1/0690/7723/7977/files/Image04_b1110e58-c0d7-471f-9cd1-d39c266f4319_720x720.jpg?v=1715278422" alt="">
-                                    <button class="prev" onclick="prevSlide5()">&#10094</button>
-                                    <button class="next" onclick="nextSlide5()">&#10095</button>
-                                </div>
-                            </div>
-                            <div class="namepricing smallpara">
-                                <h2>Isorich Blend Whey Protein with Ultrasorb Tech | 1848G</h2>
-                                <h4><s>₹7,699</s>₹6,159</h4>
-                            </div>
-                            <div class="description">
-                                <h2>Description:</h2>
-                                <p>
-                                    Protein that wont kill your appetite, and won't make you feel bloated while making you flex your muscles. Ultrasorb tech making it light as water in Rich Double Chocolate Flavour.
-                                </p>
-                            </div>
-                            <div class="buttons">
-                                <button>Know More</button>
-                                <div class="green"><button>Get It Now</button></div>
-                            </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div thumbsSlider="" class="p5swiper">
-                    <div class="swiper-wrapper p5swiper-wrapper">
-                      <div class="swiper-slide p5slide">
-                        <img src="https://cdn.shopify.com/s/files/1/0690/7723/7977/files/Image-01_9718492e-2831-467a-80e6-8cccf9110cfd_720x720.jpg?v=1715100774" />
-                        <h1>Creatine</h1>
-                      </div>
-                      <div class="swiper-slide p5slide">
-                        <img src="https://cdn.shopify.com/s/files/1/0690/7723/7977/files/IsorichBlendWheyProteinwithUltrasorbTech_924G_720x720.jpg?v=1715278362" />
-                        <div class="justgap"><h1>Whey Protein</h1></div>
-                      </div>
-                      <div class="swiper-slide p5slide">
-                        <img src="https://cdn.shopify.com/s/files/1/0690/7723/7977/files/Image-01_720x720.jpg?v=1715100188" />
-                        <h1>BCCA</h1>
-                      </div>
-                      <div class="swiper-slide p5slide">
-                        <img src="https://cdn.shopify.com/s/files/1/0690/7723/7977/t/4/assets/d543ec9c521c--shopall-219a3f.jpg?v=1715186587" />
-                        <h1>And More</h1>
-                      </div>
-                    </div>
-                  </div>
+            <div id="homeimg" class="w-[80%] h-[80%] flex justify-center items-end opacity-[0.7]">
+                <img class="w-full h-full scale-[2] object-cover " src="./homephoto.png" alt="">
             </div>
         </div>
-        <div id="page6">
-            <div id="lefttext6">
-                <h1>Discover Our <span>Blogs</span></h1>
-                <button>Check All</button>
-            </div>
-            <div id="rightplace2">
-                <div id="rightpart1">
-                    <div class="uppart">
-                        <img src="https://images.unsplash.com/photo-1631880383152-f29099b0fd16?q=80&w=1787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-                    </div>
-                    <div class="downpart">
-                        <h3>I am a Vegetarian. How can I have Enough Protein?</h3>
-                        <div class="circle3"><i class="ri-arrow-right-line"></i></div>
-                    </div>
-                </div>
-                <div id="rightpart2">
-                    <div class="uppart">
-                        <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-                    </div>
-                    <div class="downpart">
-                        <h3>What is creatine? Why should I consume it?</h3>
-                        <div class="circle3"><i class="ri-arrow-right-line"></i></div>
-                    </div>
-                </div>
-                <div id="rightpart3">
-                    <div class="uppart">
-                        <img src="https://beastlife.in/cdn/shop/articles/blog3.jpg?v=1715274108" alt="">
-                    </div>
-                    <div class="downpart">
-                        <h3>BCAAs: Need of the Hour</h3>
-                        <div class="circle3"><i class="ri-arrow-right-line"></i></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="phonepage6">
-            <div id="lefttext62">
-                <h1>Discover Our <span>Blogs</span></h1>
-                <button>Check All</button>
-            </div>
-            <div id="rightplace62">
-                <div id="rightpart61">
-                    <div class="uppart2">
-                        <img src="https://images.unsplash.com/photo-1631880383152-f29099b0fd16?q=80&w=1787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-                    </div>
-                    <div class="downpart2">
-                        <h3>I am a Vegetarian. How can I have Enough Protein?</h3>
-                        <div class="circle32"><i class="ri-arrow-right-line"></i></div>
-                    </div>
-                </div> 
-                <div id="rightpart62">
-                    <div class="uppart2">
-                        <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-                    </div>
-                    <div class="downpart2">
-                        <h3>What is creatine? Why should I consume it?</h3>
-                        <div class="circle32"><i class="ri-arrow-right-line"></i></div>
-                    </div>
-                </div>
-                <div id="rightpart63">
-                    <div class="uppart2">
-                        <img src="https://beastlife.in/cdn/shop/articles/blog3.jpg?v=1715274108" alt="">
-                    </div>
-                    <div class="downpart2">
-                        <h3>BCAAs: Need of the Hour</h3>
-                        <div class="circle32"><i class="ri-arrow-right-line"></i></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="page7">
-          <div id="partleft7">
-            <h1>Did you know we create content to boost your gym performance?</h1>
-            <h3>Join us on Instagram at <span><a href="https://www.instagram.com/beastlife.india/">@beastlife.india</a></span> <br>for pro tips and beast-mode workouts.</h3> 
-            <h4> Fun fact: we call it 'Beastagram'! Live the beast life with us!</h4>
-          </div>
-          <div id="partright7">
-            <img src="./instagram.png" alt="">
-          </div>
-        </div>
-        <footer> 
-            <div id="block1">
-                <div id="onea">
-                    <img src="https://beastlife.in/cdn/shop/files/beastlife-whitelogo.svg?v=1714820170&width=260" alt="">
-                </div>
-            </div>
-            <div id="block2">
-                <h3>Your one step solution to all your supplement needs! Game-changing products that are geared to unlock your #BeastMode and drive top-tier performance for all your hustle days.Explore our epic lineup of fuel that's genius-built, expert-tested and beast-approved! Go, Hustle!
-                </h3>
-            </div>
-            <div id="block3">
-                <div id="a1">
-                    <h1>For Customers</h1> <br>
-                    <h3>About us</h3>
-                    <h3>Contact us</h3>
-                    <h3>Privacy Policy</h3>
-                    <h3>Returns,Shipping,Cookie Policies</h3>
-                    <h3>Payment Policy</h3>
-                    <h3>Terms & Conditions</h3>
-                    <h3>FAQ</h3>
-                </div>
-                <div id="a2">
-                    <div id="a21">
-                    <h1>Products</h1> <br>
-                    <h3>Protein</h3>
-                    <h3>Creatine</h3>
-                    <h3>BCAA</h3>
-                    <h3>Beastlife T-Shirt</h3>
-                    <h3>Sipper</h3>
-                    <h3>Shaker</h3>
-                    </div>
-                    <div id="a22">
-                        <h1>Explore</h1> <br>
-                        <h3>Blogs</h3>
-                        <h3>Lab Reports</h3>
-                        <h3>Track Order</h3>
-                    </div>
-                </div>
-                <div id="a3">
-                    <h1>Connect With Us</h1> <br>
-                    <img src="./images/facebook.png" alt="" height="30" width="30"> &nbsp;
-                    <img src="./images/instagram.png" alt="" height="30" width="30">  &nbsp;
-                    <img src="./images/whatsapp.png" alt="" height="30" width="30"> &nbsp;
-                    <img src="./images/youtube.png" alt="" height="30" width="30"> <br>
-                    <img id='panther-img'src="https://cdn.shopify.com/s/files/1/0690/7723/7977/files/footer-panther.svg?v=1715239577" alt="" width="374" height="362">
-                </div>
-            </div>
-            <div id="block4">
-                <h3>Copyright © 2024 BeastLife. All Rights Reserved.
-                </h3>
-            </div>
-        </footer>
     </main>
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script  type="text/javascript"  src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="script.js"></script> 
+    <script src="script.js"></script>
 </body>
 </html>
