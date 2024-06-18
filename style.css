@@ -20,7 +20,6 @@ html, body{
 }
 
 main{
-    position: relative;
     overflow: hidden;
 }
 
@@ -59,5 +58,11 @@ main{
     word-spacing: 1px;
 }
 #part12 h1{
+    font-family: 'outfitlight';
+}
+#bigcursor{
+    border: 1px solid white;
+}
+#page2text p{
     font-family: 'outfitlight';
 }

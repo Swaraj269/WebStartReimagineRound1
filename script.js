@@ -1,4 +1,53 @@
+gsap.registerPlugin(ScrollTrigger);
+
+const locoScroll = new LocomotiveScroll({
+  el: document.querySelector("main"),
+  smooth: true,
+  smartphone: true,
+  multiplier: 1.3,
+  firefoxMultiplier: 200,
+  tablet: {
+    smooth: true
+  },
+  smartphone: {
+    smooth: true
+  }
+});
+
+gsap.to("body", {
+  autoAlpha: 1
+});
+
+locoScroll.on("scroll", ScrollTrigger.update);
+
+ScrollTrigger.scrollerProxy("main", {
+  scrollTop(value) {
+    return arguments.length
+      ? locoScroll.scrollTo(value, 0, 0)
+      : locoScroll.scroll.instance.scroll.y;
+  },
+  getBoundingClientRect() {
+    return {
+      top: 0,
+      left: 0,
+      width: window.innerWidth,
+      height: window.innerHeight
+    };
+  },
+  pinType: document.querySelector("main").style.transform
+    ? "transform"
+    : "fixed"
+});
+
+// each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll. 
+ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+
+// after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
+ScrollTrigger.refresh();
+
+
 document.addEventListener('DOMContentLoaded', function(){
+
     var counter = document.querySelector("#counter");
     var count = 50;
     var counterinterval = setInterval(function(){
@@ -125,7 +174,7 @@ document.addEventListener('DOMContentLoaded', function(){
                     })
                     tl2.to("#homeimg img",{
                         scale: 1,
-                        duration: 1.5,
+                        duration: 1.7,
                         ease: "power3.inOut",
                     })
                     tl2.from("#hometext h1",{
@@ -149,6 +198,18 @@ document.addEventListener('DOMContentLoaded', function(){
                         ease: "power3.out",
                         delay: -1.19,
                     })
+                    tl2.to("#cursor",{
+                        opacity: 1,
+                        duration: 1.5,
+                        ease: "power3.out",
+                        delay: -1.19, 
+                    })
+                    tl2.to("#bigcursor",{
+                        opacity: 1,
+                        duration: 1.5,
+                        ease: "power3.out",
+                        delay: -1.19,
+                    })
                 }
             })
             tl.to("#loader",{
@@ -157,5 +218,80 @@ document.addEventListener('DOMContentLoaded', function(){
         }
         
     }
+    window.addEventListener("mousemove", function(e){
+        gsap.set("#cursor",{
+            yPercent: -50,
+            xPercent: -50,
+        })
+        gsap.set("#bigcursor",{
+            yPercent: -50,
+            xPercent: -50,
+        })
+        gsap.to("#cursor",{
+            x: e.clientX,
+            y: e.clientY,
+            duration: 0.85,
+        })
+        gsap.to("#bigcursor",{
+            x: e.clientX,
+            y: e.clientY,
+            duration: 0.3,
+        })
+    });
 
+    var mainbutton = document.querySelector("#mainbutton");
+    var cursor = document.querySelector("#cursor");
+    
+    mainbutton.addEventListener("mouseover", function(){
+        gsap.to(cursor,{
+            scale: 12,
+            backgroundColor: "#00000000",
+        })
+        gsap.to("#bigcursor",{
+            scale: 0.1,
+            borderColor: "#B4EF02",
+        })
+        gsap.to(mainbutton,{
+            scale: 1.1,
+            backgroundColor: "#B4EF02",
+            color: "#000"
+        })
+    });
+    mainbutton.addEventListener("mouseleave", function(){
+        gsap.to(cursor,{
+            scale: 1,
+            backgroundColor: "#fff",
+        })
+        gsap.to("#bigcursor",{
+            scale: 1,
+            borderColor: "#fff",
+        })
+        gsap.to(mainbutton,{
+            scale: 1,
+            color: "#000",
+            backgroundColor: "#fff",
+        })
+    });
+    Shery.makeMagnet("#mainbutton", {
+    });
+    Shery.makeMagnet("#part11", {
+    });
+    Shery.makeMagnet("#part12 h1", {
+    });
+    Shery.makeMagnet("#part31", {
+    });
+    Shery.makeMagnet("#part32", {
+    });
+    Shery.makeMagnet("#navpart2", {
+    });
+
+    gsap.to("nav",{
+        backgroundColor: "#010101",
+        scrollTrigger:{
+            trigger: "nav",
+            scroller: "main",
+            start: "top 10%",
+            end: "top 15%",
+        }
+    })
 })

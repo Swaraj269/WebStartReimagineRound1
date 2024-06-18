@@ -8,11 +8,13 @@
     href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
     rel="stylesheet"
 />
+    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" /> 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
     <title>Document</title>
 </head>
 <body>
-    <div id="loader" class="bg-[#010101] w-screen h-screen z-[99] fixed flex justify-center items-center">
+    <div id="loader" class="bg-[#010101] w-screen h-screen z-[99] fixed flex justify-center items-center  cursor-none">
         <div id="loadertext" class="text-[#fff] flex flex-col  justify-center items-center overflow-hidden ">
             <h1 class="text-3xl">BEAST LIFE</h1>
             <h1 id="counter" class="text-center text-[#B4EF02]">100%</h1>
@@ -43,34 +45,57 @@
             </div>
         </div>
     </div>
-    <main class="bg-[#010101]">
-        <nav class=" z-[5] fixed top-[0%] left-[0%] w-screen h-[12vh]  px-[5vw] flex justify-between items-center ">
+    <div   id="cursor" class="fixed top-[0] left-[0]   h-[0.3vw] w-[0.3vw] z-[990] rounded-[50%] bg-[#fff] opacity-[0] pointer-events-none  "></div>
+    <div id="bigcursor" class="fixed top-[0] left-[0] h-[3vw] w-[3vw] z-[990] rounded-[50%] mix-blend-difference opacity-[0] pointer-events-none"></div>
+    <main class="bg-[#010101] cursor-none">
+        <nav data-scroll data-scroll-sticky data-scroll-target="main" class=" z-[5] fixed top-[0%] left-[0%] w-screen h-[12vh]  px-[5vw] flex justify-between items-center ">
             <div id="navpart1" class="flex items-center gap-[1.2vw]">
-                <div id="part11"><i class="ri-menu-line text-[1.5vw] text-[#fff] cursor-pointer"></i></div>
-                <div id="part12"><h1 class="text-[1.4vw] text-[#fff] cursor-pointer">Product</h1></div>
+                <div id="part11"><i class="ri-menu-line text-[1.5vw] text-[#fff] "></i></div>
+                <div id="part12"><h1 class="text-[1.4vw] text-[#fff] ">Product</h1></div>
             </div>
-            <div id="navpart2" class=" w-[10%] mr-[3.2vw] h-full  flex justify-center items-center  ">
+            <div id="navpart2" class=" w-[10%] mr-[3.2vw] h-[80%]  flex justify-center items-center  ">
                 <img class="w-full h-[70%]  object-cover" src="https://beastlife.in/cdn/shop/files/beastlife-whitelogo.svg?v=1714820170&width=260" alt="">
             </div>
             <div id="navpart3" class="flex items-center gap-[1.2vw]">
-                <div id="part31"><i class="ri-search-line text-[1.5vw] text-[#fff] cursor-pointer"></i></div>
-                <div id="part32"><i class="ri-shopping-cart-2-fill text-[1.5vw] text-[#fff] cursor-pointer"></i></div>
+                <div id="part31"><i class="ri-search-line text-[1.5vw] text-[#fff] "></i></div>
+                <div id="part32"><i class="ri-shopping-cart-2-fill text-[1.5vw] text-[#fff] "></i></div>
             </div>
         </nav>
-        <div id="page1" class="w-screen h-screen flex justify-center items-end bg-[#010101] relative   ">
+        <div id="page1" data-scroll data-scroll-speed="-2" class="w-screen h-screen flex justify-center items-end bg-[#010101] relative   ">
             <div id="hometext" class="absolute top-[50%] left-[50%] translate-y-[-50%] flex flex-col justify-center items-center translate-x-[-50%] h-[30%] w-[70%] gap-[0.4] overflow-hidden z-[2]">
                 <h1 class="uppercase leading-[0.4] text-[3vw] text-[#fff]">Supplements that will make</h1>
                 <h1 class="uppercase text-[3vw] text-[#fff]">the beast in you <span class="text-[3.2vw] text-[#B4EF02]">roar!</span></h1>
                 <div id="cta" class="mt-[1.2vw]">
-                    <button class=" px-[2vw] py-[0.5vw]  text-[1.2vw] text-[#010101] bg-[#fff] overflow-hidden rounded-md flex flex-col ">get it now</button>
+                    <button id="mainbutton" class=" px-[2vw] py-[0.5vw]  text-[1.2vw] text-[#010101] bg-[#fff] overflow-hidden rounded-md flex flex-col cursor-none ">get it now</button>
                 </div>
             </div>
-            <div id="homeimg" class="w-[80%] h-[80%] flex justify-center items-end opacity-[0.7]">
-                <img class="w-full h-full scale-[2] object-cover " src="./homephoto.png" alt="">
+            <div id="homeimg" data-scroll data-scroll-speed="-3" class="w-[80%] h-[80%] flex justify-center items-end opacity-[0.7]">
+                <img  class="w-full h-full scale-[2] object-cover " src="./homephoto.png" alt="">
             </div>
         </div>
+        <div id="page2" data-scroll data-scroll-speed="1" class="w-screen h-screen bg-[#010101] flex justify-center items-center relative ">
+            <div id="page2imagewrapper" class="absolute z-[2] w-full h-full top-[0] left-[0]">
+                <div id="page2image1" class="absolute z-[3] w-[30vw] h-[18vw] top-[55%] left-[2%]">
+                    <video muted loop autoplay src="./16;9 vid1 (1).mp4" class="w-full h-full object-cover opacity-[0.6]"></video>
+                </div>
+                <div id="page2image2"></div>
+                <div id="page2image3"></div>
+                <div id="page2image4"></div>
+                <div id="page2image5"></div>
+            </div>
+            <div id="page2text" class="flex flex-col justify-center items-center gap-[2vw] w-[40vw]">
+                <h1 class="text-[#fff] text-[3vw] text-center leading-[1]">Unlock your Beastmode with <br> <span class="text-[3vw] text-[#B4EF02]">Ultrasorb Tech </span>  in Action</h1>
+                <p class="text-[#fff] text-[1.3vw] text-center flex justify-center items-center w-[90%]">Our cutting-edge formula revolutionizes whey absorption,  ensuring a noticeable difference after consumption.  Once you experience Beast Life Whey,  you'll never look back. Our whey features an Isorich formula,  highlighting whey protein isolate as our primary protein source for maximum protein content</p>
+            </div>
+        </div>
+        <div id="page3" data-scroll  class="w-screen h-screen bg-[#010101] relative ">
+
+        </div>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script  type="text/javascript"  src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
