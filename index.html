@@ -45,7 +45,7 @@
             </div>
         </div>
     </div>
-    <div   id="cursor" class="fixed top-[0] left-[0]   h-[0.3vw] w-[0.3vw] z-[990] rounded-[50%] bg-[#fff] opacity-[0] pointer-events-none  "></div>
+    <div   id="cursor" class="fixed top-[0] left-[0]   h-[0.3vw] w-[0.3vw] z-[990] rounded-[50%] bg-[#fff] opacity-[0] pointer-events-none text-center flex items-center justify-center leading-[1]  uppercase "></div>
     <div id="bigcursor" class="fixed top-[0] left-[0] h-[3vw] w-[3vw] z-[990] rounded-[50%] mix-blend-difference opacity-[0] pointer-events-none"></div>
     <main class="bg-[#010101] cursor-none">
         <nav data-scroll data-scroll-sticky data-scroll-target="main" class=" z-[5] fixed top-[0%] left-[0%] w-screen h-[12vh]  px-[5vw] flex justify-between items-center ">
@@ -53,38 +53,52 @@
                 <div id="part11"><i class="ri-menu-line text-[1.5vw] text-[#fff] "></i></div>
                 <div id="part12"><h1 class="text-[1.4vw] text-[#fff] ">Product</h1></div>
             </div>
-            <div id="navpart2" class=" w-[10%] mr-[3.2vw] h-[80%]  flex justify-center items-center  ">
-                <img class="w-full h-[70%]  object-cover" src="https://beastlife.in/cdn/shop/files/beastlife-whitelogo.svg?v=1714820170&width=260" alt="">
+            <div id="navpart2" class=" w-[9%] mr-[3.2vw] h-[70%]  flex justify-center items-center  ">
+                <img class="w-full h-full  object-cover" src="https://beastlife.in/cdn/shop/files/beastlife-whitelogo.svg?v=1714820170&width=260" alt="">
             </div>
             <div id="navpart3" class="flex items-center gap-[1.2vw]">
                 <div id="part31"><i class="ri-search-line text-[1.5vw] text-[#fff] "></i></div>
                 <div id="part32"><i class="ri-shopping-cart-2-fill text-[1.5vw] text-[#fff] "></i></div>
             </div>
         </nav>
-        <div id="page1" data-scroll data-scroll-speed="-2" class="w-screen h-screen flex justify-center items-end bg-[#010101] relative   ">
-            <div id="hometext" class="absolute top-[50%] left-[50%] translate-y-[-50%] flex flex-col justify-center items-center translate-x-[-50%] h-[30%] w-[70%] gap-[0.4] overflow-hidden z-[2]">
-                <h1 class="uppercase leading-[0.4] text-[3vw] text-[#fff]">Supplements that will make</h1>
-                <h1 class="uppercase text-[3vw] text-[#fff]">the beast in you <span class="text-[3.2vw] text-[#B4EF02]">roar!</span></h1>
+        <div id="page1" data-scroll   class="w-screen h-screen flex justify-center items-end bg-[#010101] relative   ">
+            <div id="hometext" class="absolute top-[50%] left-[50%] translate-y-[-50%] flex flex-col justify-center items-center translate-x-[-50%] h-[30%] w-[70%] gap-[0.3] overflow-hidden z-[2]">
+                <h1  class="uppercase leading-[0.6] text-[3vw] text-[#fff]">Supplements that will make</h1>
+                <h1  class="uppercase text-[3vw] text-[#fff]">the beast in you <span class="text-[3vw] text-[#B4EF02]">roar!</span></h1>
                 <div id="cta" class="mt-[1.2vw]">
                     <button id="mainbutton" class=" px-[2vw] py-[0.5vw]  text-[1.2vw] text-[#010101] bg-[#fff] overflow-hidden rounded-md flex flex-col cursor-none ">get it now</button>
                 </div>
             </div>
-            <div id="homeimg" data-scroll data-scroll-speed="-3" class="w-[80%] h-[80%] flex justify-center items-end opacity-[0.7]">
-                <img  class="w-full h-full scale-[2] object-cover " src="./homephoto.png" alt="">
+            <div id="homeimg" data-scroll data-scroll-speed="-10" class="w-[80%] h-[100%] flex justify-center items-end opacity-[0.7]">
+                <img  class="w-full h-[80%] scale-[2] object-cover" src="./homephoto.png" alt="">
             </div>
         </div>
-        <div id="page2" data-scroll data-scroll-speed="1" class="w-screen h-screen bg-[#010101] flex justify-center items-center relative ">
-            <div id="page2imagewrapper" class="absolute z-[2] w-full h-full top-[0] left-[0]">
-                <div id="page2image1" class="absolute z-[3] w-[30vw] h-[18vw] top-[55%] left-[2%]">
-                    <video muted loop autoplay src="./16;9 vid1 (1).mp4" class="w-full h-full object-cover opacity-[0.6]"></video>
+        <div id="page2" data-scroll   class="w-screen h-[110vh] bg-[#010101] flex justify-center items-center relative">
+            <div id="page2imagewrapper" class="absolute z-[1] w-full h-full top-[0] left-[0]">
+                <div id="page2image1"  class="absolute z-[3] w-[17vw] h-[17vw] top-[65%] left-[13%] overflow-hidden">
+                    <img data-scroll data-scroll-speed="-0.8" src="https://cdn.shopify.com/s/files/1/0690/7723/7977/files/Image-02_f72169fb-4f00-4b50-a882-892ec2cd7612_720x720.jpg?v=1715100792" class="w-full h-full object-cover scale-[1.3]" alt="">
                 </div>
-                <div id="page2image2"></div>
-                <div id="page2image3"></div>
-                <div id="page2image4"></div>
-                <div id="page2image5"></div>
+                <div id="page2image2"  class="absolute z-[3] w-[15vw] h-[19vw] top-[10%] left-[9%] overflow-hidden">
+                    <img data-scroll data-scroll-speed="-0.8" src="https://cdn.shopify.com/s/files/1/0690/7723/7977/files/Image-06_720x720.jpg?v=1715100190" class="w-full h-full object-cover scale-[1.2] " alt="">
+                </div>
+                <div id="page2image3"  class="absolute z-[3] w-[21vw] h-[13vw] top-[2%] left-[50%] overflow-hidden">
+                    <img data-scroll data-scroll-speed="-0.8" src="https://cdn.shopify.com/s/files/1/0690/7723/7977/files/Image07_51f2d9f3-83af-4192-a58c-bb92525d8efb_720x720.jpg?v=1715278358" class="w-full h-full object-cover scale-[1.2] " alt="">
+                </div>
+                <div id="page2image4"  class="absolute z-[3] w-[15vw] h-[15vw] top-[70%] left-[63%] overflow-hidden">
+                    <img data-scroll data-scroll-speed="-0.8" src="https://cdn.shopify.com/s/files/1/0690/7723/7977/files/Image05_36f1d9a3-a3f1-400f-931f-dda79fe9b3c3_720x720.jpg?v=1715278358" class="w-full h-full object-cover scale-[1.2] " alt="">
+                </div>
+                <div id="page2image5"  class="absolute z-[3] w-[15vw] h-[15vw] top-[35%] left-[80%] overflow-hidden">
+                    <img data-scroll data-scroll-speed="-0.8" src="https://cdn.shopify.com/s/files/1/0690/7723/7977/files/Image06_e7679616-b66f-4b6f-b1c5-53adbbf8de62_720x720.jpg?v=1715278358" class="w-full h-full object-cover scale-[1.2] " alt="">
+                </div>
             </div>
-            <div id="page2text" class="flex flex-col justify-center items-center gap-[2vw] w-[40vw]">
-                <h1 class="text-[#fff] text-[3vw] text-center leading-[1]">Unlock your Beastmode with <br> <span class="text-[3vw] text-[#B4EF02]">Ultrasorb Tech </span>  in Action</h1>
+            <div id="page2video" class="absolute w-[80%] h-[80%] z-[5] top-[50%]  left-[50%] translate-y-[-50%] translate-x-[-50%] pointer-events-none hidden   ">
+                <div id="cross" class=" absolute z-[6] top-[2%] left-[94%] h-[4vw] w-[4vw] rounded-[50%] bg-[#000] flex justify-center items-center">
+                    <i class="ri-close-line text-[#fff] text-[1.8vw]"></i>
+                </div>
+                <video muted autoplay controls loop class="h-full w-full object-cover" src="./16;9 vid1 (1).mp4"></video>
+            </div>
+            <div id="page2text" class="absolute z-[4] flex flex-col justify-center items-center gap-[2vw] w-[40vw] ">
+                <h1 class="text-[#fff] text-[3vw] text-center w-full h-fit  leading-[1] ">Unlock your Beastmode with <br> <span class="text-[3vw] text-[#B4EF02]">Ultrasorb Tech </span>  in Action</h1>
                 <p class="text-[#fff] text-[1.3vw] text-center flex justify-center items-center w-[90%]">Our cutting-edge formula revolutionizes whey absorption,  ensuring a noticeable difference after consumption.  Once you experience Beast Life Whey,  you'll never look back. Our whey features an Isorich formula,  highlighting whey protein isolate as our primary protein source for maximum protein content</p>
             </div>
         </div>

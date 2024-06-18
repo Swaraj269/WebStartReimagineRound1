@@ -178,29 +178,27 @@ document.addEventListener('DOMContentLoaded', function(){
                         ease: "power3.inOut",
                     })
                     tl2.from("#hometext h1",{
-                        y: 20,
+                        y: 40,
                         opacity: 0,
-                        duration: 1.4,
+                        duration: 0.8,
+                        stagger: 0.2,
                         delay: -0.4,
-                        ease: "power3.out",
                     })
                     tl2.from("#cta button",{
                         y: 20,
                         opacity: 0,
-                        duration: 1.4,
+                        duration: 1.7,
                         ease: "power3.out",
-                        delay: -1.2,
-                    })
+                    },"<")
                     tl2.from("nav",{
                         y: -20,
                         opacity: 0,
-                        duration: 1.2,
+                        duration: 1.7,
                         ease: "power3.out",
-                        delay: -1.19,
-                    })
+                    },"<");
                     tl2.to("#cursor",{
                         opacity: 1,
-                        duration: 1.5,
+                        duration: 1.7,
                         ease: "power3.out",
                         delay: -1.19, 
                     })
@@ -241,6 +239,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
     var mainbutton = document.querySelector("#mainbutton");
     var cursor = document.querySelector("#cursor");
+    var page2text = document.querySelector("#page2text h1");
     
     mainbutton.addEventListener("mouseover", function(){
         gsap.to(cursor,{
@@ -285,13 +284,93 @@ document.addEventListener('DOMContentLoaded', function(){
     Shery.makeMagnet("#navpart2", {
     });
 
-    gsap.to("nav",{
-        backgroundColor: "#010101",
-        scrollTrigger:{
-            trigger: "nav",
+    let tl5 = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#page1",
             scroller: "main",
-            start: "top 10%",
-            end: "top 15%",
+            start: "top -0.5%",
+            end: "top 0%",
+            toggleActions: "restart none none reverse",
+        }
+    });
+    
+    tl5.to("nav", {
+        backgroundColor: "#000",
+        height: "8vh",
+        duration: 0.4,
+    });
+
+    tl5.to("#navpart2 ", {
+        width: "7%",
+        duration: 0.4,
+    }, "<");
+
+    tl5.to("nav i", {
+        fontSize: "1.2vw",
+        duration: 0.4,
+    }, "<");
+
+    tl5.to("#part12 h1", {
+        fontSize: "1.2vw",
+        duration: 0.4,
+    }, "<");
+    gsap.from("#page2text",{
+        y: 20,
+        opacity: 0,
+        duration: 1.4,
+        ease: "power3.out",
+        scrollTrigger: {
+            trigger: "#page2",
+            scroller: "main",
+            start: "top 50%",
+            end: "top 45%",
+            toggleActions: "restart none none reverse",
         }
     })
+    page2text.addEventListener("mouseover",function(){
+        cursor.innerHTML = "Click to explore";
+        cursor.style.fontSize = "0.8px";
+        gsap.to(cursor,{
+            scale: 20,
+            backgroundColor: "#fff",
+        })
+        gsap.to("#bigcursor",{
+            scale: 0.1,
+        })
+    })
+    page2text.addEventListener("mouseleave",function(){
+        cursor.innerHTML = "";
+        gsap.to(cursor,{
+            scale: 1,
+            backgroundColor: "#fff",
+        })
+        gsap.to("#bigcursor",{
+            scale: 1,
+        })
+    })
+    var page2video = document.querySelector("#page2video video")
+    page2text.addEventListener("click",function(){
+        gsap.to("#page2video",{
+            display: "block",
+            pointerEvents: "auto",
+            duration: 0.4,
+            onComplete: function(){
+                page2video.muted = false;
+                page2video.play();
+            }
+        })
+    })
+    var cross = document.querySelector("#cross");
+    cross.addEventListener("click",function(){
+        gsap.to("#page2video",{
+            display: "none",
+            pointerEvents: "none",
+            videoMuted: "true",
+            duration: 0.4,
+            onComplete: function(){
+                page2video.muted = true;
+                page2video.pause();
+            }
+        });
+    });
 })

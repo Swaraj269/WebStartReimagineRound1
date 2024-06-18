@@ -52,6 +52,7 @@ main{
     clip-path: polygon(30% 48%, 76% 48%, 76% 70%, 30% 70%);
 }
 
+
 #cta button{
     font-family: 'outfitlight';
     text-transform: uppercase;
@@ -65,4 +66,10 @@ main{
 }
 #page2text p{
     font-family: 'outfitlight';
+}
+#page2image1 img{
+    object-position: 0% 12% ;
+}
+#page2image2 img{
+    object-position: 35% 0 ;
 }
