@@ -1,11 +1,11 @@
 
 @font-face {
     font-family: 'outfit';
-    src: url('./Outfit-ExtraBold.woff2');
+    src: url('./fonts/Outfit-ExtraBold.woff2');
 }
 @font-face {
     font-family: 'outfitlight';
-    src: url('./Outfit-Regular.woff2');
+    src: url('./fonts/Outfit-Regular.woff2');
 }
 *{
     padding: 0;
@@ -73,3 +73,29 @@ main{
 #page2image2 img{
     object-position: 35% 0 ;
 }
+#navpart2 img{
+    filter: invert(0%) sepia(0%) saturate(7470%) hue-rotate(218deg) brightness(108%) contrast(108%);
+}
+.productcard .lowerpart {
+    padding: 0 0.5vw;
+    background-color: #fff;
+}
+.productcard .lowerpart h1, .lowestpart p{
+    font-family: 'outfitlight';
+}
+
+.upperpart button{
+    position: relative;
+    font-family: 'outfitlight';
+    font-size: 1.2vw;
+    padding: 0.4vw 5.2vw;
+    background-color: #010101;
+    color: #fff;
+    transform: translateY(110%);
+}
+
+.upperpart button:hover{
+    color: #010101;
+    background-color: #B4EF02;
+}
+
