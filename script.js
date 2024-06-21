@@ -181,7 +181,6 @@ document.addEventListener('DOMContentLoaded', function(){
                         y: 40,
                         opacity: 0,
                         duration: 0.8,
-                        stagger: 0.2,
                         delay: -0.4,
                     })
                     tl2.from("#cta button",{
@@ -388,10 +387,6 @@ document.addEventListener('DOMContentLoaded', function(){
         backgroundColor: "#fff",
         duration: 0.6,
     })
-    tl6.to("#cursor",{
-        backgroundColor: "#000",
-        duration: 0.4,
-    }, "<")
     tl6.to("nav",{
         backgroundColor: "#fff",
         duration: 0.4,
@@ -426,9 +421,102 @@ document.addEventListener('DOMContentLoaded', function(){
         }
     });
 
-    document.addEventListener("scroll", function(){
-        cursor.style.opacity = 0;
-    })
+    gsap.from("#page3part2", {
+        y: 100,
+        opacity: 0,
+        duration: 0.5,
+        scrollTrigger: {
+            trigger: "#page3part2",
+            scroller: "main",
+            start: "top 100%",
+            end: "top 98%",
+            toggleActions: "restart none none reverse",
+        }
+    });
+    gsap.from("#page3part3", {
+        y: 100,
+        opacity: 0,
+        duration: 0.5,
+        scrollTrigger: {
+            trigger: "#page3part3",
+            scroller: "main",
+            start: "top 100%",
+            end: "top 98%",
+            toggleActions: "restart none none reverse",
+        }
+    });
+    gsap.from("#page3part4", {
+        y: 100,
+        opacity: 0,
+        duration: 0.5,
+        scrollTrigger: {
+            trigger: "#page3part4",
+            scroller: "main",
+            start: "top 100%",
+            end: "top 98%",
+            toggleActions: "restart none none reverse",
+        }
+    });
+    gsap.from("#page3part5", {
+        y: 100,
+        opacity: 0,
+        duration: 0.5,
+        scrollTrigger: {
+            trigger: "#page3part5",
+            scroller: "main",
+            start: "top 100%",
+            end: "top 98%",
+            toggleActions: "restart none none reverse",
+        }
+    });
+    gsap.from("#page3part6", {
+        y: 100,
+        opacity: 0,
+        duration: 0.5,
+        scrollTrigger: {
+            trigger: "#page3part6",
+            scroller: "main",
+            start: "top 94%",
+            end: "top 92%",
+            toggleActions: "restart none none reverse",
+        }
+    });
+    gsap.from("#page3part7", {
+        y: 100,
+        opacity: 0,
+        duration: 0.5,
+        scrollTrigger: {
+            trigger: "#page3part7",
+            scroller: "main",
+            start: "top 94%",
+            end: "top 92%",
+            toggleActions: "restart none none reverse",
+        }
+    });
+    gsap.from("#page3part8", {
+        y: 100,
+        opacity: 0,
+        duration: 0.5,
+        scrollTrigger: {
+            trigger: "#page3part8",
+            scroller: "main",
+            start: "top 94%",
+            end: "top 92%",
+            toggleActions: "restart none none reverse",
+        }
+    });
+    gsap.from("#page3part9", {
+        y: 100,
+        opacity: 0,
+        duration: 0.5,
+        scrollTrigger: {
+            trigger: "#page3part9",
+            scroller: "main",
+            start: "top 94%",
+            end: "top 92%",
+            toggleActions: "restart none none reverse",
+        }
+    });
     var productcard1 = document.querySelector(" #page3part2 .productcard");
     productcard1.addEventListener("mouseenter", function(){
         gsap.to(" #page3part2 .upperpart button",{
@@ -600,4 +688,147 @@ document.addEventListener('DOMContentLoaded', function(){
             scale: 1,
         })
     })
+    var buttons = document.querySelectorAll(".upperpart button");
+    buttons.forEach(function(elem) {
+        elem.addEventListener("mouseover", function() {
+            gsap.to(cursor, {
+                scale: 12,
+                backgroundColor: "#00000000",
+            },"<");
+            gsap.to(bigcursor, {
+                scale: 0.1,
+                borderColor: "#B4EF02",
+            },"<");
+            gsap.to(elem, {
+                scale: 1.1,
+                backgroundColor: "#B4EF02",
+                color: "#000",
+            },"<");
+        });
+
+        elem.addEventListener("mouseleave", function() {
+            gsap.to(cursor, {
+                scale: 1,
+                backgroundColor: "#fff",
+            },"<");
+            gsap.to(bigcursor, {
+                scale: 1,
+                borderColor: "#fff",
+            },"<");
+            gsap.to(elem, {
+                scale: 1,
+                color: "#fff",
+                backgroundColor: "#000",
+            },"<");
+        });
+    });
+    var productcard = document.querySelectorAll(".productcard");
+    productcard.forEach(function(elem) {
+        elem.addEventListener("mouseover", function() {
+            var tl9 = gsap.timeline();
+            tl9.to("#cursor",{
+                scale: 40,
+                backgroundColor: "#b4ef0222",
+                duration: 0.5,
+            }, "<")
+            tl9.to("#bigcursor",{
+                scale: 0,
+                duration: 0.5,
+            }, "<")
+        });
+
+        elem.addEventListener("mouseleave", function() {
+            var tl9 = gsap.timeline();
+            tl9.to("#cursor",{
+                scale: 1,
+                backgroundColor: "#fff",
+                duration: 0.5,
+            }, "<")
+            tl9.to("#bigcursor",{
+                scale: 1,
+                duration: 0.5,
+            }, "<")
+        });
+    });
+
+    gsap.from("#heading", {
+        y: 100,
+        opacity: 0,
+        duration: 0.5,
+        scrollTrigger: {
+            trigger: "#heading",
+            scroller: "main",
+            start: "top 98%",
+            end: "top 95%",
+            toggleActions: "restart none none reverse",
+        }
+    });
+    gsap.from("#blog1", {
+        y: 100,
+        opacity: 0,
+        duration: 0.5,
+        scrollTrigger: {
+            trigger: "#blog1",
+            scroller: "main",
+            start: "top 98%",
+            end: "top 95%",
+            toggleActions: "restart none none reverse",
+        }
+    });
+
+    let tl10 = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#page4",
+            scroller: "main",
+            start: "top 15%",
+            end: "top 0%",
+            toggleActions: "restart none none reverse",
+        }
+    });
+    
+    tl10.to("nav", {
+        backgroundColor: "#000",
+        height: "8vh",
+        duration: 0.4,
+    },"<");
+
+    tl10.to("#navpart2 ", {
+        marginLeft: "3.2vw",
+        width: "8%",
+        duration: 0.4,
+    }, "<");
+
+    tl10.to("nav i", {
+        fontSize: "1.2vw",
+        duration: 0.4,
+        color: "#fff"
+    }, "<");
+
+    tl10.to("#part12 h1", {
+        fontSize: "0vw",
+        duration: 0.4,
+    }, "<");
+
+    
+
+    const tl12 = gsap.timeline({
+        scrollTrigger: {
+          trigger: "#page4",
+          scroller: "main",
+          pin: true,
+          scrub: 2,
+          start: "top 0",
+          end: "top -220%", 
+        }
+      });
+      
+      tl12.to("#page4 .card", {
+        yPercent:-413, 
+      },"<");
+      
+      tl12.to("#page4 .box", {
+        yPercent: -440, 
+      }, "<");
+
+
 })

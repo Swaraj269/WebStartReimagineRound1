@@ -52,6 +52,9 @@ main{
     clip-path: polygon(30% 48%, 76% 48%, 76% 70%, 30% 70%);
 }
 
+.navbarimg {
+    transition: opacity 0.4s ease-in-out;
+}
 
 #cta button{
     font-family: 'outfitlight';
@@ -93,9 +96,157 @@ main{
     color: #fff;
     transform: translateY(110%);
 }
-
 .upperpart button:hover{
     color: #010101;
-    background-color: #B4EF02;
+    background-color: #b4ef02;
+}
+
+
+#blogs{
+    height:100vh;
+    width:100vw;
+    display: flex;
+    padding: 0 1.5vw;
+    background-color: white;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+#box{
+    border: 1.5px solid white;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#box2{
+    border: 1.5px solid white;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.box{
+    transform: translateY(200%);
+}
+.card{
+    transform: translateY(26.5%);
+}
+#heading{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#heading h1{
+    font-size: 2.5vw;
+    text-transform: uppercase;
+}
+#allblog{
+    height: 85%;
+    width: 100vw;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+#blog1{
+    height:100%;
+    width:100%;
+    display: flex;
+    background-color: white;
+    align-items: center;
+}
+#blog1:hover #a1 img{
+    scale: 1.07;
+}
+#a{
+    height: 100%;
+    width: 100%;
+    padding: 0.5vw 0.5vw;
+    display: flex;
+    flex-direction: column;
+    border-left: 0.5px solid rgb(202, 202, 202);
+    border-top: 0.5px solid rgb(202, 202, 202) ;
+    border-bottom: 0.5px solid rgb(202, 202, 202) ;
+}
+#aa{
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+#a1{
+    height: 86%;
+    width: 100%;
+    overflow: hidden;
+    transition: all 3.5s ease-in-out;
+}
+#a1 img{
+    height:100%;
+    width: 100%;
+    object-fit:cover;
+}
+#a2{
+    height: 14%;
+    width: 100%;
+    color: #010101;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#a21{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    height:100%
+}
+#a21 h3{
+    font-size: 1.3vw;
+    line-height: 1;
+}
+#a3{
+    height: 20%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 0.5vw;
+    justify-content: start;
+    padding-top: 0.1vw;
+}
+#a3 h2{
+    font-family: 'outfitlight';
+    font-size: 1vw;
+}
+#a3 a{
+    color: #010101;
+    text-decoration: none;
+    font-size: 1vw ;
+    transition: all 0.5s linear;
+}
+#a3 a:hover{
+    color: #647707;
+}
+#seeall{
+    height: 5%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#seeall h1{
+    font-size: 1.2vw;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+#seeall a{
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    color: black;
+}
+#seeall:hover a{
+    font-size: 1.22vw;
+    color: #4d5a0c;
 }
 
