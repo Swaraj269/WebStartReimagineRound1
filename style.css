@@ -13,6 +13,9 @@
     box-sizing: border-box;
     font-family: 'outfit';
 }
+button, a{
+    cursor: none;
+}
 
 html, body{
     width: 100%;
@@ -95,12 +98,19 @@ main{
     background-color: #010101;
     color: #fff;
     transform: translateY(110%);
+    cursor: none;
 }
 .upperpart button:hover{
     color: #010101;
     background-color: #b4ef02;
 }
-
+.page4buttons button{
+    cursor: none;
+}
+.page4buttons button:hover{
+    color: #010101;
+    background-color: #b4ef02;
+}
 
 #blogs{
     height:100vh;
@@ -113,22 +123,25 @@ main{
     align-items: center;
 }
 #box{
-    border: 1.5px solid white;
+    border: 2px solid #fff;
     position: absolute;
+    mix-blend-mode: difference;
     top: 50%;
     transform: translateY(-50%);
 }
-#box2{
-    border: 1.5px solid white;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
-.box{
-    transform: translateY(200%);
-}
+
+
 .card{
     transform: translateY(26.5%);
+}
+.card video{
+    object-position: 0 15%;
+}
+#page4buttons{
+    font-family: 'outfitlight';
+}
+#page4part1 p{
+    font-family: 'outfitlight';
 }
 #heading{
     height: 10%;

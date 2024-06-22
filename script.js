@@ -818,7 +818,7 @@ document.addEventListener('DOMContentLoaded', function(){
           pin: true,
           scrub: 2,
           start: "top 0",
-          end: "top -220%", 
+          end: "top -370%", 
         }
       });
       
@@ -830,5 +830,56 @@ document.addEventListener('DOMContentLoaded', function(){
         yPercent: -440, 
       }, "<");
 
+      tl12.to("#page4 .name", {
+        yPercent: -428, 
+      }, "<");
+      var page4buttons = document.querySelectorAll(".page4buttons button");
+      page4buttons.forEach(function(elem) {
+        elem.addEventListener("mouseover", function() {
+            gsap.to(cursor, {
+                scale: 12,
+                backgroundColor: "#00000000",
+            },"<");
+            gsap.to(bigcursor, {
+                scale: 0.1,
+                borderColor: "#B4EF02",
+            },"<");
+            gsap.to(elem, {
+                scale: 1.1,
+                backgroundColor: "#B4EF02",
+                color: "#000",
+            },"<");
+        });
 
+        elem.addEventListener("mouseleave", function() {
+            gsap.to(cursor, {
+                scale: 1,
+                backgroundColor: "#fff",
+            },"<");
+            gsap.to(bigcursor, {
+                scale: 1,
+                borderColor: "#fff",
+            },"<");
+            gsap.to(elem, {
+                scale: 1,
+                color: "#000",
+                backgroundColor: "#fff",
+            },"<");
+        });
+    });
+    var card = document.querySelectorAll(".card");
+    var cardVideo = document.querySelectorAll(".card video");
+    cardVideo.forEach(function(elem) {
+        var flag = true;
+        elem.addEventListener("click", function(){
+            if(elem.muted === true){
+                elem.muted = false;
+                flag = false;
+            }
+            else{
+                elem.muted = true;
+                flag = true;
+            }
+        })
+    });
 })
