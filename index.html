@@ -14,7 +14,7 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="loader" class="bg-[#010101] w-screen h-screen z-[99] fixed flex justify-center items-center  cursor-none">
+    <div id="loader" class="bg-[#010101] w-screen h-screen z-[99] fixed flex justify-center items-center cursor-none ">
         <div id="loadertext" class="text-[#fff] flex flex-col  justify-center items-center overflow-hidden ">
             <h1 class="text-3xl">BEAST LIFE</h1>
             <h1 id="counter" class="text-center text-[#B4EF02]">100%</h1>
@@ -45,9 +45,103 @@
             </div>
         </div>
     </div>
-    <div   id="cursor" class="fixed top-[0] left-[0]   h-[0.3vw] w-[0.3vw] z-[990] rounded-[50%] bg-[#fff] opacity-[0] pointer-events-none text-center flex items-center justify-center leading-[1]  uppercase "></div>
-    <div id="bigcursor" class="fixed top-[0] left-[0] h-[3vw] w-[3vw] z-[990] rounded-[50%] mix-blend-difference opacity-[0] pointer-events-none"></div>
-    <main class="bg-[#010101] cursor-none">
+    <div  id="cursor" class="fixed top-[0] left-[0]   h-[0.3vw] w-[0.3vw] z-[990] rounded-[50%] bg-[#fff] opacity-[0] mix-blend-difference pointer-events-none"></div>
+    <div id="bigcursor" class="fixed top-[0] left-[0] h-[2.8vw] w-[2.8vw] z-[990] rounded-[50%] mix-blend-difference opacity-[0] pointer-events-none"></div>
+    <main class="bg-[#010101] ">
+        <div id="menudiv" data-scroll data-scroll-sticky data-scroll-target="main"  class="fixed flex justify-center items-center top-[0] left-[0] z-[8] h-screen w-[0]  bg-[#fff]">
+            <div id="menucross" class="flex opacity-[0] absolute top-[1vw] left-[1vw] justify-center items-center h-[3.6vw] w-[3.6vw] rounded-full  bg-[#010101]"> <i class="ri-close-large-fill text-[#fff] text-[1.2vw]"></i> </div>
+            <div id="pagetext" class="w-full  h-[50%] mt-[-10vw] overflow-hidden">
+                <div class="pagetext relative w-full h-[20%]  flex justify-start items-center ">
+                    <div id="behind0" class="h-full w-0 absolute z-[-1] bg-[#010101]"></div>
+                    <h1 class="text-[#010101] text-[0vw]  px-[1vw]">Products</h1>
+                </div>
+                <div class="pagetext w-full h-[20%] flex justify-start items-center ">
+                    <h1 class="text-[#010101] text-[0vw] px-[1vw]">Our Story</h1>
+                    <div id="behind1" class="h-full w-0 absolute z-[-1] bg-[#010101]"></div>
+                </div>
+                <div class="pagetext w-full h-[20%]  flex justify-start items-center "><h1 class="text-[#010101] text-[0vw] px-[1vw]">
+                    Authenticity Guaranteed</h1>
+                    <div id="behind2" class="h-full w-0 absolute z-[-1] bg-[#010101]"></div>
+                </div>
+                <div class="pagetext w-full h-[20%]  flex justify-start items-center">
+                    <h1 class="text-[#010101] text-[0vw] px-[1vw]">Blogs</h1>
+                    <div id="behind3" class=" behind h-full w-0 absolute z-[-1] bg-[#010101]"></div>
+                </div>
+                <div class="pagetext w-full h-[20%] flex justify-start items-center ">
+                    <h1 class="text-[#010101] text-[0vw] px-[1vw]">Track My Order</h1>
+                    <div id="behind4" class=" behind h-full w-0 absolute z-[-1] bg-[#010101]"></div>
+                </div>
+            </div>
+        </div>
+        <div id="cartdiv" data-scroll data-scroll-sticky data-scroll-target="main" class="fixed flex items-center justify-center  z-[8] h-screen w-[0%] bg-[#fff] right-[0] ">
+            <div id="cartcross" class="flex opacity-[0] absolute top-[1vw] right-[1vw]  justify-center items-center h-[3.6vw] w-[3.6vw] rounded-full  bg-[#010101]"> <i class="ri-close-large-fill text-[#fff] text-[1.2vw]"></i> </div>
+            <div id="cartcontent" class="flex opacity-[0] w-full h-[75%] flex-col items-center justify-center">
+                <div id="upperpart" class="w-full h-[50%] gap-[1.7vw]  flex flex-col items-center justify-center">
+                    <h2 class="text-[1.8vw] text-center leading-[1]">Your Cart has (0) items</h2>
+                    <div id="cartbutton" class="px-[1vw]  w-full flex flex-col items-center justify-center gap-[1.4vw]">
+                        <h1 class="text-[1.4vw] text-center leading-[1]">Tap the button below to discover our huge ranging products</h1>
+                        <button class="px-4 py-2 text-[#fff] rounded-sm bg-[#010101] text-[1.2vw]">Explore Now</button>
+                    </div>
+                </div>
+                <div id="lowerpart" class="w-full h-[50%]  flex flex-col items-center justify-center">
+                    <div class="cartheading w-full h-[20%] flex items-center justify-center"><h2 class="text-[#010101] text-[1.4vw] mb-[1vw]">Recommended for you</h2></div>
+                    <div id="cartproductcard" class="w-full h-[80%]">
+                        <div class="cartcard w-full h-[50%] flex">
+                            <div class="cartpicture w-[25%] h-full">
+                                <img class="h-full w-full object-cover" src="https://beastlife.in/cdn/shop/files/IsorichBlendWheyProteinwithUltrasorbTech_1848G.jpg?v=1715278422&width=1100" alt="">
+                            </div>
+                            <div class="cartproductcontent h-full w-[75%] px-[1vw]">
+                                <div class="productname w-full flex items-center justify-between h-[40%]">
+                                    <h1 class="text-[1.2vw]">Whey Protein | 1848G</h1>
+                                    <h1 class="text-[1.2vw]"><s class="text-[0.94vw]">₹7,699</s> ₹6,159</h1>
+                                </div>
+                                <div class="productdescription w-full flex items-center justify-between h-[60%]">
+                                    <div id="descriptionleft" class="w-[75%] flex justify-center items-center h-full ">
+                                        <p class="text-[0.9vw] leading-[1]">Protein that won't kill your appetite, and won't make you feel bloated while making you flex your muscles.</p>
+                                    </div>
+                                    <div id="descriptionright" class="w-[25%] h-full flex justify-end items-center">
+                                        <button class="px-5 py-2 bg-[#010101] text-[#fff] text-[0.8vw] rounded-sm">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cartcard w-full h-[50%] flex">
+                            <div class="cartpicture w-[25%] h-full">
+                                <img class="h-full w-full object-cover" src="https://beastlife.in/cdn/shop/files/Image-01_81db46fe-1312-418c-b90e-c06e683041f4.jpg?v=1715100791&width=1100" alt="">
+                            </div>
+                            <div class="cartproductcontent h-full w-[75%] px-[1vw]">
+                                <div class="productname w-full flex items-center justify-between h-[40%]">
+                                    <h1 class="text-[1.2vw]">Creatine  | 249G</h1>
+                                    <h1 class="text-[1.2vw]"><s class="text-[0.94vw]">₹1,499</s> ₹1,199</h1>
+                                </div>
+                                <div class="productdescription w-full flex items-center justify-between h-[60%]">
+                                    <div id="descriptionleft" class="w-[75%] flex justify-center items-center h-full ">
+                                        <p class="text-[0.9vw] leading-[1]">A Clean Fuel for Max Hustle.249g / 83 Servings!</p>
+                                    </div>
+                                    <div id="descriptionright" class="w-[25%] h-full flex justify-end items-center">
+                                        <button class="px-5 py-2 bg-[#010101] text-[#fff] text-[0.8vw] rounded-sm">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="products" class="h-[70vh] opacity-[0] w-full bg-[#fff] absolute z-[8] top-[0] flex justify-center items-center">
+            <div id="productcross" class="flex opacity-[1] absolute top-[1vw] left-[1vw]  justify-center items-center h-[3.5vw] w-[3.5vw] rounded-full  bg-[#010101]"> <i class="ri-close-large-fill text-[#fff] text-[1.2vw]"></i> </div>
+            <div id="productsname" class="  px-[1vw]  mt-[3.5vw] leading-[1.2] h-full w-[65%]   flex flex-col justify-center">
+                <h3 id="product0" class=" uppercase text-[3.3vw] h-fit gap-2 flex items-end w-full"><span class="product1 hidden text-[1.3vw] mb-[0.7vw] lowercase " id="product00">shop</span>All</h3>
+                <h3 id="product1" class="  uppercase text-[3.3vw] h-fit gap-2 flex items-end w-full"><span class="shop hidden text-[1.3vw] mb-[0.7vw] lowercase" id="product11">shop</span>Protein</h3>
+                <h3 id="product2" class="  uppercase text-[3.3vw] h-fit gap-2 flex items-end w-full"><span class="shop hidden text-[1.3vw] mb-[0.7vw] lowercase" id="product22">shop</span>Creatine</h3>
+                <h3 id="product3" class="  uppercase text-[3.3vw] h-fit gap-2 flex items-end w-full"><span class="shop hidden text-[1.3vw] mb-[0.7vw] lowercase" id="product33">shop</span>BCCA</h3>
+                <h3 id="product4" class="  uppercase text-[3.3vw] h-fit gap-2 flex items-end w-full"><span class="shop hidden text-[1.3vw] mb-[0.7vw] lowercase" id="product44">shop</span>CLOTHING</h3>
+                <h3 id="product5" class="  uppercase text-[3.3vw] h-fit gap-2 flex items-end w-full"><span class="shop hidden text-[1.3vw]  mb-[0.7vw] lowercase" id="product55">shop</span>ACCESSORIES</h3>
+            </div>
+            <div id="productphoto" class="h-full w-[35%]">
+                <img class="h-full w-full hidden object-cover" src="https://cdn.shopify.com/s/files/1/0690/7723/7977/t/4/assets/d543ec9c521c--shopall-219a3f.jpg?v=1715186587" alt="">
+            </div>
+        </div>
         <nav data-scroll data-scroll-sticky data-scroll-target="main" class=" z-[5] fixed top-[0%] left-[0%] w-screen h-[12vh]  px-[5vw] flex justify-between items-center ">
             <div id="navpart1" class="flex items-center gap-[1.2vw]">
                 <div id="part11"><i class="ri-menu-line text-[1.5vw] text-[#fff] "></i></div>
@@ -229,8 +323,8 @@
         </div>
         <div id="page4" data-scroll  class="w-screen h-screen bg-[#010101]  relative ">
             <div id="page4part1" class="h-[60%] w-[34%]  absolute top-[50%] left-[5vw]  -translate-y-1/2   flex flex-col items-start overflow-hidden">
-                <h1 class="text-[#fff] text-[4.5vw] leading-[1]">Experience <br> Our Products:</h1>
-                <p class="text-[#fff] w-[83%] text-[1.5vw] leading-[1.2] mt-[3vw]">Dive into our collection of product videos to get an up-close look at what we offer.</p>
+                <h1 class="text-[#fff] text-[4.3vw] leading-[1]">Experience <br> Our Products:</h1>
+                <p class="text-[#fff] w-[83%] text-[1.5vw] leading-[1.2] mt-[2vw]">Dive into our collection of product videos to get an up-close look at what we offer.</p>
             </div>
             <div id="page4part2" class="h-[100%] w-[22%] absolute top-[0] left-[40%]  overflow-hidden">
                 <div id="cards" class="h-full w-full flex flex-col items-center gap-[1vw]">
@@ -301,7 +395,139 @@
                 </div>
             </div>
         </div>
-        <div id="blogs" data-scroll >
+        <div data-scroll id="page6" class="mt-[-5vw]">
+            <div id="move1">
+                <div class="marque">
+                    <h1>Built  by  Beasts, Seal Packed by  Experts.</h1>
+                    <h1>Built  by  Beasts, Seal Packed by  Experts.</h1>
+                    <h1>Built  by  Beasts, Seal Packed by  Experts.</h1>
+                </div>
+                <div class="marque">
+                    <h1>Built  by  Beasts, Seal Packed by  Experts. </h1>
+                    <h1>Built  by  Beasts, Seal Packed by  Experts. </h1>
+                    <h1>Built  by  Beasts, Seal Packed by  Experts. </h1>
+                </div>
+                <div class="marque">
+                    <h1>Built  by  Beasts, Seal Packed by  Experts. </h1>
+                    <h1>Built  by  Beasts, Seal Packed by  Experts. </h1>
+                    <h1>Built  by  Beasts, Seal Packed by  Experts. </h1>
+                </div>
+                <div class="marque">
+                    <h1>Built  by  Beasts, Seal Packed by  Experts. </h1>
+                    <h1>Built  by  Beasts, Seal Packed by  Experts. </h1>
+                    <h1>Built  by  Beasts, Seal Packed by  Experts. </h1>
+                </div>
+                <div class="marque">
+                    <h1>Built  by  Beasts, Seal Packed by  Experts. </h1>
+                    <h1>Built  by  Beasts, Seal Packed by  Experts. </h1>
+                    <h1>Built  by  Beasts, Seal Packed by  Experts. </h1>
+                </div>
+                <div class="marque">
+                    <h1>Built  by  Beasts, Seal Packed by  Experts.</h1>
+                    <h1>Built  by  Beasts, Seal Packed by  Experts.</h1>
+                    <h1>Built  by  Beasts, Seal Packed by  Experts.</h1>
+                </div>
+                <div class="marque">
+                    <h1>Built  by  Beasts, Seal Packed by  Experts. </h1>
+                    <h1>Built  by  Beasts, Seal Packed by  Experts. </h1>
+                    <h1>Built  by  Beasts, Seal Packed by  Experts. </h1>
+                </div>
+                <div class="marque">
+                    <h1>Built  by  Beasts, Seal Packed by  Experts. </h1>
+                    <h1>Built  by  Beasts, Seal Packed by  Experts. </h1>
+                    <h1>Built  by  Beasts, Seal Packed by  Experts. </h1>
+                </div>
+                <div class="marque">
+                    <h1>Built  by  Beasts, Seal Packed by  Experts. </h1>
+                    <h1>Built  by  Beasts, Seal Packed by  Experts. </h1>
+                    <h1>Built  by  Beasts, Seal Packed by  Experts. </h1>
+                </div>
+                <div class="marque">
+                    <h1>Built  by  Beasts, Seal Packed by  Experts. </h1>
+                    <h1>Built  by  Beasts, Seal Packed by  Experts. </h1>
+                    <h1>Built  by  Beasts, Seal Packed by  Experts. </h1>
+                </div>
+                <div class="marque">
+                    <h1>Built  by  Beasts, Seal Packed by  Experts.</h1>
+                    <h1>Built  by  Beasts, Seal Packed by  Experts.</h1>
+                    <h1>Built  by  Beasts, Seal Packed by  Experts.</h1>
+                </div>
+                <div class="marque">
+                    <h1>Built  by  Beasts, Seal Packed by  Experts. </h1>
+                    <h1>Built  by  Beasts, Seal Packed by  Experts. </h1>
+                    <h1>Built  by  Beasts, Seal Packed by  Experts. </h1>
+                </div>
+                <div class="marque">
+                    <h1>Built  by  Beasts, Seal Packed by  Experts. </h1>
+                    <h1>Built  by  Beasts, Seal Packed by  Experts. </h1>
+                    <h1>Built  by  Beasts, Seal Packed by  Experts. </h1>
+                </div>
+                <div class="marque">
+                    <h1>Built  by  Beasts, Seal Packed by  Experts. </h1>
+                    <h1>Built  by  Beasts, Seal Packed by  Experts. </h1>
+                    <h1>Built  by  Beasts, Seal Packed by  Experts. </h1>
+                </div>
+                <div class="marque">
+                    <h1>Built  by  Beasts, Seal Packed by  Experts. </h1>
+                    <h1>Built  by  Beasts, Seal Packed by  Experts. </h1>
+                    <h1>Built  by  Beasts, Seal Packed by  Experts. </h1>
+                </div>
+                <div class="marque">
+                    <h1>Built  by  Beasts, Seal Packed by  Experts.</h1>
+                    <h1>Built  by  Beasts, Seal Packed by  Experts.</h1>
+                    <h1>Built  by  Beasts, Seal Packed by  Experts.</h1>
+                </div>
+                <div class="marque">
+                    <h1>Built  by  Beasts, Seal Packed by  Experts. </h1>
+                    <h1>Built  by  Beasts, Seal Packed by  Experts. </h1>
+                    <h1>Built  by  Beasts, Seal Packed by  Experts. </h1>
+                </div>
+                <div class="marque">
+                    <h1>Built  by  Beasts, Seal Packed by  Experts. </h1>
+                    <h1>Built  by  Beasts, Seal Packed by  Experts. </h1>
+                    <h1>Built  by  Beasts, Seal Packed by  Experts. </h1>
+                </div>
+                <div class="marque">
+                    <h1>Built  by  Beasts, Seal Packed by  Experts. </h1>
+                    <h1>Built  by  Beasts, Seal Packed by  Experts. </h1>
+                    <h1>Built  by  Beasts, Seal Packed by  Experts. </h1>
+                </div>
+                <div class="marque">
+                    <h1>Built  by  Beasts, Seal Packed by  Experts. </h1>
+                    <h1>Built  by  Beasts, Seal Packed by  Experts. </h1>
+                    <h1>Built  by  Beasts, Seal Packed by  Experts. </h1>
+                </div>
+            </div>
+        </div>
+        <div id="blank" data-scroll class="h-[6vh] w-full bg-[#010101]"></div>
+        <div id="page7" data-scroll class="h-screen w-screen flex items-center justify-center relative">
+            <div class="apimage h-full w-full absolute z-[-1] ">
+                <img data-scroll data-scroll-speed="-2" class="w-full h-full object-cover" src="https://cdn.shopify.com/s/files/1/0690/7723/7977/files/Image07_73fd0844-29e3-4060-89ea-e459192ccc64_720x720.jpg?v=1715278422" alt="">
+            </div>
+            <div class="apbox  w-full h-[100%] bg-[#01010155] rounded-lg flex flex-col items-center justify-center">
+                <h1 class="text-center w-[50%]  text-[4vw] leading-[1] text-[#B7EE0C]">PRODUCT AUTHENTICATION</h1>
+                <form action="" class=" h-2/4 w-full flex flex-col items-center justify-center">
+                    <label for="digitcode" class="text-[1.4vw] text-[#fff]">Enter your 6 digit code here*</label>
+                    <input type="text" class="px-4 py-2 mt-[0.4vw]" id="digitcode" placeholder="a0 b0 c0">
+                    <label for="mobnumber" class="text-[1.4vw] text-[#fff] mt-[1vw]">Enter your Phone Number</label>
+                    <input type="phone" class="px-4 py-2 mt-[0.4vw]" id="mobnumber" >
+                    <button class=" cursor-none submit px-6 py-2 mt-[2vw] bg-[#fff] text-[1.4vw]" >Check Authenticity</button>
+                </form>
+            </div>
+        </div>
+        <div id="page5" data-scroll class="w-screen h-screen bg-[#010101] relative overflow-hidden">
+            <div id="page5body" class="w-full h-[100%] flex absolute">
+                <div id="page5img" class="h-full w-full absolute top-[0] left-[0]  z-[1]">
+                    <img data-scroll data-scroll-speed="-2" class="h-full w-full object-cover " src="./images/aboutimg.jpeg" alt="">
+                </div>
+                <div id="page5content" class="h-full absolute z-[2] w-[55%] bg-[#010101cc] px-[5vw] flex flex-col justify-center">
+                    <h2 class="heading text-[#fff]  text-[4vw] ">Our <span class="text-[#b4ef02] ">Story</span></h2>
+                    <h1 class="text-[#fff] text-[1.5vw] mt-[2vw]">Welcome to BeastLife, where the hustle never stops! We're more than just a fitness brand. Inspired by our founder, Gaurav Taneja aka Flying Beast, we embody the spirit of relentless ambition and unbreakable willpower.</h1>
+                    <h1 class="text-[#fff] text-[1.5vw] mt-[1vw]">We thrive on pushing limits, breaking barriers, and achieving the impossible. Join us and live for the chase, the rush, and the joy of surpassing your goals.</h1>
+                </div>
+            </div>
+        </div>
+        <div id="blogs" data-scroll class="relative overflow-hidden" >
             <div id="heading">
               <h1>Explore Our Blog</h1>
             </div>
@@ -309,13 +535,13 @@
               <div id="blog1">
                 <div id="a">
                     <div id="aa">
-                        <div id="a1"><img src="https://images.unsplash.com/photo-1607532941433-304659e8198a?q=80&w=1978&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
+                        <div id="a1"><img data-scroll data-scroll-speed="-1" src="https://images.unsplash.com/photo-1607532941433-304659e8198a?q=80&w=1978&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
                         <div id="a2">
                             <div id="a21"><h3>I am a Vegeterian. How can I have enough protein?</h3></div>
                         </div>
                     </div>
                     <div id="a3">
-                        <h2>You must have heard from your friends “Vegetarians are boring, how can you even eat this leafy food your whole life?” and many more questions like that. So, in a world where diets are as diverse as the cultures they stem from, being a vegetarian stands as a conscious choice for many.</h2>
+                        <h2>You must have heard from your friends “Vegetarians are boring, how can you even eat this leafy food your whole life?” and many more questions like that. So, in a world where diets are as diverse as the cultures they stem from.</h2>
                         <h2><a href="https://beastlife.in/blogs/blog/i-am-a-vegetarian-how-can-i-have-enough-protein">READ MORE</a></h2>
                     </div>
                 </div>
@@ -323,13 +549,13 @@
             <div id="blog1">
                 <div id="a">
                     <div id="aa">
-                        <div id="a1"><img src="https://images.unsplash.com/photo-1521804906057-1df8fdb718b7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
+                        <div id="a1"><img data-scroll data-scroll-speed="-1" src="https://images.unsplash.com/photo-1521804906057-1df8fdb718b7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
                         <div id="a2">
                             <div id="a21"><h3>What is creatine? Why should I consume it?</h3></div>
                         </div>
                     </div>
                     <div id="a3">
-                      <h2>Alright, buckle up, because we're diving into the world of creatine - the not-so-secret weapon for unleashing your inner superhero!So, what the heck is creatine anyway? Well, think of it as your body's very own energy booster, the sidekick that kicks your workouts into high gear.</h2>
+                      <h2>Alright, buckle up, because we're diving into the world of creatine - the not-so-secret weapon for unleashing your inner superhero!So, what the heck is creatine anyway? Well, think of it as your body's very own energy booster.</h2>
                       <h2><a href="https://beastlife.in/blogs/blog/what-is-creatine-why-should-i-consume-it">READ MORE</a></h2>
                   </div>
                 </div>
@@ -337,13 +563,13 @@
             <div id="blog1">
                 <div id="a">
                     <div id="aa">
-                        <div id="a1"><img src="https://cdn.shopify.com/s/files/1/0690/7723/7977/files/Image-06_720x720.jpg?v=1715100190" alt=""></div>
+                        <div id="a1"><img data-scroll data-scroll-speed="-1" src="https://cdn.shopify.com/s/files/1/0690/7723/7977/files/Image-06_720x720.jpg?v=1715100190" alt=""></div>
                         <div id="a2">
                             <div id="a21"><h3>BCAAs: Need of the hour</h3></div>
                         </div>
                     </div>
                     <div id="a3">
-                      <h2>You must have heard from your friends “Vegetarians are boring, how can you even eat this leafy food your whole life?” and many more questions like that. So, in a world where diets are as diverse as the cultures they stem from, being a vegetarian stands as a conscious choice for many.</h2>
+                      <h2>You must have heard from your friends “Vegetarians are boring, how can you even eat this leafy food your whole life?” and many more questions like that. So, in a world where diets are as diverse as the cultures they stem from.</h2>
                       <h2><a href="https://beastlife.in/blogs/blog/i-am-a-vegetarian-how-can-i-have-enough-protein">READ MORE</a></h2>
                     </div>
                 </div>
@@ -351,6 +577,73 @@
             </div>
             <div id="seeall">
               <h1><a href="">view all</a></h1>
+            </div>
+        </div>
+        <div id="footer" data-scroll class="h-screen   w-screen relative flex flex-col items-start justify-end">
+            <div id="pantherimg" class="absolute  top-[0] right-[0] h-[100%] w-[60%]">
+                <img class="h-full w-full object-cover" src="https://cdn.shopify.com/s/files/1/0690/7723/7977/files/footer-panther.svg?v=1715239577" alt="">
+            </div>
+            <div id="footer1" class="h-[12%] w-full px-[5vw]">
+                <div id="footerlogo" class="h-full w-[11%]">
+                    <img class="h-full w-full object-screen" src="https://beastlife.in/cdn/shop/files/beastlife-whitelogo.svg?v=1714820170&width=260" alt="">
+                </div>
+            </div>
+            <div id="footer2" class="h-[28%] w-[80%] px-[5vw]  flex flex-col items-start justify-center ">
+                <p class="text-[1.5vw] leading-[1.3] text-[#fff]">Your one-stop solution for all your supplement needs! Game-changing products that are geared to unlock your #BeastMode and drive top-tier performance for all your hustle days. Explore our epic lineup of fuel that's genius-built,expert-tested and beast-approved!</p>
+                <h2 class="text-[1.8vw] text-[#B7EE0C]">Go, hustle!</h2>
+            </div>
+            <div id="footer3" class="h-[40%] w-[100%] px-[5vw] flex justify-center items-center">
+                <div id="footer31" class="h-full w-[25%]">
+                    <div id="footerheading" class="h-[20%] w-[100%] flex justify-items align-start">
+                        <h1 class="text-[1.8vw] text-[#B7EE0C]">For Customers</h1>
+                    </div>
+                    <div id="links" class="h-[80%] w-[100%] flex flex-col justify-start gap-1 items-start">
+                        <h3 class="text-[#fff] text-[1.1vw]">About Us</h3>
+                        <h3 class="text-[#fff] text-[1.1vw]">Contact Us</h3>
+                        <h3 class="text-[#fff] text-[1.1vw]">Privacy Policy</h3>
+                        <h3 class="text-[#fff] text-[1.1vw]">Returns,Shipping,Cookie,Policies</h3>
+                        <h3 class="text-[#fff] text-[1.1vw]">Payment Policy</h3>
+                        <h3 class="text-[#fff] text-[1.1vw]">Terms & Conditions</h3>
+                        <h3 class="text-[#fff] text-[1.1vw]">FAQ</h3>
+                    </div>
+                </div>
+                <div id="footer32" class="h-full w-[25%]">
+                    <div id="footerheading" class="h-[20%] w-[100%] flex justify-items align-start">
+                        <h1 class="text-[1.8vw] text-[#B7EE0C]">Products</h1>
+                    </div>
+                    <div id="links" class="h-[80%] w-[100%] flex flex-col justify-start gap-1 items-start">
+                        <h3 class="text-[#fff] text-[1.1vw]">Protein</h3>
+                        <h3 class="text-[#fff] text-[1.1vw]">Creatine</h3>
+                        <h3 class="text-[#fff] text-[1.1vw]">BCAA</h3>
+                        <h3 class="text-[#fff] text-[1.1vw]">Beastlife T-Shirt</h3>
+                        <h3 class="text-[#fff] text-[1.1vw]">Sipper</h3>
+                        <h3 class="text-[#fff] text-[1.1vw]">Shaker</h3>
+                    </div>
+                </div>
+                <div id="footer33" class="h-full w-[25%]">
+                    <div id="footerheading" class="h-[20%] w-[100%] flex justify-items align-start">
+                        <h1 class="text-[1.8vw] text-[#B7EE0C]">Explore</h1>
+                    </div>
+                    <div id="links" class="h-[80%] w-[100%] flex flex-col justify-start gap-1 items-start">
+                        <h3 class="text-[#fff] text-[1.1vw]">Blogs</h3>
+                        <h3 class="text-[#fff] text-[1.1vw]">Lab Reports</h3>
+                        <h3 class="text-[#fff] text-[1.1vw]">Track Order</h3>
+                    </div>
+                </div>
+                <div id="footer34" class="h-full w-[25%]">
+                    <div id="footerheading" class="h-[20%] w-[100%] flex justify-items align-start">
+                        <h1 class="text-[1.8vw] text-[#B7EE0C]">Contact With Us</h1>
+                    </div>
+                    <div id="links" class="h-[80%] w-[100%] flex  justify-start gap-4 items-start">
+                        <div id="socialcircle" class="h-[2.7vw] w-[2.7vw] rounded-full bg-[#fff] flex items-center justify-center"><i class="ri-facebook-fill text-[#010101] text-[1.5vw]"></i></div>
+                        <div id="socialcircle" class="h-[2.7vw] w-[2.7vw] rounded-full bg-[#fff] flex items-center justify-center"><i class="ri-instagram-line text-[#010101] text-[1.5vw]"></i></div>
+                        <div id="socialcircle" class="h-[2.7vw] w-[2.7vw] rounded-full bg-[#fff] flex items-center justify-center"><i class="ri-whatsapp-line text-[#010101] text-[1.5vw]"></i></div>
+                        <div id="socialcircle" class="h-[2.7vw] w-[2.7vw] rounded-full bg-[#fff] flex items-center justify-center"><i class="ri-youtube-fill text-[#010101] text-[1.5vw]"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div id="footer4" class="w-full h-[10%] flex items-center justify-center">
+                <h1 class="text-[#fff] text-[1.2vw]">Copyright © 2024 BeastLife. All Rights Reserved.</h1>
             </div>
         </div>
     </main>

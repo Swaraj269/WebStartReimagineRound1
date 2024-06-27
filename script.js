@@ -186,27 +186,22 @@ document.addEventListener('DOMContentLoaded', function(){
                     tl2.from("#cta button",{
                         y: 20,
                         opacity: 0,
-                        duration: 1.7,
-                        ease: "power3.out",
-                    },"<")
+                        duration: 1.3,
+                        delay: -0.34, 
+                    })
+                    tl2.to("#cursor",{
+                        opacity: 1,
+                        duration: 1.3,
+                    },"<");
+                    tl2.to("#bigcursor",{
+                        opacity: 1,
+                        duration: 1.3,
+                    },"<");
                     tl2.from("nav",{
                         y: -20,
                         opacity: 0,
-                        duration: 1.7,
-                        ease: "power3.out",
+                        duration: 1.3,
                     },"<");
-                    tl2.to("#cursor",{
-                        opacity: 1,
-                        duration: 1.7,
-                        ease: "power3.out",
-                        delay: -1.19, 
-                    })
-                    tl2.to("#bigcursor",{
-                        opacity: 1,
-                        duration: 1.5,
-                        ease: "power3.out",
-                        delay: -1.19,
-                    })
                 }
             })
             tl.to("#loader",{
@@ -215,40 +210,239 @@ document.addEventListener('DOMContentLoaded', function(){
         }
         
     }
-    window.addEventListener("mousemove", function(e){
-        gsap.set("#cursor",{
-            yPercent: -50,
-            xPercent: -50,
-        })
-        gsap.set("#bigcursor",{
-            yPercent: -50,
-            xPercent: -50,
-        })
+
+    var cursor = document.querySelector("#cursor");
+    gsap.set("#bigcursor",{
+        xPercent: -50,
+        yPercent: -50,
+    })
+    gsap.set("#cursor",{
+        xPercent: -50,
+        yPercent: -50,
+    })
+    window.addEventListener("mousemove",function(e){
         gsap.to("#cursor",{
-            x: e.clientX,
-            y: e.clientY,
-            duration: 0.85,
+            x: e.clientX + "px",
+            y: e.clientY + "px",
+            duration: 0.5,
+            ease: "power1.out",
         })
         gsap.to("#bigcursor",{
-            x: e.clientX,
-            y: e.clientY,
-            duration: 0.3,
+            x: e.clientX + "px",
+            y: e.clientY + "px",
+            duration: 0.2,
+            ease: "power1.out",
         })
-    });
+    })
+
+    var allbutton = document.querySelectorAll("button");
+    allbutton.forEach(elem => {
+        elem.addEventListener("mouseover", function(){
+            gsap.to("#cursor",{
+                scale: 12,
+                duration: 0.5,
+                backgroundColor: "#ffffff00",
+                ease: "power1.out",
+            })
+            gsap.to("#bigcursor",{
+                scale: 0.1,
+                duration: 0.5,
+                ease: "power1.out",
+            })
+        })
+        elem.addEventListener("mouseleave", function(){
+            gsap.to("#cursor",{
+                scale: 1,
+                duration: 0.5,
+                backgroundColor: "#fff",
+                ease: "power1.out",
+            })
+            gsap.to("#bigcursor",{
+                scale: 1,
+                duration: 0.5,
+                ease: "power1.out",
+            })
+        })
+    })
+
+    function menuanimation() {
+        var menucross = document.querySelector("#menucross");
+        var part11 = document.querySelector("#part11");
+        var pagetext = document.querySelectorAll(".pagetext");
+        var menudiv = document.querySelector("#menudiv");
+      
+        pagetext.forEach((elem,index) =>{
+          elem.addEventListener("mouseover", function() {
+              gsap.to(`#behind${index}`, {
+                  width: "100%",
+                  duration: 0.5,
+                  ease: "power1.out",
+              });
+          });
+      
+          elem.addEventListener("mouseleave", function() {
+              gsap.to(`#behind${index}`, {
+                  width: "0%",
+                  duration: 0.5,
+                  ease: "power1.out",
+              });
+          });
+        })
+        part11.addEventListener("click", function(){
+          gsap.to("#menudiv", {
+            width: "33.4%",
+            opacity: 1,
+            duration : 0.4,
+          })
+          gsap.to("#menucross", {
+            opacity: 1,
+            duration : 0.4,
+          })
+          gsap.to(".pagetext h1",{
+            fontSize: "2.2vw",
+            duration : 0.4,
+          })
+        });
+        menudiv.addEventListener("mouseleave", function(){
+          gsap.to("#menudiv", {
+            width: "0%",
+            opacity: 0,
+            duration : 0.4,
+          })
+          gsap.to(".pagetext h1",{
+            fontSize: "0vw",
+            duration : 0.4,
+          })
+        });
+        menucross.addEventListener("click", function(){
+            gsap.to("#menudiv", {
+              width: "0%",
+              opacity: 0,
+              duration : 0.4,
+            })
+            gsap.to(".pagetext h1",{
+              fontSize: "0vw",
+              duration : 0.4,
+            })
+        } )
+      }
+      
+      menuanimation();
+      
+      function cartanimation() {
+        var cartcross = document.querySelector("#cartcross");
+        var part32  = document.querySelector("#part32");
+      
+        cartcross.addEventListener("click", function(){
+          gsap.to("#cartdiv", {
+            width: "0%",
+            opacity: 0,
+            duration : 0.4,
+          })
+          gsap.to("#cartcross", {
+            opacity: 0,
+            duration : 0.4,
+          })
+          gsap.to("#cartcontent", {
+            opacity: 0,
+            duration : 0.8,
+          })
+        });
+        part32.addEventListener("click", function(){
+          gsap.to("#cartdiv", {
+            width: "30%",
+            opacity: 1,
+            duration : 0.4,
+          })
+          gsap.to("#cartcross", {
+            opacity: 1,
+            duration : 0.4,
+          })
+          gsap.to("#cartcontent", {
+            opacity: 1,
+            duration : 0.2,
+          })
+        });
+      }
+      
+      cartanimation();
+      
+      function productanimation() {
+        
+        var productcross = document.querySelector("#productcross");
+        var part12 = document.querySelector("#part12");
+        var product = document.querySelector("#products");
+      
+        productcross.addEventListener("click", function(){
+          gsap.to("#products",{
+            transform: "translateY(-100%)",
+            opacity: 0,
+            duration : 0.4,
+          })
+        });
+      
+        product.addEventListener("mouseleave", function(){
+          gsap.to("#products",{
+            transform: "translateY(-100%)",
+            opacity: 0,
+            duration : 0.4,
+          })
+        });
+        part12.addEventListener("mouseover", function(){
+          gsap.to("#products",{
+            transform: "translateY(0%)",
+            opacity: 1,
+            duration : 0.4,
+          })
+        });
+      
+        var productsname = document.querySelectorAll("#productsname h3");
+        var images = [
+          "https://cdn.shopify.com/s/files/1/0690/7723/7977/t/4/assets/d543ec9c521c--shopall-219a3f.jpg?v=1715186587",
+          "https://cdn.shopify.com/s/files/1/0690/7723/7977/t/4/assets/d543ec9c521c--protein-eb5e33.jpg?v=1715186349", 
+          "https://cdn.shopify.com/s/files/1/0690/7723/7977/t/4/assets/d543ec9c521c--creatine-e7ea9c.jpg?v=1715186354",
+          "https://cdn.shopify.com/s/files/1/0690/7723/7977/t/4/assets/d543ec9c521c--bcaa-c241d8.jpg?v=1715186359",
+          "https://cdn.shopify.com/s/files/1/0690/7723/7977/t/4/assets/d543ec9c521c--tshirt-88de72.jpg?v=1715186364",
+          "https://cdn.shopify.com/s/files/1/0690/7723/7977/t/4/assets/d543ec9c521c--Metal-Shaker-53da01.jpg?v=1715247352",
+        ]
+        productsname.forEach((elem,index)=>{
+          elem.addEventListener("mouseover", function(){
+            gsap.to(`#product${index}${index}`,{
+              display: 'block',
+              opacity: 1,
+              duration : 0.2,
+              ease: "linear",
+              onComplete: function(){
+                var productphoto = document.querySelector('#productphoto img');
+                productphoto.style.display = 'block';
+                productphoto.src = images[index];
+              }
+            })
+          })
+          elem.addEventListener("mouseleave", function(){
+            gsap.to(`#product${index}${index}`,{
+              display: 'none',
+              opacity: 1,
+              duration : 0.2,
+              ease: "linear",
+              onComplete: function(){
+                var productphoto = document.querySelector('#productphoto img');
+                productphoto.style.display = 'none';
+              }
+            })
+          })
+        })
+      }
+
+    
+    
+    productanimation();
+
 
     var mainbutton = document.querySelector("#mainbutton");
-    var cursor = document.querySelector("#cursor");
     var page2text = document.querySelector("#page2text h1");
     
     mainbutton.addEventListener("mouseover", function(){
-        gsap.to(cursor,{
-            scale: 12,
-            backgroundColor: "#00000000",
-        })
-        gsap.to("#bigcursor",{
-            scale: 0.1,
-            borderColor: "#B4EF02",
-        })
         gsap.to(mainbutton,{
             scale: 1.1,
             backgroundColor: "#B4EF02",
@@ -256,14 +450,6 @@ document.addEventListener('DOMContentLoaded', function(){
         })
     });
     mainbutton.addEventListener("mouseleave", function(){
-        gsap.to(cursor,{
-            scale: 1,
-            backgroundColor: "#fff",
-        })
-        gsap.to("#bigcursor",{
-            scale: 1,
-            borderColor: "#fff",
-        })
         gsap.to(mainbutton,{
             scale: 1,
             color: "#000",
@@ -327,28 +513,44 @@ document.addEventListener('DOMContentLoaded', function(){
             toggleActions: "restart none none reverse",
         }
     })
-    page2text.addEventListener("mouseover",function(){
-        cursor.innerHTML = "Click to explore";
-        cursor.style.fontSize = "0.8px";
-        gsap.to(cursor,{
+    var page2video = document.querySelector("#page2video video");
+
+    page2text.addEventListener("mouseover", function(){
+        cursor.innerHTML = 'Click to Explore More',
+        cursor.style.color = "#010101",
+        gsap.to("#cursor",{
             scale: 20,
+            duration: 0.5,
             backgroundColor: "#fff",
+            ease: "power1.out",
+            onStart: () => {
+                gsap.set("#cursor", { mixBlendMode: "normal"}); // Disable mix-blend-mode
+            }
         })
         gsap.to("#bigcursor",{
             scale: 0.1,
+            duration: 0.5,
+            ease: "power1.out",
         })
     })
-    page2text.addEventListener("mouseleave",function(){
-        cursor.innerHTML = "";
-        gsap.to(cursor,{
+    page2text.addEventListener("mouseleave", function(){
+        cursor.innerHTML = "",
+        gsap.to("#cursor",{
             scale: 1,
+            duration: 0.5,
             backgroundColor: "#fff",
+            ease: "power1.out",
+            onStart: () => {
+                gsap.set("#cursor", { mixBlendMode: "difference" }); // Disable mix-blend-mode
+            }
         })
         gsap.to("#bigcursor",{
             scale: 1,
+            duration: 0.5,
+            ease: "power1.out",
         })
     })
-    var page2video = document.querySelector("#page2video video")
+
     page2text.addEventListener("click",function(){
         gsap.to("#page2video",{
             display: "block",
@@ -691,14 +893,6 @@ document.addEventListener('DOMContentLoaded', function(){
     var buttons = document.querySelectorAll(".upperpart button");
     buttons.forEach(function(elem) {
         elem.addEventListener("mouseover", function() {
-            gsap.to(cursor, {
-                scale: 12,
-                backgroundColor: "#00000000",
-            },"<");
-            gsap.to(bigcursor, {
-                scale: 0.1,
-                borderColor: "#B4EF02",
-            },"<");
             gsap.to(elem, {
                 scale: 1.1,
                 backgroundColor: "#B4EF02",
@@ -707,47 +901,11 @@ document.addEventListener('DOMContentLoaded', function(){
         });
 
         elem.addEventListener("mouseleave", function() {
-            gsap.to(cursor, {
-                scale: 1,
-                backgroundColor: "#fff",
-            },"<");
-            gsap.to(bigcursor, {
-                scale: 1,
-                borderColor: "#fff",
-            },"<");
             gsap.to(elem, {
                 scale: 1,
                 color: "#fff",
                 backgroundColor: "#000",
             },"<");
-        });
-    });
-    var productcard = document.querySelectorAll(".productcard");
-    productcard.forEach(function(elem) {
-        elem.addEventListener("mouseover", function() {
-            var tl9 = gsap.timeline();
-            tl9.to("#cursor",{
-                scale: 40,
-                backgroundColor: "#b4ef0222",
-                duration: 0.5,
-            }, "<")
-            tl9.to("#bigcursor",{
-                scale: 0,
-                duration: 0.5,
-            }, "<")
-        });
-
-        elem.addEventListener("mouseleave", function() {
-            var tl9 = gsap.timeline();
-            tl9.to("#cursor",{
-                scale: 1,
-                backgroundColor: "#fff",
-                duration: 0.5,
-            }, "<")
-            tl9.to("#bigcursor",{
-                scale: 1,
-                duration: 0.5,
-            }, "<")
         });
     });
 
@@ -791,7 +949,6 @@ document.addEventListener('DOMContentLoaded', function(){
         height: "8vh",
         duration: 0.4,
     },"<");
-
     tl10.to("#navpart2 ", {
         marginLeft: "3.2vw",
         width: "8%",
@@ -836,14 +993,6 @@ document.addEventListener('DOMContentLoaded', function(){
       var page4buttons = document.querySelectorAll(".page4buttons button");
       page4buttons.forEach(function(elem) {
         elem.addEventListener("mouseover", function() {
-            gsap.to(cursor, {
-                scale: 12,
-                backgroundColor: "#00000000",
-            },"<");
-            gsap.to(bigcursor, {
-                scale: 0.1,
-                borderColor: "#B4EF02",
-            },"<");
             gsap.to(elem, {
                 scale: 1.1,
                 backgroundColor: "#B4EF02",
@@ -852,14 +1001,6 @@ document.addEventListener('DOMContentLoaded', function(){
         });
 
         elem.addEventListener("mouseleave", function() {
-            gsap.to(cursor, {
-                scale: 1,
-                backgroundColor: "#fff",
-            },"<");
-            gsap.to(bigcursor, {
-                scale: 1,
-                borderColor: "#fff",
-            },"<");
             gsap.to(elem, {
                 scale: 1,
                 color: "#000",
@@ -867,19 +1008,154 @@ document.addEventListener('DOMContentLoaded', function(){
             },"<");
         });
     });
-    var card = document.querySelectorAll(".card");
-    var cardVideo = document.querySelectorAll(".card video");
-    cardVideo.forEach(function(elem) {
-        var flag = true;
-        elem.addEventListener("click", function(){
-            if(elem.muted === true){
-                elem.muted = false;
-                flag = false;
-            }
-            else{
-                elem.muted = true;
-                flag = true;
+
+
+    var cardVideos = document.querySelectorAll(".card video");
+        cardVideos.forEach(function(video, index) {
+            video.addEventListener("click", function() {
+                // Mute all other videos
+                cardVideos.forEach(function(otherVideo, index2) {
+                    if (index !== index2) {
+                        otherVideo.muted = true;
+                    }
+                });
+                video.muted = !video.muted;
+            });
+            video.addEventListener("mouseover", function(){
+                cursor.innerHTML = 'Click to Mute/Unmute',
+                cursor.style.color = "#010101",
+                gsap.to("#cursor",{
+                    scale: 20,
+                    duration: 0.5,
+                    backgroundColor: "#fff",
+                    ease: "power1.out",
+                    onStart: () => {
+                        gsap.set("#cursor", { mixBlendMode: "normal"}); // Disable mix-blend-mode
+                    }
+                })
+                gsap.to("#bigcursor",{
+                    scale: 0.1,
+                    duration: 0.5,
+                    ease: "power1.out",
+                })
+            })
+            video.addEventListener("mouseleave", function(){
+                cursor.innerHTML = "",
+                gsap.to("#cursor",{
+                    scale: 1,
+                    duration: 0.5,
+                    backgroundColor: "#fff",
+                    ease: "power1.out",
+                    onStart: () => {
+                        gsap.set("#cursor", { mixBlendMode: "difference" }); // Disable mix-blend-mode
+                    }
+                })
+                gsap.to("#bigcursor",{
+                    scale: 1,
+                    duration: 0.5,
+                    ease: "power1.out",
+                })
+            })
+        });
+
+
+    var page5content = document.querySelectorAll('#page5content h1');
+    var page5content1 = document.querySelector('#page5content h2');
+    page5content.forEach(elem => {
+        gsap.from(elem,{
+            y: 200,
+            opacity: 0,
+            duration: 0.6,
+            scrollTrigger: {
+                trigger: "#page5content",
+                scroller: "main",
+                start: "top 88%",
+                end: "top 85%",
+                toggleActions: "restart none none none",
             }
         })
-    });
+    })
+    gsap.from(page5content1,{
+        y: 200,
+        opacity: 0,
+        duration: 0.6,
+        scrollTrigger: {
+            trigger: "#page5content",
+            scroller: "main",
+            start: "top 88%",
+            end: "top 85%",
+            toggleActions: "restart none none none",
+        }
+    })
+
+    window.addEventListener("wheel",function(dets){
+        if(dets.deltaY>0){
+            gsap.to("#move1",{
+                transform:"translatex(-60%)",
+                duration:50,
+                repeat: -1,
+                ease:"linear",
+      
+            })
+            
+        }
+        else{
+            gsap.to("#move1",{
+                transform:"translatex(20%)",
+                duration:50,
+                repeat:-1,
+                ease:"linear",
+      
+            })
+        } 
+    })
+
+    gsap.from("#page4part1",{
+        y: 200,
+        opacity: 0,
+        duration: 0.6,
+        scrollTrigger: {
+            trigger: "#page4part1",
+            scroller: "main",
+            start: "top 99%",
+            end: "top 96%",
+            toggleActions: "restart none none reverse",
+        }
+    })
+    gsap.from(".card video",{
+        y: 200,
+        opacity: 0,
+        duration: 0.6,
+        scrollTrigger: {
+            trigger: "#page4part1",
+            scroller: "main",
+            start: "top 99%",
+            end: "top 96%",
+            toggleActions: "restart none none reverse",
+        }
+    })
+    gsap.from("#blogs #heading h1",{
+        y: 100,
+        opacity: 0,
+        duration: 0.6,
+        scrollTrigger: {
+            trigger: "#blogs #heading h1",
+            scroller: "main",
+            start: "top 99%",
+            end: "top 98%",
+            toggleActions: "restart none none reverse",
+        }
+    })
+    gsap.from("#allblog",{
+        y: 100,
+        opacity: 0,
+        duration: 0.6,
+        scrollTrigger: {
+            trigger: "#allblog",
+            scroller: "main",
+            start: "top 99%",
+            end: "top 98%",
+            toggleActions: "restart none none reverse",
+        }
+    })
 })
