@@ -540,7 +540,7 @@ label{
     .lowestpart p{
         font-size: 1.76vw;
     }
-    .card{
+    #cards .card{
         height: 100%;
     }
     #page4part1{
@@ -862,12 +862,12 @@ label{
         width: 25vh;
     }
     #images #image6{
-        height: 25vh;
-        width: 25vh;
+        height: 28vh;
+        width: 28vh;
     }
     #images #image7{
-        height: 25vh;
-        width: 25vh;
+        height: 28vh;
+        width: 28vh;
     }
 }
 
