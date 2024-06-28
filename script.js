@@ -1223,6 +1223,31 @@ document.addEventListener('DOMContentLoaded', function(){
         } 
     })
 
+    let lastScrollTop = 0;
+
+    window.addEventListener("scroll", function() {
+        let st = window.scrollY;
+        if (st > lastScrollTop) {
+            gsap.to("#move1", {
+                x: "-60%",
+                duration: 50,
+                repeat: -1,
+                ease: "linear"
+            });
+        } else {
+            gsap.to("#move1", {
+                x: "20%",
+                duration: 50,
+                repeat: -1,
+                ease: "linear"
+            });
+        }
+        lastScrollTop = st <= 0 ? 0 : st; 
+    });
+
+
+
+
     gsap.from("#page4part1",{
         y: 200,
         opacity: 0,
