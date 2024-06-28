@@ -869,5 +869,16 @@ label{
         height: 28vh;
         width: 28vh;
     }
+    #page2video {
+        width: 100%;
+    }
+    #page2video #cross{
+        left: 5%;
+        height: 15vw;
+        width: 15vw;
+    }
+    #page2video #cross i{
+        font-size: 5vw;
+    }
 }
 
