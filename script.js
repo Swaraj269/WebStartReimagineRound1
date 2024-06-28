@@ -1086,7 +1086,7 @@ document.addEventListener('DOMContentLoaded', function(){
             pin: true,
             scrub: 2,
             start: "top 0",
-            end: isDesktop ? "top -370%" : "top -220%", 
+            end: isDesktop ? "top -370%" : "top -200%", 
           }
         });
       

@@ -217,6 +217,10 @@ main{
     justify-content:space-between;
     align-items: center;
 }
+.middleblog{
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
 #blog1{
     height:100%;
     width:100%;
@@ -780,7 +784,7 @@ label{
         line-height: 1.2;
     }
     #footer4{
-        height: 5%;
+        height: 2%;
     }
     #footer4 h1{
         font-size: 3vw;
@@ -882,6 +886,10 @@ label{
     }
     #page2video #cross i{
         font-size: 5vw;
+    }
+    .middleblog{
+        margin-top: 1vw;
+        margin-bottom: 1vw;
     }
 }
 
