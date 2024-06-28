@@ -728,7 +728,7 @@ label{
     #pantherimg{
         width: 70%;
         right: 0%;
-        top: 50%;
+        top: 42%;
         height: 42%;
     }
     #pantherimg img{
@@ -765,17 +765,18 @@ label{
     }
     #footerheading{
         height: 25%;
-        margin-top: 2vw;
+        margin-top: 4vw;
     }
     #footerheading h1{
-        font-size: 7vw;
+        font-size: 6vw;
     }
     #links{
         height: 70%;
+        gap: 2vw;
         justify-content: center;
     }
     #links h3{
-        font-size: 4.5vw;
+        font-size: 4vw;
         line-height: 1.2;
     }
     #footer4{
@@ -785,12 +786,12 @@ label{
         font-size: 3vw;
     }
     #socialcircle{
-        height: 10vw;
-        width: 10vw;
+        height: 8vw;
+        width: 8vw;
         margin-top: 4vw;
     }
     #socialcircle i{
-        font-size: 6vw;
+        font-size: 5vw;
     }
     #cartcross i, #menucross i{
         font-size: 6vw;
