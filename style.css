@@ -784,7 +784,7 @@ label{
         line-height: 1.2;
     }
     #footer4{
-        height: 2%;
+        height: 8%;
     }
     #footer4 h1{
         font-size: 3vw;
@@ -861,6 +861,7 @@ label{
         width: 25vh;
     }
     #images #image4{
+        top: 20%;
         height: 25vh;
         width: 25vh;
     }
@@ -869,6 +870,7 @@ label{
         width: 25vh;
     }
     #images #image6{
+        top: 30%;
         height: 28vh;
         width: 28vh;
     }
