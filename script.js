@@ -1073,29 +1073,36 @@ document.addEventListener('DOMContentLoaded', function(){
     }, "<");
 
     
-
-    const tl12 = gsap.timeline({
-        scrollTrigger: {
-          trigger: "#page4",
-          scroller: "main",
-          pin: true,
-          scrub: 2,
-          start: "top 0",
-          end: "top -370%", 
-        }
+    gsap.matchMedia().add({
+        isDesktop: "(min-width: 601px)",
+        isMobile: "(max-width: 600px)"
+      }, (context) => {
+        let { isDesktop, isMobile } = context.conditions;
+      
+        let tl12 = gsap.timeline({
+          scrollTrigger: {
+            trigger: "#page4",
+            scroller: "main",
+            pin: true,
+            scrub: 2,
+            start: "top 0",
+            end: isDesktop ? "top -370%" : "top -250%", 
+          }
+        });
+      
+        tl12.to("#page4 .card", {
+          yPercent: isDesktop ? -413 : -413,
+        }, "<");
+      
+        tl12.to("#page4 .box", {
+          yPercent: isDesktop ? -440 : -440,
+        }, "<");
+      
+        tl12.to("#page4 .name", {
+          yPercent: isDesktop ? -428 : -428,
+        }, "<");
       });
-      
-      tl12.to("#page4 .card", {
-        yPercent:-413, 
-      },"<");
-      
-      tl12.to("#page4 .box", {
-        yPercent: -440, 
-      }, "<");
 
-      tl12.to("#page4 .name", {
-        yPercent: -428, 
-      }, "<");
       var page4buttons = document.querySelectorAll(".page4buttons button");
       page4buttons.forEach(function(elem) {
         elem.addEventListener("mouseover", function() {
@@ -1240,4 +1247,23 @@ document.addEventListener('DOMContentLoaded', function(){
             toggleActions: "restart none none reverse",
         }
     })
+
+    var productcard = document.querySelectorAll('.productcard');
+
+    productcard.forEach( (elem, index)=>{
+        elem.addEventListener("click", function(){
+            gsap.to(` #page3part${index+2} .upperpart button`,{
+                duration: 0.5,
+                backgroundColor: "#B7EE0C",
+                color: "#000",
+                transform: "translateY(-10%)",
+            })
+            gsap.to(` #page3part${index+2} .upperpart button`,{
+                duration: 0.5,
+                scale: 1.05,
+            })
+        })
+    })
+
+
 })
