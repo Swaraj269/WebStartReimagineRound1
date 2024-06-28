@@ -17,14 +17,14 @@
     <div id="loader" class="bg-[#010101] w-screen h-screen z-[99] fixed flex justify-center items-center cursor-none ">
         <div id="loadertext" class="text-[#fff] flex flex-col  justify-center items-center overflow-hidden ">
             <h1 class="text-3xl">BEAST LIFE</h1>
-            <h1 id="counter" class="text-center text-[#B4EF02]">100%</h1>
+            <h1 id="counter" class="text-center text-lg  text-[#B4EF02]">100%</h1>
         </div>
         <div id="photos" class="h-screen w-screen hidden ">
             <div id="images" class="h-full w-full relative">
-                <div class="absolute top-2/4 left-2/4 translate-y-[-50%] translate-x-[-50%]  opacity-0  h-[20vw] w-[16vw] bg-[#010101] " id="image1">
+                <div  class="absolute top-2/4 left-2/4 translate-y-[-50%] translate-x-[-50%]   opacity-0  h-[20vw] w-[16vw] bg-[#010101] " id="image1">
                     <img class="h-full w-full object-cover" src="https://cdn.shopify.com/s/files/1/0690/7723/7977/files/Image05_36f1d9a3-a3f1-400f-931f-dda79fe9b3c3_720x720.jpg?v=1715278358" alt="">
                 </div>
-                <div class="absolute top-[45%] left-[35%] translate-y-[-50%] translate-x-[-50%] opacity-0  h-[20vw] w-[24vw] bg-[#010101] " id="image2">
+                <div class="absolute top-[45%] left-[35%] translate-y-[-50%] translate-x-[-50%] opacity-0   h-[20vw] w-[24vw] bg-[#010101] " id="image2">
                     <img class="h-full w-full object-cover " src="https://cdn.shopify.com/s/files/1/0690/7723/7977/files/Image06_e7679616-b66f-4b6f-b1c5-53adbbf8de62_720x720.jpg?v=1715278358" alt="">
                 </div>
                 <div class="absolute top-[35%] left-[65%] translate-y-[-50%] translate-x-[-50%] opacity-0 z-10 h-[25vw] w-[18vw] bg-[#010101] " id="image4">
@@ -33,13 +33,13 @@
                 <div class="absolute top-[75%] left-[34%] translate-y-[-50%] translate-x-[-50%] opacity-0  h-[15vw] w-[25vw] bg-[#010101] " id="image5">
                     <img class="h-full w-full object-cover " src="https://cdn.shopify.com/s/files/1/0690/7723/7977/files/Image-02_720x720.jpg?v=1715100774" alt="">
                 </div>
-                <div class="absolute top-[75%] left-[65%] translate-y-[-50%] translate-x-[-50%] opacity-0  h-[15vw] w-[24vw] bg-[#010101] " id="image3">
+                <div class="absolute top-[75%] left-[65%] translate-y-[-50%] translate-x-[-50%] opacity-0 h-[15vw] w-[24vw] bg-[#010101] " id="image3">
                     <img class="h-full w-full object-cover " src="https://cdn.shopify.com/s/files/1/0690/7723/7977/files/Image-04_42d43c89-5531-429d-b0c8-8f574c5d01b6_720x720.jpg?v=1715100776" alt="">
                 </div>
                 <div class="absolute top-[40%] left-[20%] translate-y-[-50%] translate-x-[-50%] opacity-0  h-[22vw] w-[18vw] bg-[#010101] " id="image6">
                     <img class="h-full w-full object-cover " src="https://cdn.shopify.com/s/files/1/0690/7723/7977/files/Image-05_891cb73c-1bde-4a9a-b800-f0c46e484e6a_720x720.jpg?v=1715100187" alt="">
                 </div>
-                <div class="absolute top-[40%] left-[80%] translate-y-[-50%] translate-x-[-50%] opacity-0 z-[11] h-[25vw] w-[20vw] bg-[#010101] " id="image7">
+                <div class="absolute top-[40%] left-[80%] translate-y-[-50%] translate-x-[-50%] opacity-0 z-[11]  h-[25vw] w-[20vw] bg-[#010101] " id="image7">
                     <img class="h-full w-full object-cover " src="https://cdn.shopify.com/s/files/1/0690/7723/7977/files/Image-06_720x720.jpg?v=1715100190" alt="">
                 </div>
             </div>
@@ -142,7 +142,7 @@
                 <img class="h-full w-full hidden object-cover" src="https://cdn.shopify.com/s/files/1/0690/7723/7977/t/4/assets/d543ec9c521c--shopall-219a3f.jpg?v=1715186587" alt="">
             </div>
         </div>
-        <nav data-scroll data-scroll-sticky data-scroll-target="main" class=" z-[5] fixed top-[0%] left-[0%] w-screen h-[12vh]  px-[5vw] flex justify-between items-center ">
+        <nav id="navwebsite" data-scroll data-scroll-sticky data-scroll-target="main" class=" z-[5] fixed top-[0%] left-[0%] w-screen h-[12vh]  px-[5vw] flex justify-between items-center ">
             <div id="navpart1" class="flex items-center gap-[1.2vw]">
                 <div id="part11"><i class="ri-menu-line text-[1.5vw] text-[#fff] "></i></div>
                 <div id="part12"><h1 class="text-[1.4vw] text-[#fff] ">Product</h1></div>
@@ -155,11 +155,24 @@
                 <div id="part32"><i class="ri-shopping-cart-2-fill text-[1.5vw] text-[#fff] "></i></div>
             </div>
         </nav>
+        <div id="navmobile" data-scroll data-scroll-sticky data-scroll-target="main" class=" z-[5] hidden fixed top-[0%] left-[0%] w-screen h-[10vh] bg-[#010101]  px-[5vw] flex justify-between items-center ">
+            <div id="navmob1" class="flex items-center">
+                <div id="partmob11"><i class="ri-menu-line text-xl text-[#fff] "></i></div>
+                <div id="partmob12"><h1 class="text-[0] text-[#fff] ">Product</h1></div>
+            </div>
+            <div id="navmob2" class=" w-[28%] ml-10 h-[42%]   flex justify-center items-center rounded-sm ">
+                <img class="navbarimg w-full h-full  object-cover" src="./images/beastlife-whitelogo (1).svg" alt="">
+            </div>
+            <div id="navmob3" class="flex items-center gap-4">
+                <div id="partmob31"><i class="ri-search-line text-xl text-[#fff] "></i></div>
+                <div id="partmob32"><i class="ri-shopping-cart-2-fill text-xl text-[#fff] "></i></div>
+            </div>
+        </div>
         <div id="page1" data-scroll   class="w-screen h-screen flex justify-center items-end bg-[#010101] relative   ">
             <div id="hometext" class="absolute top-[50%] left-[50%] translate-y-[-50%] flex flex-col justify-center items-center translate-x-[-50%] h-[30%] w-[70%] gap-[0.3] overflow-hidden z-[2]">
                 <h1  class="uppercase leading-[0.6] text-[3vw] text-[#fff]">Supplements that will make</h1>
                 <h1  class="uppercase text-[3vw] text-[#fff]">the beast in you <span class="text-[3vw] text-[#B4EF02]">roar!</span></h1>
-                <div id="cta" class="mt-[1.2vw]">
+                <div id="cta" class="mt-[1vw]">
                     <button id="mainbutton" class=" px-[2vw] py-[0.5vw]  text-[1.2vw] text-[#010101] bg-[#fff] overflow-hidden rounded-md flex flex-col cursor-none ">get it now</button>
                 </div>
             </div>
@@ -193,7 +206,7 @@
             </div>
             <div id="page2text" class="absolute z-[4] flex flex-col justify-center items-center gap-[2vw] w-[40vw] ">
                 <h1 class="text-[#fff] text-[3vw] text-center w-full h-fit  leading-[1] ">Unlock your Beastmode with <br> <span class="text-[3vw] text-[#B4EF02]">Ultrasorb Tech </span>  in Action</h1>
-                <p class="text-[#fff] text-[1.3vw] text-center flex justify-center items-center w-[90%]">Our cutting-edge formula revolutionizes whey absorption,  ensuring a noticeable difference after consumption.  Once you experience Beast Life Whey,  you'll never look back. Our whey features an Isorich formula,  highlighting whey protein isolate as our primary protein source for maximum protein content</p>
+                <p class="text-[#fff] text-[1.3vw] text-center flex justify-center items-center w-[90%]">Our cutting-edge formula revolutionizes whey absorption,  ensuring a noticeable difference after consumption.  Once you experience Beast Life Whey,  you'll never look back. Our whey features an Isorich formula,  highlighting whey protein isolate as our primary protein source for maximum protein content.</p>
             </div>
         </div>
         <div id="page3" data-scroll  class="w-screen h-[150vh] bg-[#fff] relative grid grid-rows-[6%,47%,47%]  grid-cols-[25%,25%,25%,25%] px-[5vw] py-[1vw]">
@@ -322,8 +335,9 @@
             </div>
         </div>
         <div id="page4" data-scroll  class="w-screen h-screen bg-[#010101]  relative ">
-            <div id="page4part1" class="h-[60%] w-[34%]  absolute top-[50%] left-[5vw]  -translate-y-1/2   flex flex-col items-start overflow-hidden">
-                <h1 class="text-[#fff] text-[4.3vw] leading-[1]">Experience <br> Our Products:</h1>
+            <div id="page4part1" class="h-[60%] w-[34%]  absolute top-[50%] left-[5vw]  -translate-y-1/2  z-[8]  flex flex-col items-start overflow-hidden">
+                <h1 id="page4webtext" class="text-[#fff] text-[4.3vw] leading-[1]">Experience <br> Our Products:</h1>
+                <h1 id="page4mobiletext" class="text-[#fff] hidden text-[4.3vw] leading-[1]">Experience Our Products</h1>
                 <p class="text-[#fff] w-[83%] text-[1.5vw] leading-[1.2] mt-[2vw]">Dive into our collection of product videos to get an up-close look at what we offer.</p>
             </div>
             <div id="page4part2" class="h-[100%] w-[22%] absolute top-[0] left-[40%]  overflow-hidden">
@@ -348,48 +362,68 @@
             <div id="page4part3" class="h-[30%] w-[30%] absolute top-[50%] left-[64%] -translate-y-1/2  overflow-hidden">
                 <div id="names" class="h-full w-full flex flex-col items-center gap-[1vw]">
                     <div class="name h-full w-full  shrink-0 px-[1.5vw] py-[2vw]" >
-                        <h1 class="text-[2vw] text-[#fff] leading-[1]">Creatine Monohydrate | 100G</h1>
-                        <h1 class="text-[1.6vw] text-[#fff] mt-[0.3vw]" ><s class="text-[1.2vw] text-[#dbdbdb]">₹749</s> ₹599</h1>
+                        <h1 class="nametext text-[2vw] text-[#fff] leading-[1]">Creatine Monohydrate | 100G</h1>
+                        <h1 class="nametext text-[1.6vw] text-[#fff] mt-[0.3vw]" ><s class="text-[1.2vw] text-[#dbdbdb]">₹749</s> ₹599</h1>
+                        <div id="page4part2mobh1" class=" hidden flex justify-center items-center">
+                            <h1 class="text-[2vw] text-[#fff] leading-[1]">Creatine Monohydrate | 100G</h1>
+                            <h1 class="text-[1.6vw] text-[#fff] " ><s class="text-[1.2vw] text-[#dbdbdb]">₹749</s> ₹599</h1> 
+                        </div>
                         <div id="page4buttons" class="page4buttons flex gap-[1vw] items-center mt-[0.3vw]">
                             <button class=" py-[0.5vw] px-[2vw]  bg-[#fff] rounded-sm text-[1.1vw]">More Info</button>
                             <button class="py-[0.5vw] px-[2vw]  bg-[#fff] rounded-sm text-[1.1vw]">Add to Cart</button>
-                            <button class="py-[0.5vw] px-[1vw] bg-[#fff]  rounded-sm"><i class="ri-shopping-cart-2-fill  text-[1.2vw]"></i></button>
+                            <button class="cartbutton4 py-[0.5vw] px-[1vw] bg-[#fff]  rounded-sm"><i class="ri-shopping-cart-2-fill  text-[1.2vw]"></i></button>
                         </div>
                     </div>
                     <div class="name h-full w-full  shrink-0" >
-                        <h1 class="text-[2vw] text-[#fff] leading-[1]">Whey Protein | <br> 924G</h1>
-                        <h1 class="text-[1.6vw] text-[#fff] mt-[0.3vw]" ><s class="text-[1.2vw] text-[#dbdbdb]">₹3,999</s> ₹3,199</h1>
+                        <h1 class="nametext text-[2vw] text-[#fff] leading-[1]">Whey Protein | <br> 924G</h1>
+                        <h1 class="nametext text-[1.6vw] text-[#fff] mt-[0.3vw]" ><s class="text-[1.2vw] text-[#dbdbdb]">₹3,999</s> ₹3,199</h1>
+                        <div id="page4part2mobh1" class=" hidden flex justify-center items-center">
+                            <h1 class="text-[2vw] text-[#fff] leading-[1]">Whey Protein | 924G</h1>
+                            <h1 class="text-[1.6vw] text-[#fff] " ><s class="text-[1.2vw] text-[#dbdbdb]">₹3,999</s> ₹3,199</h1> 
+                        </div>
                         <div id="page4buttons" class=" page4buttons flex gap-[1vw] items-center mt-[0.3vw]">
                             <button class="py-[0.5vw] px-[2vw]  bg-[#fff] rounded-sm text-[1.1vw]">More Info</button>
                             <button class="py-[0.5vw] px-[2vw]  bg-[#fff] rounded-sm text-[1.1vw]">Add to Cart</button>
-                            <button class="py-[0.5vw] px-[1vw] bg-[#fff]  rounded-sm"><i class="ri-shopping-cart-2-fill  text-[1.2vw]"></i></button>
+                            <button class="cartbutton4 py-[0.5vw] px-[1vw] bg-[#fff]  rounded-sm"><i class="ri-shopping-cart-2-fill  text-[1.2vw]"></i></button>
                         </div>
                     </div>
                     <div class="name h-full w-full  shrink-0" >
-                        <h1 class="text-[2vw] text-[#fff] leading-[1]">Creatine Monohydrate | <br> 249G</h1>
-                        <h1 class="text-[1.6vw] text-[#fff] mt-[0.3vw]" ><s class="text-[1.2vw] text-[#dbdbdb]">₹1,499</s> ₹1,199</h1>
+                        <h1 class="nametext text-[2vw] text-[#fff] leading-[1]">Creatine Monohydrate | <br> 249G</h1>
+                        <h1 class="nametext text-[1.6vw] text-[#fff] mt-[0.3vw]" ><s class="text-[1.2vw] text-[#dbdbdb]">₹1,499</s> ₹1,199</h1>
+                        <div id="page4part2mobh1" class=" hidden flex justify-center items-center">
+                            <h1 class="text-[2vw] text-[#fff] leading-[1]">Creatine Monohydrate | 249G</h1>
+                            <h1 class="text-[1.6vw] text-[#fff] " ><s class="text-[1.2vw] text-[#dbdbdb]">₹1,499</s> ₹1,199</h1> 
+                        </div>
                         <div id="page4buttons" class=" page4buttons flex gap-[1vw] items-center mt-[0.3vw]">
                             <button class="py-[0.5vw] px-[2vw]  bg-[#fff] rounded-sm text-[1.1vw]">More Info</button>
                             <button class="py-[0.5vw] px-[2vw]  bg-[#fff] rounded-sm text-[1.1vw]">Add to Cart</button>
-                            <button class="py-[0.5vw] px-[1vw] bg-[#fff]  rounded-sm"><i class="ri-shopping-cart-2-fill  text-[1.2vw]"></i></button>
+                            <button class="cartbutton4 py-[0.5vw] px-[1vw] bg-[#fff]  rounded-sm"><i class="ri-shopping-cart-2-fill  text-[1.2vw]"></i></button>
                         </div>
                     </div>
                     <div class="name h-full w-full  shrink-0" >
-                        <h1 class="text-[2vw] text-[#fff] leading-[1]">BCAA | Mango | <br> 120G</h1>
-                        <h1 class="text-[1.6vw] text-[#fff] mt-[0.3vw]" ><s class="text-[1.2vw] text-[#dbdbdb]">₹849</s> ₹764</h1>
+                        <h1 class="nametext text-[2vw] text-[#fff] leading-[1]">BCAA | Mango | <br> 120G</h1>
+                        <h1 class="nametext text-[1.6vw] text-[#fff] mt-[0.3vw]" ><s class="text-[1.2vw] text-[#dbdbdb]">₹849</s> ₹764</h1>
+                        <div id="page4part2mobh1" class=" hidden flex justify-center items-center">
+                            <h1 class="text-[2vw] text-[#fff] leading-[1]">BCAA | Mango | 120G</h1>
+                            <h1 class="text-[1.6vw] text-[#fff] " ><s class="text-[1.2vw] text-[#dbdbdb]">₹849</s> ₹764</h1> 
+                        </div>
                         <div id="page4buttons" class=" page4buttons flex gap-[1vw] items-center mt-[0.3vw]">
                             <button class="py-[0.5vw] px-[2vw]  bg-[#fff] rounded-sm text-[1.1vw]">More Info</button>
                             <button class="py-[0.5vw] px-[2vw]  bg-[#fff] rounded-sm text-[1.1vw]">Add to Cart</button>
-                            <button class="py-[0.5vw] px-[1vw] bg-[#fff]  rounded-sm"><i class="ri-shopping-cart-2-fill  text-[1.2vw]"></i></button>
+                            <button class="cartbutton4 py-[0.5vw] px-[1vw] bg-[#fff]  rounded-sm"><i class="ri-shopping-cart-2-fill  text-[1.2vw]"></i></button>
                         </div>
                     </div>
                     <div class="name h-full w-full  shrink-0" >
-                        <h1 class="text-[2vw] text-[#fff] leading-[1]">Whey Protein | <br> 1848G</h1>
-                        <h1 class="text-[1.6vw] text-[#fff] mt-[0.3vw]" ><s class="text-[1.2vw] text-[#dbdbdb]">₹7,699</s> ₹6,159</h1>
+                        <h1 class="nametext text-[2vw] text-[#fff] leading-[1]">Whey Protein | <br> 1848G</h1>
+                        <h1 class="nametext text-[1.6vw] text-[#fff] mt-[0.3vw]" ><s class="text-[1.2vw] text-[#dbdbdb]">₹7,699</s> ₹6,159</h1>
+                        <div id="page4part2mobh1" class=" hidden flex justify-center items-center">
+                            <h1 class="text-[2vw] text-[#fff] leading-[1]">Whey Protein | 1848G</h1>
+                            <h1 class="text-[1.6vw] text-[#fff] " ><s class="text-[1.2vw] text-[#dbdbdb]">₹7,699</s> ₹6,159</h1> 
+                        </div>
                         <div id="page4buttons" class="page4buttons flex gap-[1vw] items-center mt-[0.3vw]">
                             <button  class="py-[0.5vw] px-[2vw]  bg-[#fff] rounded-sm text-[1.1vw]">More Info</button>
                             <button class="py-[0.5vw] px-[2vw]  bg-[#fff] rounded-sm text-[1.1vw]">Add to Cart</button>
-                            <button class="py-[0.5vw] px-[1vw] bg-[#fff]  rounded-sm"><i class="ri-shopping-cart-2-fill  text-[1.2vw]"></i></button>
+                            <button class="cartbutton4 py-[0.5vw] px-[1vw] bg-[#fff]  rounded-sm"><i class="ri-shopping-cart-2-fill  text-[1.2vw]"></i></button>
                         </div>
                     </div>
                 </div>
@@ -501,17 +535,17 @@
         </div>
         <div id="blank" data-scroll class="h-[6vh] w-full bg-[#010101]"></div>
         <div id="page7" data-scroll class="h-screen w-screen flex items-center justify-center relative">
-            <div class="apimage h-full w-full absolute z-[-1] ">
-                <img data-scroll data-scroll-speed="-2" class="w-full h-full object-cover" src="https://cdn.shopify.com/s/files/1/0690/7723/7977/files/Image07_73fd0844-29e3-4060-89ea-e459192ccc64_720x720.jpg?v=1715278422" alt="">
+            <div class="apimage h-full w-full absolute z-[1] overflow-hidden ">
+                <img data-scroll data-scroll-speed="-2" class=" w-full h-full object-cover" src="https://cdn.shopify.com/s/files/1/0690/7723/7977/files/Image07_73fd0844-29e3-4060-89ea-e459192ccc64_720x720.jpg?v=1715278422" alt="">
             </div>
-            <div class="apbox  w-full h-[100%] bg-[#01010155] rounded-lg flex flex-col items-center justify-center">
+            <div class="apbox relative z-[2]  w-full h-[100%] bg-[#01010155] rounded-lg flex flex-col items-center justify-center">
                 <h1 class="text-center w-[50%]  text-[4vw] leading-[1] text-[#B7EE0C]">PRODUCT AUTHENTICATION</h1>
                 <form action="" class=" h-2/4 w-full flex flex-col items-center justify-center">
                     <label for="digitcode" class="text-[1.4vw] text-[#fff]">Enter your 6 digit code here*</label>
                     <input type="text" class="px-4 py-2 mt-[0.4vw]" id="digitcode" placeholder="a0 b0 c0">
                     <label for="mobnumber" class="text-[1.4vw] text-[#fff] mt-[1vw]">Enter your Phone Number</label>
                     <input type="phone" class="px-4 py-2 mt-[0.4vw]" id="mobnumber" >
-                    <button class=" cursor-none submit px-6 py-2 mt-[2vw] bg-[#fff] text-[1.4vw]" >Check Authenticity</button>
+                    <button class=" cursor-none submit px-6 py-2 mt-[2vw] bg-[#fff] text-[1.2vw]" >Check Authenticity</button>
                 </form>
             </div>
         </div>
@@ -634,7 +668,7 @@
                     <div id="footerheading" class="h-[20%] w-[100%] flex justify-items align-start">
                         <h1 class="text-[1.8vw] text-[#B7EE0C]">Contact With Us</h1>
                     </div>
-                    <div id="links" class="h-[80%] w-[100%] flex  justify-start gap-4 items-start">
+                    <div id="social" class="h-[80%] w-[100%] flex  justify-start gap-4 items-start">
                         <div id="socialcircle" class="h-[2.7vw] w-[2.7vw] rounded-full bg-[#fff] flex items-center justify-center"><i class="ri-facebook-fill text-[#010101] text-[1.5vw]"></i></div>
                         <div id="socialcircle" class="h-[2.7vw] w-[2.7vw] rounded-full bg-[#fff] flex items-center justify-center"><i class="ri-instagram-line text-[#010101] text-[1.5vw]"></i></div>
                         <div id="socialcircle" class="h-[2.7vw] w-[2.7vw] rounded-full bg-[#fff] flex items-center justify-center"><i class="ri-whatsapp-line text-[#010101] text-[1.5vw]"></i></div>
@@ -642,6 +676,7 @@
                     </div>
                 </div>
             </div>
+
             <div id="footer4" class="w-full h-[10%] flex items-center justify-center">
                 <h1 class="text-[#fff] text-[1.2vw]">Copyright © 2024 BeastLife. All Rights Reserved.</h1>
             </div>

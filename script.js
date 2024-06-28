@@ -202,6 +202,11 @@ document.addEventListener('DOMContentLoaded', function(){
                         opacity: 0,
                         duration: 1.3,
                     },"<");
+                    tl2.from("#navmobile",{
+                        y: -20,
+                        opacity: 0,
+                        duration: 1.3,
+                    },"<");
                 }
             })
             tl.to("#loader",{
@@ -210,7 +215,7 @@ document.addEventListener('DOMContentLoaded', function(){
         }
         
     }
-
+    var main = document.querySelector("main");
     var cursor = document.querySelector("#cursor");
     gsap.set("#bigcursor",{
         xPercent: -50,
@@ -219,6 +224,30 @@ document.addEventListener('DOMContentLoaded', function(){
     gsap.set("#cursor",{
         xPercent: -50,
         yPercent: -50,
+    })
+    main.addEventListener("mouseleave", function(){
+        gsap.to("#cursor",{
+            opacity: 0,
+            duration: 0.2,
+            ease: "power1.out",
+        })
+        gsap.to("#bigcursor",{
+            opacity: 0,
+            duration: 0.2,
+            ease: "power1.out",
+        })
+    })
+    main.addEventListener("mouseenter", function(){
+        gsap.to("#cursor",{
+            opacity: 1,
+            duration: 0.2,
+            ease: "power1.out",
+        })
+        gsap.to("#bigcursor",{
+            opacity: 1,
+            duration: 0.2,
+            ease: "power1.out",
+        })
     })
     window.addEventListener("mousemove",function(e){
         gsap.to("#cursor",{
@@ -268,6 +297,7 @@ document.addEventListener('DOMContentLoaded', function(){
     function menuanimation() {
         var menucross = document.querySelector("#menucross");
         var part11 = document.querySelector("#part11");
+        var partmob11 = document.querySelector("#partmob11");
         var pagetext = document.querySelectorAll(".pagetext");
         var menudiv = document.querySelector("#menudiv");
       
@@ -296,12 +326,31 @@ document.addEventListener('DOMContentLoaded', function(){
           })
           gsap.to("#menucross", {
             opacity: 1,
+            height: "3.6vw",
+            width: "3.6vw",
             duration : 0.4,
           })
           gsap.to(".pagetext h1",{
             fontSize: "2.2vw",
             duration : 0.4,
           })
+        });
+        partmob11.addEventListener("click", function(){
+            gsap.to("#menudiv", {
+              width: "100%",
+              opacity: 1,
+              duration : 0.4,
+            })
+            gsap.to("#menucross", {
+              opacity: 1,
+              height: "15vw",
+              width: "15vw",
+              duration : 0.4,
+            })
+            gsap.to(".pagetext h1",{
+              fontSize: "8vw",
+              duration : 0.4,
+            })
         });
         menudiv.addEventListener("mouseleave", function(){
           gsap.to("#menudiv", {
@@ -320,6 +369,12 @@ document.addEventListener('DOMContentLoaded', function(){
               opacity: 0,
               duration : 0.4,
             })
+            gsap.to("#menucross", {
+                opacity: 1,
+                height: "0vw",
+                width: "0vw",
+                duration : 0.4,
+              })
             gsap.to(".pagetext h1",{
               fontSize: "0vw",
               duration : 0.4,
@@ -332,6 +387,7 @@ document.addEventListener('DOMContentLoaded', function(){
       function cartanimation() {
         var cartcross = document.querySelector("#cartcross");
         var part32  = document.querySelector("#part32");
+        var partmob32 = document.querySelector("#partmob32");
       
         cartcross.addEventListener("click", function(){
           gsap.to("#cartdiv", {
@@ -341,6 +397,8 @@ document.addEventListener('DOMContentLoaded', function(){
           })
           gsap.to("#cartcross", {
             opacity: 0,
+            height: '0vw',
+            width: '0vw',
             duration : 0.4,
           })
           gsap.to("#cartcontent", {
@@ -356,6 +414,8 @@ document.addEventListener('DOMContentLoaded', function(){
           })
           gsap.to("#cartcross", {
             opacity: 1,
+            height: "3.6vw",
+            width: "3.6vw",
             duration : 0.4,
           })
           gsap.to("#cartcontent", {
@@ -363,6 +423,23 @@ document.addEventListener('DOMContentLoaded', function(){
             duration : 0.2,
           })
         });
+        partmob32.addEventListener("click", function(){
+            gsap.to("#cartdiv", {
+              width: "100%",
+              opacity: 1,
+              duration : 0.4,
+            })
+            gsap.to("#cartcross", {
+              opacity: 1,
+              height: "15vw",
+              width: "15vw",
+              duration : 0.4,
+            })
+            gsap.to("#cartcontent", {
+              opacity: 1,
+              duration : 0.2,
+            })
+          });
       }
       
       cartanimation();
@@ -484,7 +561,6 @@ document.addEventListener('DOMContentLoaded', function(){
         height: "8vh",
         duration: 0.4,
     });
-
     tl5.to("#navpart2 ", {
         marginLeft: "3.2vw",
         width: "7%",
@@ -576,6 +652,8 @@ document.addEventListener('DOMContentLoaded', function(){
         });
     });
 
+    var navpart2 = document.querySelector('#navpart2 img');
+    var navmob2 = document.querySelector('#navmob2 img');
     let tl6 = gsap.timeline({
         scrollTrigger: {
             trigger: "#page3",
@@ -592,20 +670,28 @@ document.addEventListener('DOMContentLoaded', function(){
     tl6.to("nav",{
         backgroundColor: "#fff",
         duration: 0.4,
+        onStart: function(){
+            navpart2.src = "./images/blacklogo.png";
+        },
+        onReverseComplete: function(){
+            navpart2.src = "./images/beastlife-whitelogo (1).svg";
+        }
     }, "<")
-    tl6.to("#navpart2", {
-        height: "90%",
-        width: "10%",
-        padding: "0.3vw",
+    tl6.to("#navmobile",{
+        backgroundColor: "#fff",
         duration: 0.4,
-        backgroundColor: "#000",
-    }, "<");
-    tl6.to("#navpart2 img", {
-        height: "90%",
-        width: "80%",
-        duration: 0.4,
-    }, "<");
+        onStart: function(){
+            navmob2.src = "./images/blacklogo.png";
+        },
+        onReverseComplete: function(){
+            navmob2.src = "./images/beastlife-whitelogo (1).svg";
+        }
+    }, "<")
     tl6.to("nav i", {
+        color: "#000",
+        duration: 0.4,
+    }, "<");
+    tl6.to("#navmobile i", {
         color: "#000",
         duration: 0.4,
     }, "<");
@@ -948,15 +1034,35 @@ document.addEventListener('DOMContentLoaded', function(){
         backgroundColor: "#000",
         height: "8vh",
         duration: 0.4,
+        onStart: function(){
+            navpart2.src = "./images/beastlife-whitelogo (1).svg";
+        },
+        onReverseComplete: function(){
+            navpart2.src = "./images/blacklogo.png";
+        },
+    },"<");
+    tl10.to("#navmobile", {
+        backgroundColor: "#000",
+        duration: 0.4,
+        onStart: function(){
+            navmob2.src = "./images/beastlife-whitelogo (1).svg";
+        },
+        onReverseComplete: function(){
+            navmob2.src = "./images/blacklogo.png";
+        },
     },"<");
     tl10.to("#navpart2 ", {
         marginLeft: "3.2vw",
-        width: "8%",
+        width: "7%",
         duration: 0.4,
     }, "<");
 
     tl10.to("nav i", {
         fontSize: "1.2vw",
+        duration: 0.4,
+        color: "#fff"
+    }, "<");
+    tl10.to("#navmobile i", {
         duration: 0.4,
         color: "#fff"
     }, "<");
@@ -1131,30 +1237,6 @@ document.addEventListener('DOMContentLoaded', function(){
             scroller: "main",
             start: "top 99%",
             end: "top 96%",
-            toggleActions: "restart none none reverse",
-        }
-    })
-    gsap.from("#blogs #heading h1",{
-        y: 100,
-        opacity: 0,
-        duration: 0.6,
-        scrollTrigger: {
-            trigger: "#blogs #heading h1",
-            scroller: "main",
-            start: "top 99%",
-            end: "top 98%",
-            toggleActions: "restart none none reverse",
-        }
-    })
-    gsap.from("#allblog",{
-        y: 100,
-        opacity: 0,
-        duration: 0.6,
-        scrollTrigger: {
-            trigger: "#allblog",
-            scroller: "main",
-            start: "top 99%",
-            end: "top 98%",
             toggleActions: "restart none none reverse",
         }
     })
