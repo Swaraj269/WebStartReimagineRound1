@@ -563,7 +563,7 @@ document.addEventListener('DOMContentLoaded', function(){
     });
     tl5.to("#navpart2 ", {
         marginLeft: "3.2vw",
-        width: "7%",
+        width: "9%",
         duration: 0.4,
     }, "<");
 
@@ -1053,7 +1053,7 @@ document.addEventListener('DOMContentLoaded', function(){
     },"<");
     tl10.to("#navpart2 ", {
         marginLeft: "3.2vw",
-        width: "7%",
+        width: "9%",
         duration: 0.4,
     }, "<");
 
