@@ -174,39 +174,39 @@ document.addEventListener('DOMContentLoaded', function(){
                     })
                     tl2.to("#homeimg img",{
                         scale: 1,
-                        duration: 1.7,
-                        ease: "power3.inOut",
+                        duration: 2,
+                        ease: "power4.inOut",
                     })
                     tl2.from("#hometext h1",{
                         y: 40,
                         opacity: 0,
-                        duration: 0.8,
+                        duration: 1,
                         delay: -0.4,
                     })
                     tl2.from("#cta button",{
-                        y: 20,
+                        y: 40,
                         opacity: 0,
-                        duration: 1.3,
-                        delay: -0.34, 
+                        duration: 0.8,
+                        delay: -0.4, 
                     })
-                    tl2.to("#cursor",{
-                        opacity: 1,
-                        duration: 1.3,
-                    },"<");
-                    tl2.to("#bigcursor",{
-                        opacity: 1,
-                        duration: 1.3,
-                    },"<");
                     tl2.from("nav",{
-                        y: -20,
+                        y: -40,
                         opacity: 0,
-                        duration: 1.3,
+                        duration: 0.8,
                     },"<");
                     tl2.from("#navmobile",{
                         y: -20,
                         opacity: 0,
                         duration: 1.3,
                     },"<");
+                    tl2.to("#cursor",{
+                        opacity: 1,
+                        duration: 1.3,
+                    });
+                    tl2.to("#bigcursor",{
+                        opacity: 1,
+                        duration: 1.3,
+                    }, ">");
                 }
             })
             tl.to("#loader",{
